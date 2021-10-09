@@ -1,0 +1,3829 @@
+[
+  {
+    "uuid": "05b8c655-a594-4502-b6b0-d7b9111337c6",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "The Star Chamber",
+    "description": "Disgusted with criminals escaping the judicial system via technicalities, an idealistic young judge investigates an alternative method for punishing the guilty.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "7fd85018-827c-4758-acdf-936446a21d6f",
+        "name": "Crime"
+      },
+      {
+        "uuid": "a5fe191f-48c5-47e8-8d96-a240649790ec",
+        "name": "Drama"
+      },
+      {
+        "uuid": "ae28b347-2713-4247-b709-89af8c229560",
+        "name": "Mystery"
+      },
+      {
+        "uuid": "cafdae7a-9f64-443a-a8cf-ed070db9b0ce",
+        "name": "Thriller"
+      }
+    ],
+    "imdb_rating": 6.3,
+    "actors": [
+      {
+        "uuid": "1026a261-2d90-45d7-a545-a333415e6631",
+        "full_name": "Hal Holbrook"
+      },
+      {
+        "uuid": "487c9b82-1771-4cae-aab9-ac8197d8b0a3",
+        "full_name": "Yaphet Kotto"
+      },
+      {
+        "uuid": "77cd50b5-dc01-45a5-be9f-cc5bfc895b26",
+        "full_name": "Michael Douglas"
+      },
+      {
+        "uuid": "d3a9a3aa-87f4-4363-ac0d-9d6eff9cce7e",
+        "full_name": "Sharon Gless"
+      }
+    ],
+    "actors_names": [
+      "Hal Holbrook",
+      "Yaphet Kotto",
+      "Michael Douglas",
+      "Sharon Gless"
+    ],
+    "writers": [
+      {
+        "uuid": "b2780bd2-0b90-46e7-8767-f7c92bff4c89",
+        "full_name": "Peter Hyams"
+      },
+      {
+        "uuid": "3546f456-6193-4fd6-a149-84326235fb50",
+        "full_name": "Roderick Taylor"
+      }
+    ],
+    "writers_names": [
+      "Hal Holbrook",
+      "Yaphet Kotto",
+      "Michael Douglas",
+      "Sharon Gless"
+    ],
+    "directors": [
+      {
+        "uuid": "b2780bd2-0b90-46e7-8767-f7c92bff4c89",
+        "full_name": "Peter Hyams"
+      }
+    ],
+    "directors_names": [
+      "Peter Hyams"
+    ],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "07890c23-1bdd-4eb4-a153-864bd62096f9",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "The Star Maker",
+    "description": "\"Dottore\" Joe Moretti travels round Sicily doing screen tests for the big Roman studios. He's a conman and takes money or favours for his efforts. Beata, a young illiterate convent girl desperately wants to change her life and falls for him, belatedly he realises his feelings for her. Their love affair is doomed when he's arrested.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "32059e67-efeb-46b3-bf10-367d424a1ad7",
+        "name": "Drama"
+      },
+      {
+        "uuid": "cafdae7a-9f64-443a-a8cf-ed070db9b0ce",
+        "name": "Romance"
+      }
+    ],
+    "imdb_rating": 7.4,
+    "actors": [
+      {
+        "uuid": "31896307-fb0d-49ea-80fa-76e30a3216d0",
+        "full_name": "Tiziana Lodato"
+      },
+      {
+        "uuid": "784b6532-c89b-47c7-b921-1906beedf674",
+        "full_name": "Sergio Castellitto"
+      },
+      {
+        "uuid": "5e8eec44-a4a5-4a74-8d21-843c4d50691f",
+        "full_name": "Leopoldo Trieste"
+      },
+      {
+        "uuid": "68b2fd98-b76c-454b-aaf7-97127945d9f3",
+        "full_name": "Franco Scaldati"
+      }
+    ],
+    "actors_names": [
+      "Tiziana Lodato",
+      "Sergio Castellitto",
+      "Leopoldo Trieste",
+      "Franco Scaldati"
+    ],
+    "writers": [
+      {
+        "uuid": "134e72e1-07bc-42b4-b4d3-43b4caf0c2b1",
+        "full_name": "Fabio Rinaudo"
+      },
+      {
+        "uuid": "54ff44da-4600-428d-b3f5-93a1783bcd87",
+        "full_name": "Giuseppe Tornatore"
+      }
+    ],
+    "writers_names": [
+      "Tiziana Lodato",
+      "Sergio Castellitto",
+      "Leopoldo Trieste",
+      "Franco Scaldati"
+    ],
+    "directors": [
+      {
+        "uuid": "54ff44da-4600-428d-b3f5-93a1783bcd87",
+        "full_name": "Giuseppe Tornatore"
+      }
+    ],
+    "directors_names": [
+      "Giuseppe Tornatore"
+    ],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "08940e3e-bc7e-41f3-8fa3-e5e6e56e2706",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Rock Star",
+    "description": "Chris Cole was born to rock. His longtime girlfriend Emily believes his talent could take him all the way - but Chris worships at the altar of Bobby Beers, the fiery frontman for heavy metal legends Steel Dragon. By day, Chris still lives at home with his parents and spends his days repairing copy machines. But when Chris takes the stage, fronting Pennsylvania's premiere Steel Dragon tribute band, all of that disappears. Chris Cole is Bobby Beers - mesmerizing audiences with his perfect imitation of Beers' electrifying vocals. The night his bandmates boot him out of the group, Chris is devastated - until an unexpected phone call changes his life forever: He, Chris Cole, has been tapped to replace Bobby Beers as the lead singer of Steel Dragon. In an instant, Chris rockets to the dizzying heights of sudden stardom, rising from devotee to icon, from rock fan to rock god - the wanna-be who got to be. So what happens when an average guy gets everything he wants - and discovers it's not enough?",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "03d48df8-9a64-4995-aab8-63869756381c",
+        "name": "Drama"
+      },
+      {
+        "uuid": "cafdae7a-9f64-443a-a8cf-ed070db9b0ce",
+        "name": "Music"
+      }
+    ],
+    "imdb_rating": 6.3,
+    "actors": [
+      {
+        "uuid": "9e35e279-79eb-4694-9502-521ef865beb5",
+        "full_name": "Jennifer Aniston"
+      },
+      {
+        "uuid": "311556d4-a8f0-407c-b3f2-c28d6338e82d",
+        "full_name": "Jason Bonham"
+      },
+      {
+        "uuid": "3c87e7d8-2c4a-4344-a201-407597ac37d3",
+        "full_name": "Mark Wahlberg"
+      },
+      {
+        "uuid": "5c8080bc-0ff2-4c65-8016-a6344452d37b",
+        "full_name": "Dominic West"
+      }
+    ],
+    "actors_names": [
+      "Jennifer Aniston",
+      "Jason Bonham",
+      "Mark Wahlberg",
+      "Dominic West"
+    ],
+    "writers": [
+      {
+        "uuid": "6e5ec733-9fb6-47b3-8d00-79cb0af66440",
+        "full_name": "John Stockwell"
+      }
+    ],
+    "writers_names": [
+      "Jennifer Aniston",
+      "Jason Bonham",
+      "Mark Wahlberg",
+      "Dominic West"
+    ],
+    "directors": [
+      {
+        "uuid": "8edc9f4c-f303-44da-b949-56e4432c6742",
+        "full_name": "Stephen Herek"
+      }
+    ],
+    "directors_names": [
+      "Stephen Herek"
+    ],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "09c8c39e-62ba-410b-a800-de66fdc80097",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Star Wars Jedi: Fallen Order",
+    "description": "Set shortly after Revenge of the Sith, the player takes on the role of a Jedi padawan being hunted by the Empire after Order 66.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "47392fcb-82e5-4ca3-b01f-aaa9cb96d2a2",
+        "name": "Action"
+      },
+      {
+        "uuid": "61807c42-0f8f-417b-bb28-32e1fb7e370c",
+        "name": "Adventure"
+      },
+      {
+        "uuid": "8197e9ab-3869-4f18-b178-a1d297a4db8a",
+        "name": "Fantasy"
+      },
+      {
+        "uuid": "8301bd05-5052-4ee3-9e53-b907b160c2d7",
+        "name": "Sci-Fi"
+      }
+    ],
+    "imdb_rating": 8.8,
+    "actors": [
+      {
+        "uuid": "e3fd9d07-8d4f-4ae4-8a4f-7227f7652605",
+        "full_name": "Dee Bradley Baker"
+      },
+      {
+        "uuid": "86739a28-1d9f-477f-97be-33dc0c97197c",
+        "full_name": "Daniel Roebuck"
+      },
+      {
+        "uuid": "10230689-14bc-4fe7-b398-df85e74e0944",
+        "full_name": "Cameron Monaghan"
+      },
+      {
+        "uuid": "30da7947-629b-4b03-8ece-dbba5f799e67",
+        "full_name": "Debra Wilson"
+      }
+    ],
+    "actors_names": [
+      "Dee Bradley Baker",
+      "Daniel Roebuck",
+      "Cameron Monaghan",
+      "Debra Wilson"
+    ],
+    "writers": [
+      {
+        "uuid": "f6b26818-3628-4ce0-85b7-e09dc7be69b3",
+        "full_name": "Chris Avellone"
+      },
+      {
+        "uuid": "6b35215d-b862-4ec7-ac6d-a67ae00f7ea5",
+        "full_name": "Clayton Hogston"
+      },
+      {
+        "uuid": "12583c25-2434-4d4f-8bfc-4ed96ce696e8",
+        "full_name": "Sabine Rosgren"
+      },
+      {
+        "uuid": "148e753d-bba8-4ab0-a738-0411abc825ec",
+        "full_name": "George Lucas"
+      },
+      {
+        "uuid": "6a427950-b9cc-4d63-a9e9-b0159943aa6f",
+        "full_name": "Megan Fausti"
+      },
+      {
+        "uuid": "50d864b3-74b8-4c52-ba7c-4bf3e0085a71",
+        "full_name": "Manny Hagopian"
+      },
+      {
+        "uuid": "5139677c-bedf-4e71-a51a-a7f768320ad8",
+        "full_name": "Stig Asmussen"
+      },
+      {
+        "uuid": "692f58f2-3956-4644-9240-ab4901a83d7e",
+        "full_name": "Aaron Contreras"
+      },
+      {
+        "uuid": "be865422-8017-4634-a7be-fa24c9d5ae49",
+        "full_name": "Jessica Hara Campbell"
+      },
+      {
+        "uuid": "7448c75d-d4b5-4139-8225-18d8985ad68f",
+        "full_name": "Matt Michnovetz"
+      },
+      {
+        "uuid": "2d4b0b7b-e22c-43ad-a240-fedd974e11bc",
+        "full_name": "Todd Piperi"
+      },
+      {
+        "uuid": "7ce0d3d8-7cbd-4e21-8394-210c28fb669e",
+        "full_name": "Cheyenne Paulani Morrin"
+      },
+      {
+        "uuid": "2ca7b452-50f3-42b8-aaf5-fc7ffcbaa9fa",
+        "full_name": "Adnan Chatriwala"
+      }
+    ],
+    "writers_names": [
+      "Dee Bradley Baker",
+      "Daniel Roebuck",
+      "Cameron Monaghan",
+      "Debra Wilson"
+    ],
+    "directors": [
+      {
+        "uuid": "5139677c-bedf-4e71-a51a-a7f768320ad8",
+        "full_name": "Stig Asmussen"
+      }
+    ],
+    "directors_names": [
+      "Stig Asmussen"
+    ],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "0a140b2d-617a-4e66-8170-132877b54838",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Star Trek III: The Search for Spock",
+    "description": "In the wake of Spock's ultimate deed of sacrifice, Admiral Kirk and the Enterprise crew return to Earth for some essential repairs to their ship. When they arrive at Spacedock, they are shocked to discover that the Enterprise is to be decommissioned. Even worse, Dr. McCoy begins acting strangely and Scotty has been reassigned to another ship. Kirk is forced to steal back the Enterprise and head across space to the Genesis Planet to save Spock and bring him to Vulcan. Unknown to them, the Klingons are planning to steal the secrets of the Genesis Device for their own deadly purpose.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "61807c42-0f8f-417b-bb28-32e1fb7e370c",
+        "name": "Action"
+      },
+      {
+        "uuid": "8197e9ab-3869-4f18-b178-a1d297a4db8a",
+        "name": "Adventure"
+      },
+      {
+        "uuid": "8301bd05-5052-4ee3-9e53-b907b160c2d7",
+        "name": "Sci-Fi"
+      }
+    ],
+    "imdb_rating": 6.7,
+    "actors": [
+      {
+        "uuid": "c5954003-e26c-4d8d-8bf3-45fd059bca32",
+        "full_name": "William Shatner"
+      },
+      {
+        "uuid": "8a15817e-7008-4eb9-9837-02cfdac8b6c4",
+        "full_name": "James Doohan"
+      },
+      {
+        "uuid": "5428fa7b-7748-4ed3-a16b-4863f2d65503",
+        "full_name": "DeForest Kelley"
+      },
+      {
+        "uuid": "89591c47-95a8-409c-bf6d-b165fcbb561b",
+        "full_name": "Leonard Nimoy"
+      }
+    ],
+    "actors_names": [
+      "William Shatner",
+      "James Doohan",
+      "DeForest Kelley",
+      "Leonard Nimoy"
+    ],
+    "writers": [
+      {
+        "uuid": "a78930f6-38e3-41da-b030-9491fc42a350",
+        "full_name": "Harve Bennett"
+      },
+      {
+        "uuid": "54aba6d0-660d-40b5-b5ee-d127f80912c9",
+        "full_name": "Gene Roddenberry"
+      }
+    ],
+    "writers_names": [
+      "William Shatner",
+      "James Doohan",
+      "DeForest Kelley",
+      "Leonard Nimoy"
+    ],
+    "directors": [
+      {
+        "uuid": "89591c47-95a8-409c-bf6d-b165fcbb561b",
+        "full_name": "Leonard Nimoy"
+      }
+    ],
+    "directors_names": [
+      "Leonard Nimoy"
+    ],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "0d704b2c-991e-4b9d-a6fb-eb3aa6c97f93",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Star Wars: Episode VIII - The Last Jedi",
+    "description": "Rey develops her newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength of her powers. Meanwhile, the Resistance prepares for battle with the First Order.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "47392fcb-82e5-4ca3-b01f-aaa9cb96d2a2",
+        "name": "Action"
+      },
+      {
+        "uuid": "61807c42-0f8f-417b-bb28-32e1fb7e370c",
+        "name": "Adventure"
+      },
+      {
+        "uuid": "8197e9ab-3869-4f18-b178-a1d297a4db8a",
+        "name": "Fantasy"
+      },
+      {
+        "uuid": "8301bd05-5052-4ee3-9e53-b907b160c2d7",
+        "name": "Sci-Fi"
+      }
+    ],
+    "imdb_rating": 7.0,
+    "actors": [
+      {
+        "uuid": "61fb7c17-7161-411b-af40-c5ae2f352822",
+        "full_name": "Carrie Fisher"
+      },
+      {
+        "uuid": "ba2fbd08-691e-47b2-b0de-dc34f8c718a9",
+        "full_name": "Mark Hamill"
+      },
+      {
+        "uuid": "f1fe34e8-b3b9-4186-983e-ee2e830e9fbd",
+        "full_name": "Adam Driver"
+      },
+      {
+        "uuid": "6c7dcdfb-31a9-40b0-aef9-b9556ce454f0",
+        "full_name": "Daisy Ridley"
+      }
+    ],
+    "actors_names": [
+      "Carrie Fisher",
+      "Mark Hamill",
+      "Adam Driver",
+      "Daisy Ridley"
+    ],
+    "writers": [
+      {
+        "uuid": "a22acd92-254c-42b3-a961-4ba125d4e657",
+        "full_name": "Rian Johnson"
+      },
+      {
+        "uuid": "148e753d-bba8-4ab0-a738-0411abc825ec",
+        "full_name": "George Lucas"
+      }
+    ],
+    "writers_names": [
+      "Carrie Fisher",
+      "Mark Hamill",
+      "Adam Driver",
+      "Daisy Ridley"
+    ],
+    "directors": [
+      {
+        "uuid": "a22acd92-254c-42b3-a961-4ba125d4e657",
+        "full_name": "Rian Johnson"
+      }
+    ],
+    "directors_names": [
+      "Rian Johnson"
+    ],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "0dab8760-03ed-4511-a0a2-b09cc204a934",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Star",
+    "description": "A trio of women form a musical group in Atlanta.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "03d48df8-9a64-4995-aab8-63869756381c",
+        "name": "Drama"
+      },
+      {
+        "uuid": "4a7ba930-aadd-49b9-98f4-b20e2b5a33c7",
+        "name": "Music"
+      },
+      {
+        "uuid": "cafdae7a-9f64-443a-a8cf-ed070db9b0ce",
+        "name": "Musical"
+      }
+    ],
+    "imdb_rating": 6.6,
+    "actors": [
+      {
+        "uuid": "4e60892b-0a47-4416-ad5b-e5861bba11bf",
+        "full_name": "Amiyah Scott"
+      },
+      {
+        "uuid": "2ff5930b-0492-4565-82fe-504939aca143",
+        "full_name": "Ryan Destiny"
+      },
+      {
+        "uuid": "5a03eb0d-4d31-4ac2-9125-63fc096141c8",
+        "full_name": "Jude Demorest"
+      },
+      {
+        "uuid": "76ba7ab8-0e86-47fa-b7cf-9510f9715879",
+        "full_name": "Brittany O'Grady"
+      }
+    ],
+    "actors_names": [
+      "Amiyah Scott",
+      "Ryan Destiny",
+      "Jude Demorest",
+      "Brittany O'Grady"
+    ],
+    "writers": [
+      {
+        "uuid": "f4fb0a4e-e866-40fa-a523-2b31739c1c51",
+        "full_name": "Lee Daniels"
+      },
+      {
+        "uuid": "e4f0757b-dba1-4559-b2de-90444efadc9e",
+        "full_name": "Tom Donaghy"
+      }
+    ],
+    "writers_names": [
+      "Amiyah Scott",
+      "Ryan Destiny",
+      "Jude Demorest",
+      "Brittany O'Grady"
+    ],
+    "directors": [],
+    "directors_names": [],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "0f6e25f0-897b-47ba-90ef-e19999367f2e",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Star Trek: Generations",
+    "description": "In the late 23rd century, the gala maiden voyage of the newly-christened Enterprise-B boasts such luminaries as Pavel Chekov, Montgomery Scott and the legendary Captain James T. Kirk as guests. But her maiden voyage turns into a disaster as the unprepared starship is forced to rescue two transport ships from a mysterious energy ribbon. The Enterprise manages to save a handful of the ships' passengers and barely succeeds out intact... but at the cost of Captain Kirk's life. 78 years later, Captain Jean-Luc Picard and the Enterprise-D crew find themselves at odds with renegade scientist Dr. Tolian Soran... who is destroying entire star systems. Only one man can help Picard stop Soran's scheme... and he has been dead for 78 years.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "61807c42-0f8f-417b-bb28-32e1fb7e370c",
+        "name": "Action"
+      },
+      {
+        "uuid": "7fd85018-827c-4758-acdf-936446a21d6f",
+        "name": "Adventure"
+      },
+      {
+        "uuid": "8197e9ab-3869-4f18-b178-a1d297a4db8a",
+        "name": "Mystery"
+      },
+      {
+        "uuid": "8301bd05-5052-4ee3-9e53-b907b160c2d7",
+        "name": "Sci-Fi"
+      },
+      {
+        "uuid": "ae28b347-2713-4247-b709-89af8c229560",
+        "name": "Thriller"
+      }
+    ],
+    "imdb_rating": 6.6,
+    "actors": [
+      {
+        "uuid": "e44db72b-acf0-4c88-9017-2cf2e0255588",
+        "full_name": "LeVar Burton"
+      },
+      {
+        "uuid": "2acf2ad8-a854-4078-a10d-495bcc90b057",
+        "full_name": "Jonathan Frakes"
+      },
+      {
+        "uuid": "c7545e8f-bfab-4251-bec3-ca830b1aab0b",
+        "full_name": "Patrick Stewart"
+      },
+      {
+        "uuid": "1da4b960-f42e-404e-a391-0aa9661460b3",
+        "full_name": "Brent Spiner"
+      }
+    ],
+    "actors_names": [
+      "LeVar Burton",
+      "Jonathan Frakes",
+      "Patrick Stewart",
+      "Brent Spiner"
+    ],
+    "writers": [
+      {
+        "uuid": "036828e3-b2a6-46ef-92b5-5f7f51f54816",
+        "full_name": "Ronald D. Moore"
+      },
+      {
+        "uuid": "54aba6d0-660d-40b5-b5ee-d127f80912c9",
+        "full_name": "Gene Roddenberry"
+      },
+      {
+        "uuid": "cff1b7ea-c030-4523-9112-b0f6ec268005",
+        "full_name": "Brannon Braga"
+      },
+      {
+        "uuid": "6958b676-6bba-4de3-889d-92ddc186d12b",
+        "full_name": "Rick Berman"
+      }
+    ],
+    "writers_names": [
+      "LeVar Burton",
+      "Jonathan Frakes",
+      "Patrick Stewart",
+      "Brent Spiner"
+    ],
+    "directors": [
+      {
+        "uuid": "bf0ee717-7619-4b30-adf4-eb9e260e34eb",
+        "full_name": "David Carson"
+      }
+    ],
+    "directors_names": [
+      "David Carson"
+    ],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "11c0d160-8801-4adc-83bc-0f0408e6954d",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Star Wars: The Force Unleashed - Ultimate Sith Edition",
+    "description": "Casts players as Darth Vader's \"Secret Apprentice,\" unveiling new revelations about the Star Wars galaxy seen through the eyes of a mysterious new character armed with unprecedented powers.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "47392fcb-82e5-4ca3-b01f-aaa9cb96d2a2",
+        "name": "Action"
+      },
+      {
+        "uuid": "61807c42-0f8f-417b-bb28-32e1fb7e370c",
+        "name": "Adventure"
+      },
+      {
+        "uuid": "8197e9ab-3869-4f18-b178-a1d297a4db8a",
+        "name": "Fantasy"
+      }
+    ],
+    "imdb_rating": 8.1,
+    "actors": [
+      {
+        "uuid": "2060b358-0acf-407e-b4b3-d1d6ff6e7c8d",
+        "full_name": "Christopher Neme"
+      },
+      {
+        "uuid": "6e099a61-2244-4412-bddc-b4568c90c23d",
+        "full_name": "David W. Collins"
+      },
+      {
+        "uuid": "ada69c2d-0f6a-4324-9b6d-0cd47616c434",
+        "full_name": "Nathalie Cox"
+      },
+      {
+        "uuid": "3c3c007e-afaa-4859-a2a4-0413320b6cdb",
+        "full_name": "Sam Witwer"
+      }
+    ],
+    "actors_names": [
+      "Christopher Neme",
+      "David W. Collins",
+      "Nathalie Cox",
+      "Sam Witwer"
+    ],
+    "writers": [
+      {
+        "uuid": "eb09520c-6820-40da-8733-318faf21e7ac",
+        "full_name": "John Stafford"
+      },
+      {
+        "uuid": "81f5e3bd-423e-454d-882a-5c3a1606abb5",
+        "full_name": "Shawn Pitman"
+      },
+      {
+        "uuid": "bbc85d06-534f-4d8e-9c6a-08e61f80d9fb",
+        "full_name": "Haden Blackman"
+      },
+      {
+        "uuid": "dbad9f92-2a89-4dc5-afd0-5b350a01302e",
+        "full_name": "Cameron Suey"
+      },
+      {
+        "uuid": "148e753d-bba8-4ab0-a738-0411abc825ec",
+        "full_name": "George Lucas"
+      }
+    ],
+    "writers_names": [
+      "Christopher Neme",
+      "David W. Collins",
+      "Nathalie Cox",
+      "Sam Witwer"
+    ],
+    "directors": [
+      {
+        "uuid": "bbc85d06-534f-4d8e-9c6a-08e61f80d9fb",
+        "full_name": "Haden Blackman"
+      }
+    ],
+    "directors_names": [
+      "Haden Blackman"
+    ],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "1339a072-caa6-48f5-9dd4-50b9ffc26279",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Star Wars Rebels",
+    "description": "An animated TV series set between the events of Episode III and IV, Star Wars Rebels takes place in a time where the Empire is securing its grip on the galaxy and hunting down the last of the Jedi Knights as a fledgling rebellion against the Empire is taking shape.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "05819c4e-8e59-400f-b999-f3c0bed78e97",
+        "name": "Action"
+      },
+      {
+        "uuid": "47392fcb-82e5-4ca3-b01f-aaa9cb96d2a2",
+        "name": "Adventure"
+      },
+      {
+        "uuid": "4d66f6f6-68b7-4a63-b15d-747f763e8f42",
+        "name": "Animation"
+      },
+      {
+        "uuid": "61807c42-0f8f-417b-bb28-32e1fb7e370c",
+        "name": "Family"
+      },
+      {
+        "uuid": "8197e9ab-3869-4f18-b178-a1d297a4db8a",
+        "name": "Fantasy"
+      },
+      {
+        "uuid": "8301bd05-5052-4ee3-9e53-b907b160c2d7",
+        "name": "Mystery"
+      },
+      {
+        "uuid": "ae28b347-2713-4247-b709-89af8c229560",
+        "name": "Sci-Fi"
+      }
+    ],
+    "imdb_rating": 8.0,
+    "actors": [
+      {
+        "uuid": "faf8ede9-cf5f-4cd1-881b-23ddfab7b750",
+        "full_name": "Dave Filoni"
+      },
+      {
+        "uuid": "dcaea3a4-c405-49eb-b05b-85b4b3937db2",
+        "full_name": "Vanessa Marshall"
+      },
+      {
+        "uuid": "c6bfc500-09fe-4ad6-8526-9023593daa54",
+        "full_name": "Freddie Prinze Jr."
+      },
+      {
+        "uuid": "324a87c2-6114-4ebb-9137-b32f3b621851",
+        "full_name": "Taylor Gray"
+      }
+    ],
+    "actors_names": [
+      "Dave Filoni",
+      "Vanessa Marshall",
+      "Freddie Prinze Jr.",
+      "Taylor Gray"
+    ],
+    "writers": [
+      {
+        "uuid": "faf8ede9-cf5f-4cd1-881b-23ddfab7b750",
+        "full_name": "Dave Filoni"
+      },
+      {
+        "uuid": "546af46f-3d2a-446b-863b-e1f12e779d4b",
+        "full_name": "Carrie Beck"
+      },
+      {
+        "uuid": "c8bc17d0-dc34-4b5e-98e8-dd44b2d42d09",
+        "full_name": "Simon Kinberg"
+      }
+    ],
+    "writers_names": [
+      "Dave Filoni",
+      "Vanessa Marshall",
+      "Freddie Prinze Jr.",
+      "Taylor Gray"
+    ],
+    "directors": [],
+    "directors_names": [],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "160fe741-64f8-4694-97cf-92748972b6c9",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Star Trek IV: The Voyage Home",
+    "description": "The most acclaimed Star Trek adventure of all time with an important message. It is the 23rd century, and a mysterious alien probe is threatening Earth by evaporating the oceans and destroying the atmosphere. In their frantic attempt to save mankind, Admiral Kirk and his crew must time travel back to 1986 San Francisco where they find a world of punk, pizza and exact-change buses that are as alien to them as anything they have ever encountered in the far-off reaches of the galaxy. William Shatner and Leonard Nimoy return as Kirk and Spock, along with the entire Star Trek crew.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "61807c42-0f8f-417b-bb28-32e1fb7e370c",
+        "name": "Adventure"
+      },
+      {
+        "uuid": "8301bd05-5052-4ee3-9e53-b907b160c2d7",
+        "name": "Comedy"
+      },
+      {
+        "uuid": "933d0c17-2209-4b17-a3ec-a7d919768cc9",
+        "name": "Sci-Fi"
+      }
+    ],
+    "imdb_rating": 7.3,
+    "actors": [
+      {
+        "uuid": "89591c47-95a8-409c-bf6d-b165fcbb561b",
+        "full_name": "Leonard Nimoy"
+      },
+      {
+        "uuid": "8a15817e-7008-4eb9-9837-02cfdac8b6c4",
+        "full_name": "James Doohan"
+      },
+      {
+        "uuid": "5428fa7b-7748-4ed3-a16b-4863f2d65503",
+        "full_name": "DeForest Kelley"
+      },
+      {
+        "uuid": "c5954003-e26c-4d8d-8bf3-45fd059bca32",
+        "full_name": "William Shatner"
+      }
+    ],
+    "actors_names": [
+      "Leonard Nimoy",
+      "James Doohan",
+      "DeForest Kelley",
+      "William Shatner"
+    ],
+    "writers": [
+      {
+        "uuid": "a78930f6-38e3-41da-b030-9491fc42a350",
+        "full_name": "Harve Bennett"
+      },
+      {
+        "uuid": "b77a6888-befb-4ea5-b1eb-508064f901a5",
+        "full_name": "Steve Meerson"
+      },
+      {
+        "uuid": "f4368c2a-a72a-4194-9590-564ed8e1e1f6",
+        "full_name": "Peter Krikes"
+      },
+      {
+        "uuid": "89591c47-95a8-409c-bf6d-b165fcbb561b",
+        "full_name": "Leonard Nimoy"
+      },
+      {
+        "uuid": "54aba6d0-660d-40b5-b5ee-d127f80912c9",
+        "full_name": "Gene Roddenberry"
+      },
+      {
+        "uuid": "9ecf2483-3690-4444-89c2-f686f6e17f76",
+        "full_name": "Nicholas Meyer"
+      }
+    ],
+    "writers_names": [
+      "Leonard Nimoy",
+      "James Doohan",
+      "DeForest Kelley",
+      "William Shatner"
+    ],
+    "directors": [
+      {
+        "uuid": "89591c47-95a8-409c-bf6d-b165fcbb561b",
+        "full_name": "Leonard Nimoy"
+      }
+    ],
+    "directors_names": [
+      "Leonard Nimoy"
+    ],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "1a67e3dd-b374-45c4-a738-971461146fbf",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "9-1-1: Lone Star",
+    "description": "A New York firefighter relocates to Austin, Texas with his son, where he works to save people's lives while trying to solve his own personal problems.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "cafdae7a-9f64-443a-a8cf-ed070db9b0ce",
+        "name": "Drama"
+      }
+    ],
+    "imdb_rating": 6.3,
+    "actors": [
+      {
+        "uuid": "cbdb2358-3b43-4483-a646-e7ac8217d5c8",
+        "full_name": "Rob Lowe"
+      },
+      {
+        "uuid": "21ebfe9b-19c8-4a23-9f58-43dac6aef456",
+        "full_name": "Sierra Aylina McClain"
+      },
+      {
+        "uuid": "b9c68258-cef7-4605-ba9e-1f8a85f0fb30",
+        "full_name": "Ronen Rubinstein"
+      },
+      {
+        "uuid": "26cf6f6d-85ad-49ee-8cc6-4e6e4f62edfc",
+        "full_name": "Liv Tyler"
+      }
+    ],
+    "actors_names": [
+      "Rob Lowe",
+      "Sierra Aylina McClain",
+      "Ronen Rubinstein",
+      "Liv Tyler"
+    ],
+    "writers": [
+      {
+        "uuid": "96f07b2a-f426-4ff3-9758-5a9146f5720a",
+        "full_name": "Brad Falchuk"
+      },
+      {
+        "uuid": "30b82370-380b-40bc-97fb-bdd7fec85b78",
+        "full_name": "Tim Minear"
+      },
+      {
+        "uuid": "92a48afa-8784-4279-9036-2dfa8938c2cf",
+        "full_name": "Ryan Murphy"
+      }
+    ],
+    "writers_names": [
+      "Rob Lowe",
+      "Sierra Aylina McClain",
+      "Ronen Rubinstein",
+      "Liv Tyler"
+    ],
+    "directors": [],
+    "directors_names": [],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "1adc935f-a042-4972-9c6e-94b06503f701",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Star Trek: The Original Series",
+    "description": "The adventures of the USS Enterprise, representing the United Federation of Planets on a five-year mission in outer space to explore new worlds, seek new life and new civilizations, and to boldly go where no one has gone before. The Enterprise is commanded by handsome and brash Captain James T. Kirk. His First Officer and best friend is Mr. Spock from the planet Vulcan, and Kirk's Medical Officer is Dr. Leonard \"Bones\" McCoy. With a crew of approximately 430, the Enterprise battles aliens, megalomaniacal computers, time paradoxes, psychotic murderers, and even Khan!",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "61807c42-0f8f-417b-bb28-32e1fb7e370c",
+        "name": "Action"
+      },
+      {
+        "uuid": "8197e9ab-3869-4f18-b178-a1d297a4db8a",
+        "name": "Adventure"
+      },
+      {
+        "uuid": "8301bd05-5052-4ee3-9e53-b907b160c2d7",
+        "name": "Sci-Fi"
+      }
+    ],
+    "imdb_rating": 8.3,
+    "actors": [
+      {
+        "uuid": "5428fa7b-7748-4ed3-a16b-4863f2d65503",
+        "full_name": "DeForest Kelley"
+      },
+      {
+        "uuid": "c5954003-e26c-4d8d-8bf3-45fd059bca32",
+        "full_name": "William Shatner"
+      },
+      {
+        "uuid": "89591c47-95a8-409c-bf6d-b165fcbb561b",
+        "full_name": "Leonard Nimoy"
+      },
+      {
+        "uuid": "943b90c6-403f-42bb-8d4b-8eb2676a27ce",
+        "full_name": "Nichelle Nichols"
+      }
+    ],
+    "actors_names": [
+      "DeForest Kelley",
+      "William Shatner",
+      "Leonard Nimoy",
+      "Nichelle Nichols"
+    ],
+    "writers": [
+      {
+        "uuid": "54aba6d0-660d-40b5-b5ee-d127f80912c9",
+        "full_name": "Gene Roddenberry"
+      }
+    ],
+    "writers_names": [
+      "DeForest Kelley",
+      "William Shatner",
+      "Leonard Nimoy",
+      "Nichelle Nichols"
+    ],
+    "directors": [],
+    "directors_names": [],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "1d7c3f7f-37d9-4e61-bb42-a687f52895dc",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Man Without a Star",
+    "description": "Dempsey Rae, a cowboy with no clear aim in life, winds up working on a spread with a hard lady owner just arrived from the East. She needs a tough new top hand and uses all her means of persuasion to get Rae to take the job. But he doesn't like the way the other settlers are getting treated and starts to side with them, despite their introduction of the barbed wire he loathes.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "b9eafe57-0a91-4ecc-a03f-166c02bd9492",
+        "name": "Western"
+      }
+    ],
+    "imdb_rating": 6.9,
+    "actors": [
+      {
+        "uuid": "4f2fa8c7-a738-4982-80b4-6f44d6e3f1aa",
+        "full_name": "Jeanne Crain"
+      },
+      {
+        "uuid": "619ebdd1-0e52-4ea4-adf3-53580ddd780a",
+        "full_name": "William Campbell"
+      },
+      {
+        "uuid": "82576075-cfde-4e48-a6db-92cbee07307b",
+        "full_name": "Kirk Douglas"
+      },
+      {
+        "uuid": "3dc924bc-a931-41c7-80f3-43e7cef83472",
+        "full_name": "Claire Trevor"
+      }
+    ],
+    "actors_names": [
+      "Jeanne Crain",
+      "William Campbell",
+      "Kirk Douglas",
+      "Claire Trevor"
+    ],
+    "writers": [
+      {
+        "uuid": "4e641ed5-b1f1-4c61-8271-275707d36602",
+        "full_name": "D.D. Beauchamp"
+      },
+      {
+        "uuid": "87cdfeb5-d74c-45d5-81d3-5d61e81ab7a5",
+        "full_name": "Borden Chase"
+      },
+      {
+        "uuid": "316ad135-578a-45bc-9609-c39d3a748721",
+        "full_name": "Dee Linford"
+      }
+    ],
+    "writers_names": [
+      "Jeanne Crain",
+      "William Campbell",
+      "Kirk Douglas",
+      "Claire Trevor"
+    ],
+    "directors": [
+      {
+        "uuid": "25dc08e9-a925-4072-9c5c-03e6aa10cc1a",
+        "full_name": "King Vidor"
+      }
+    ],
+    "directors_names": [
+      "King Vidor"
+    ],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "2466bca2-d9a9-43a2-ba01-25e48f9dc0a5",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Robot Chicken: Star Wars",
+    "description": "The first of three Star Wars themed Robot Chicken parodies.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "05819c4e-8e59-400f-b999-f3c0bed78e97",
+        "name": "Adventure"
+      },
+      {
+        "uuid": "1d88d1fd-01df-48e9-ae7b-34aadbdb506f",
+        "name": "Animation"
+      },
+      {
+        "uuid": "4d66f6f6-68b7-4a63-b15d-747f763e8f42",
+        "name": "Comedy"
+      },
+      {
+        "uuid": "61807c42-0f8f-417b-bb28-32e1fb7e370c",
+        "name": "Family"
+      },
+      {
+        "uuid": "8301bd05-5052-4ee3-9e53-b907b160c2d7",
+        "name": "Sci-Fi"
+      },
+      {
+        "uuid": "933d0c17-2209-4b17-a3ec-a7d919768cc9",
+        "name": "Short"
+      }
+    ],
+    "imdb_rating": 8.1,
+    "actors": [
+      {
+        "uuid": "aba760cc-7aa9-40bf-a61e-f8e6846b66e4",
+        "full_name": "Abraham Benrubi"
+      },
+      {
+        "uuid": "42279edf-5bab-4809-9aff-652445648f17",
+        "full_name": "Candace Bailey"
+      },
+      {
+        "uuid": "b4d5e67c-b5f0-43e4-a77c-e9316c027db1",
+        "full_name": "Bob Bergen"
+      },
+      {
+        "uuid": "39668153-f3e3-4ea3-8794-97d5af87ad61",
+        "full_name": "Seth Green"
+      }
+    ],
+    "actors_names": [
+      "Abraham Benrubi",
+      "Candace Bailey",
+      "Bob Bergen",
+      "Seth Green"
+    ],
+    "writers": [
+      {
+        "uuid": "2f1e7ab2-9796-4156-9331-21cc1567e009",
+        "full_name": "Charles Horn"
+      },
+      {
+        "uuid": "1f7f171d-f4a3-4cf4-9568-53a866a0476e",
+        "full_name": "Jordan Allen-Dutton"
+      },
+      {
+        "uuid": "a2e23372-b053-4e89-83d2-609ca12292b7",
+        "full_name": "Tom Root"
+      },
+      {
+        "uuid": "b9e19447-bc84-4c7a-9906-0cfcb42bc690",
+        "full_name": "Douglas Goldstein"
+      },
+      {
+        "uuid": "45681da3-2da3-414b-9d78-6a4e0a3685b8",
+        "full_name": "Mike Fasolo"
+      },
+      {
+        "uuid": "799fad7d-d20f-4f70-9aeb-788f934a012d",
+        "full_name": "Erik Weiner"
+      },
+      {
+        "uuid": "39668153-f3e3-4ea3-8794-97d5af87ad61",
+        "full_name": "Seth Green"
+      },
+      {
+        "uuid": "88c47670-1e64-4be4-aad7-f029018ce13a",
+        "full_name": "Breckin Meyer"
+      },
+      {
+        "uuid": "e13d25ae-9c96-417e-8ce5-d46bf1ada48d",
+        "full_name": "Hugh Sterbakov"
+      },
+      {
+        "uuid": "3c45ee10-aafa-4c1c-91ba-a9701f2881f2",
+        "full_name": "Matthew Senreich"
+      }
+    ],
+    "writers_names": [
+      "Abraham Benrubi",
+      "Candace Bailey",
+      "Bob Bergen",
+      "Seth Green"
+    ],
+    "directors": [
+      {
+        "uuid": "39668153-f3e3-4ea3-8794-97d5af87ad61",
+        "full_name": "Seth Green"
+      }
+    ],
+    "directors_names": [
+      "Seth Green"
+    ],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "273de788-81be-4460-9ca2-37f8635dcfd7",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Star Wars: Episode IV - A New Hope",
+    "description": "The Imperial Forces, under orders from cruel Darth Vader, hold Princess Leia hostage in their efforts to quell the rebellion against the Galactic Empire. Luke Skywalker and Han Solo, captain of the Millennium Falcon, work together with the companionable droid duo R2-D2 and C-3PO to rescue the beautiful princess, help the Rebel Alliance and restore freedom and justice to the Galaxy.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "47392fcb-82e5-4ca3-b01f-aaa9cb96d2a2",
+        "name": "Action"
+      },
+      {
+        "uuid": "61807c42-0f8f-417b-bb28-32e1fb7e370c",
+        "name": "Adventure"
+      },
+      {
+        "uuid": "8197e9ab-3869-4f18-b178-a1d297a4db8a",
+        "name": "Fantasy"
+      },
+      {
+        "uuid": "8301bd05-5052-4ee3-9e53-b907b160c2d7",
+        "name": "Sci-Fi"
+      }
+    ],
+    "imdb_rating": 8.6,
+    "actors": [
+      {
+        "uuid": "ba2fbd08-691e-47b2-b0de-dc34f8c718a9",
+        "full_name": "Mark Hamill"
+      },
+      {
+        "uuid": "b3916c46-28ca-4dc9-a56a-f313a44e2acd",
+        "full_name": "Harrison Ford"
+      },
+      {
+        "uuid": "5a8edb9d-ca8f-4cef-89d4-bdd231667012",
+        "full_name": "Peter Cushing"
+      },
+      {
+        "uuid": "61fb7c17-7161-411b-af40-c5ae2f352822",
+        "full_name": "Carrie Fisher"
+      }
+    ],
+    "actors_names": [
+      "Mark Hamill",
+      "Harrison Ford",
+      "Peter Cushing",
+      "Carrie Fisher"
+    ],
+    "writers": [
+      {
+        "uuid": "148e753d-bba8-4ab0-a738-0411abc825ec",
+        "full_name": "George Lucas"
+      }
+    ],
+    "writers_names": [
+      "Mark Hamill",
+      "Harrison Ford",
+      "Peter Cushing",
+      "Carrie Fisher"
+    ],
+    "directors": [
+      {
+        "uuid": "148e753d-bba8-4ab0-a738-0411abc825ec",
+        "full_name": "George Lucas"
+      }
+    ],
+    "directors_names": [
+      "George Lucas"
+    ],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "2907029a-68d5-48af-8855-7de80101ee42",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "A Star Is Born",
+    "description": "Jackson Maine (Cooper), a country music star on the brink of decline, discovers a talented unknown named Ally (Germanotta). As the two begin a passionate love affair, Jackson coaxes Ally into the spotlight, catapulting her to stardom. But as Ally's career quickly eclipses his own, Jack finds it increasingly hard to handle his fading glory.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "03d48df8-9a64-4995-aab8-63869756381c",
+        "name": "Drama"
+      },
+      {
+        "uuid": "32059e67-efeb-46b3-bf10-367d424a1ad7",
+        "name": "Music"
+      },
+      {
+        "uuid": "cafdae7a-9f64-443a-a8cf-ed070db9b0ce",
+        "name": "Romance"
+      }
+    ],
+    "imdb_rating": 7.7,
+    "actors": [
+      {
+        "uuid": "8b8e9bb6-4fdc-4797-b0c3-6e6aea728672",
+        "full_name": "Bradley Cooper"
+      },
+      {
+        "uuid": "84bcce62-bce5-4178-809c-bb23275d43fb",
+        "full_name": "Sam Elliott"
+      },
+      {
+        "uuid": "9c5dfa8e-9575-4f4e-98dc-6d54a4dbe956",
+        "full_name": "Lady Gaga"
+      },
+      {
+        "uuid": "9bda2822-48c6-47fe-ab56-8de8d97dcfff",
+        "full_name": "Andrew Dice Clay"
+      }
+    ],
+    "actors_names": [
+      "Bradley Cooper",
+      "Sam Elliott",
+      "Lady Gaga",
+      "Andrew Dice Clay"
+    ],
+    "writers": [
+      {
+        "uuid": "4766fd1b-ffc6-4c9f-90dc-36f1f540b7f5",
+        "full_name": "Frank Pierson"
+      },
+      {
+        "uuid": "9703f41a-37e6-41a2-9d9c-994ebf875873",
+        "full_name": "John Gregory Dunne"
+      },
+      {
+        "uuid": "0bb77e82-81d2-4118-b97d-8c7a70eb9228",
+        "full_name": "William A. Wellman"
+      },
+      {
+        "uuid": "8b8e9bb6-4fdc-4797-b0c3-6e6aea728672",
+        "full_name": "Bradley Cooper"
+      },
+      {
+        "uuid": "de0b46e7-4e5c-459f-a416-e51abfbdd0ed",
+        "full_name": "Eric Roth"
+      },
+      {
+        "uuid": "127978c0-54fd-4b50-97b6-a0c300a384cc",
+        "full_name": "Moss Hart"
+      },
+      {
+        "uuid": "de2c4deb-dcf4-4df3-9f0e-d2e110234891",
+        "full_name": "Will Fetters"
+      },
+      {
+        "uuid": "d83b3ed7-6231-4f0b-8f45-0c39210965b6",
+        "full_name": "Joan Didion"
+      },
+      {
+        "uuid": "70c85247-c175-4bfb-8499-7097e332bee5",
+        "full_name": "Robert Carson"
+      }
+    ],
+    "writers_names": [
+      "Bradley Cooper",
+      "Sam Elliott",
+      "Lady Gaga",
+      "Andrew Dice Clay"
+    ],
+    "directors": [
+      {
+        "uuid": "8b8e9bb6-4fdc-4797-b0c3-6e6aea728672",
+        "full_name": "Bradley Cooper"
+      }
+    ],
+    "directors_names": [
+      "Bradley Cooper"
+    ],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "29ce81c6-9bae-44d6-a7d1-450dd07ae6ec",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Star Trek: The Animated Series",
+    "description": "This animated series continues the adventures of the USS Enterprise, taking advantage of the visual freedom of animation to present stories with more alien elements.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "05819c4e-8e59-400f-b999-f3c0bed78e97",
+        "name": "Action"
+      },
+      {
+        "uuid": "4d66f6f6-68b7-4a63-b15d-747f763e8f42",
+        "name": "Adventure"
+      },
+      {
+        "uuid": "61807c42-0f8f-417b-bb28-32e1fb7e370c",
+        "name": "Animation"
+      },
+      {
+        "uuid": "8197e9ab-3869-4f18-b178-a1d297a4db8a",
+        "name": "Family"
+      },
+      {
+        "uuid": "8301bd05-5052-4ee3-9e53-b907b160c2d7",
+        "name": "Sci-Fi"
+      }
+    ],
+    "imdb_rating": 7.5,
+    "actors": [
+      {
+        "uuid": "5428fa7b-7748-4ed3-a16b-4863f2d65503",
+        "full_name": "DeForest Kelley"
+      },
+      {
+        "uuid": "c5954003-e26c-4d8d-8bf3-45fd059bca32",
+        "full_name": "William Shatner"
+      },
+      {
+        "uuid": "89591c47-95a8-409c-bf6d-b165fcbb561b",
+        "full_name": "Leonard Nimoy"
+      },
+      {
+        "uuid": "d1e77c0e-2f85-4034-bcde-7aa9b1a4a91d",
+        "full_name": "George Takei"
+      }
+    ],
+    "actors_names": [
+      "DeForest Kelley",
+      "William Shatner",
+      "Leonard Nimoy",
+      "George Takei"
+    ],
+    "writers": [
+      {
+        "uuid": "54aba6d0-660d-40b5-b5ee-d127f80912c9",
+        "full_name": "Gene Roddenberry"
+      }
+    ],
+    "writers_names": [
+      "DeForest Kelley",
+      "William Shatner",
+      "Leonard Nimoy",
+      "George Takei"
+    ],
+    "directors": [],
+    "directors_names": [],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "29f900a9-76b1-4094-b369-576524704220",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Star 80",
+    "description": "Paul Snider is a narcissistic, small time hustler who fancies himself a ladies man. His life changes when he meets Dorothy Stratten working behind the counter of a Dairy Queen. Dorothy is a pretty but naive high school senior. Paul immediately falls for Dorothy, who sees in Paul a wise, worldly person unlike herself. Paul believes Dorothy is Playboy material, the magazine he sees as only a springboard to bigger and better things. Paul's dream does become a reality: not only does Dorothy eventually marry him, she becomes the August 1979 Playboy Playmate and ultimately Playboy Playmate of 1979, which does indeed lead to the start of an acting career. As Dorothy's star rises, Paul's life is one of a hanger-on as those in Dorothy's new circle, including Playboy publisher Hugh M. Hefner and movie director Aram Nicholas, don't much like Paul. Paul is unable to eke out a life of his own without using Dorothy's name, which she increasingly is reluctant to provide to her husband. Those that know the couple know their relationship cannot continue as is, and it's only a matter of how it will change or end is the question.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "726e661e-a3e0-4009-ae58-5f120f9fb3b9",
+        "name": "Biography"
+      },
+      {
+        "uuid": "cafdae7a-9f64-443a-a8cf-ed070db9b0ce",
+        "name": "Drama"
+      }
+    ],
+    "imdb_rating": 6.7,
+    "actors": [
+      {
+        "uuid": "a487d2bd-01f4-4aab-bce1-7e3ddc3c54bf",
+        "full_name": "Cliff Robertson"
+      },
+      {
+        "uuid": "0f7a60ec-a898-4ebd-9fbe-15d69ebcc0c8",
+        "full_name": "Eric Roberts"
+      },
+      {
+        "uuid": "a43cda83-84fc-40f9-9e54-ac9d548acaec",
+        "full_name": "Mariel Hemingway"
+      },
+      {
+        "uuid": "2f96bf01-1bac-4136-ac19-d8d854ebdc11",
+        "full_name": "Carroll Baker"
+      }
+    ],
+    "actors_names": [
+      "Cliff Robertson",
+      "Eric Roberts",
+      "Mariel Hemingway",
+      "Carroll Baker"
+    ],
+    "writers": [
+      {
+        "uuid": "0b4ab40e-9054-40ef-8946-0c79cd76a342",
+        "full_name": "Bob Fosse"
+      },
+      {
+        "uuid": "b64da63a-bf43-4763-9555-a1247c5ce862",
+        "full_name": "Teresa Carpenter"
+      }
+    ],
+    "writers_names": [
+      "Cliff Robertson",
+      "Eric Roberts",
+      "Mariel Hemingway",
+      "Carroll Baker"
+    ],
+    "directors": [
+      {
+        "uuid": "0b4ab40e-9054-40ef-8946-0c79cd76a342",
+        "full_name": "Bob Fosse"
+      }
+    ],
+    "directors_names": [
+      "Bob Fosse"
+    ],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "2ac5fe87-b8e8-400b-bd30-d20717e0071d",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Star Trek: Renegades",
+    "description": "When a seemingly unstoppable new enemy threatens the very existence of the Earth, Admiral Pavel Chekov (Walter Koenig) is forced to work outside the boundaries of Starfleet's rules to combat this deadly new foe. When planet after planet winks out of existence, yet Starfleet refuses to act, Chekov turns to Commander Tuvok (Tim Russ, who also directs), the new head of Starfleet's covert operations division, Section 31. Together, they assemble a new elite strike-force, consisting of rogues, outcasts and criminals, led by the fearless yet haunted Lexxa Singh (Adrienne Wilkinson). The Renegades' mission is simple: take on an army and stop their leader, Borrada (Bruce Young), from destroying the Earth. Outnumbered and out-gunned, the ragtag crew is in an adrenaline-pumping race against time and space. But they soon find their foes are the least of their concerns: the real trouble may be coming from within!",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "61807c42-0f8f-417b-bb28-32e1fb7e370c",
+        "name": "Action"
+      },
+      {
+        "uuid": "8197e9ab-3869-4f18-b178-a1d297a4db8a",
+        "name": "Adventure"
+      },
+      {
+        "uuid": "8301bd05-5052-4ee3-9e53-b907b160c2d7",
+        "name": "Sci-Fi"
+      }
+    ],
+    "imdb_rating": 4.9,
+    "actors": [
+      {
+        "uuid": "2e46d082-e5c6-464d-9cf2-fdf47bf22fa5",
+        "full_name": "Adrienne Wilkinson"
+      },
+      {
+        "uuid": "a83b5858-9641-449f-95c1-93d7bebfee46",
+        "full_name": "Corin Nemec"
+      },
+      {
+        "uuid": "324d3926-d0a8-4524-a07c-f6c9562383ec",
+        "full_name": "Walter Koenig"
+      },
+      {
+        "uuid": "8ff2f755-70bf-4d2a-9d2f-0849066ce7c9",
+        "full_name": "Manu Intiraymi"
+      }
+    ],
+    "actors_names": [
+      "Adrienne Wilkinson",
+      "Corin Nemec",
+      "Walter Koenig",
+      "Manu Intiraymi"
+    ],
+    "writers": [
+      {
+        "uuid": "36efa629-4ea9-4e39-9cb6-b8244aa67378",
+        "full_name": "Ethan H. Calk"
+      },
+      {
+        "uuid": "1ad0e158-00c7-452e-b168-2bfb46452789",
+        "full_name": "Jack Trevi\u00f1o"
+      },
+      {
+        "uuid": "29e721df-617c-48a7-861e-332a97165733",
+        "full_name": "Sky Douglas Conway"
+      }
+    ],
+    "writers_names": [
+      "Adrienne Wilkinson",
+      "Corin Nemec",
+      "Walter Koenig",
+      "Manu Intiraymi"
+    ],
+    "directors": [],
+    "directors_names": [],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "2bdf9ed5-977f-41aa-a4f3-95e3a6c23f3a",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Wish Upon a Star",
+    "description": "Handsome, considerate high-school jock Kyle Harding is the only taste the Wheaton sisters share. Tall, fashionable, popular airhead big sister is dating him, but fails to truly appreciate the young gentleman, let alone contemplate a serious relationship. Nerdy kid sister Haley hates the waste and expresses her envy by thoughtlessly wishing at a 'shooting star' (comet) to be Alexia. To their stupor, that happens the next morning. Forced to live each-other's lives, but unable to do it well by the other's standards, the sisters soon hate each-other even more and deliberately screw up. Gradually, they realize they would only both lose out, learn to appreciate the other's values and reconsider their own. Remain the matters of obviously utterly confused Kyle, and new neighbor boy Simon, whose no longer secret crush on Haley was confounded by Alexia.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "47392fcb-82e5-4ca3-b01f-aaa9cb96d2a2",
+        "name": "Comedy"
+      },
+      {
+        "uuid": "4d66f6f6-68b7-4a63-b15d-747f763e8f42",
+        "name": "Family"
+      },
+      {
+        "uuid": "933d0c17-2209-4b17-a3ec-a7d919768cc9",
+        "name": "Fantasy"
+      }
+    ],
+    "imdb_rating": 6.7,
+    "actors": [
+      {
+        "uuid": "bf266e72-03e0-4eaa-bec3-317583126dd5",
+        "full_name": "Katherine Heigl"
+      },
+      {
+        "uuid": "ab8ae90c-2295-4492-90d0-fcf23fc1375a",
+        "full_name": "Scott Wilkinson"
+      },
+      {
+        "uuid": "0bfb4c5c-560c-40ac-9549-659966bd0ef9",
+        "full_name": "Donnie Jeffcoat"
+      },
+      {
+        "uuid": "6a5ece76-14a3-400e-abcc-30ea9dcc7bd2",
+        "full_name": "Danielle Harris"
+      }
+    ],
+    "actors_names": [
+      "Katherine Heigl",
+      "Scott Wilkinson",
+      "Donnie Jeffcoat",
+      "Danielle Harris"
+    ],
+    "writers": [
+      {
+        "uuid": "e0584270-ab35-497f-97a5-1a2b68e4872f",
+        "full_name": "Jessica Barondes"
+      }
+    ],
+    "writers_names": [
+      "Katherine Heigl",
+      "Scott Wilkinson",
+      "Donnie Jeffcoat",
+      "Danielle Harris"
+    ],
+    "directors": [
+      {
+        "uuid": "e9006da0-e513-4581-b03f-e797b120c438",
+        "full_name": "Blair Treu"
+      }
+    ],
+    "directors_names": [
+      "Blair Treu"
+    ],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "3221c9f2-637e-4ad9-ad70-02913d011d4b",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Voices of a Distant Star",
+    "description": "The story of the high school students Mikako Nagamine and Noboru Terao. When the alien Tarsians attack, Mikako volunteers to be a pilot in the space force that will protect mankind. The lovers try to remain in contact using cellular telephone text messages, but as each battle takes Mikako further from the Earth, each message takes longer to arrive. Will their love stand the tests of time and distance?",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "05819c4e-8e59-400f-b999-f3c0bed78e97",
+        "name": "Animation"
+      },
+      {
+        "uuid": "1d88d1fd-01df-48e9-ae7b-34aadbdb506f",
+        "name": "Drama"
+      },
+      {
+        "uuid": "32059e67-efeb-46b3-bf10-367d424a1ad7",
+        "name": "Romance"
+      },
+      {
+        "uuid": "8301bd05-5052-4ee3-9e53-b907b160c2d7",
+        "name": "Sci-Fi"
+      },
+      {
+        "uuid": "cafdae7a-9f64-443a-a8cf-ed070db9b0ce",
+        "name": "Short"
+      }
+    ],
+    "imdb_rating": 7.2,
+    "actors": [
+      {
+        "uuid": "3d2758a0-4445-40f9-9c6a-3fa09d2507dd",
+        "full_name": "Chihiro Suzuki"
+      },
+      {
+        "uuid": "9e9ee868-ff2d-4be2-9b53-20763887a6c3",
+        "full_name": "Makoto Shinkai"
+      },
+      {
+        "uuid": "eefcb43b-a6f5-478d-8a6a-573eb61cc722",
+        "full_name": "Sumi Mutoh"
+      },
+      {
+        "uuid": "96636bff-81ce-4ac0-bf31-9009dc177866",
+        "full_name": "Mika Shinohara"
+      }
+    ],
+    "actors_names": [
+      "Chihiro Suzuki",
+      "Makoto Shinkai",
+      "Sumi Mutoh",
+      "Mika Shinohara"
+    ],
+    "writers": [
+      {
+        "uuid": "9e9ee868-ff2d-4be2-9b53-20763887a6c3",
+        "full_name": "Makoto Shinkai"
+      }
+    ],
+    "writers_names": [
+      "Chihiro Suzuki",
+      "Makoto Shinkai",
+      "Sumi Mutoh",
+      "Mika Shinohara"
+    ],
+    "directors": [
+      {
+        "uuid": "9e9ee868-ff2d-4be2-9b53-20763887a6c3",
+        "full_name": "Makoto Shinkai"
+      }
+    ],
+    "directors_names": [
+      "Makoto Shinkai"
+    ],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "348bf91f-5609-43e6-ae0e-2cf32bfc0d02",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Rogue One: A Star Wars Story",
+    "description": "All looks lost for the Rebellion against the Empire as they learn of the existence of a new super weapon, the Death Star. Once a possible weakness in its construction is uncovered, the Rebel Alliance must set out on a desperate mission to steal the plans for the Death Star. The future of the entire galaxy now rests upon its success.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "61807c42-0f8f-417b-bb28-32e1fb7e370c",
+        "name": "Action"
+      },
+      {
+        "uuid": "8197e9ab-3869-4f18-b178-a1d297a4db8a",
+        "name": "Adventure"
+      },
+      {
+        "uuid": "8301bd05-5052-4ee3-9e53-b907b160c2d7",
+        "name": "Sci-Fi"
+      }
+    ],
+    "imdb_rating": 7.8,
+    "actors": [
+      {
+        "uuid": "3a283d47-fcf0-4042-b4b5-7e6ef30936a9",
+        "full_name": "Diego Luna"
+      },
+      {
+        "uuid": "aaa9b319-8f8c-4fc3-a915-dd90893c5fc2",
+        "full_name": "Alan Tudyk"
+      },
+      {
+        "uuid": "a3457f7b-66c4-42a8-946c-e03e69c533d3",
+        "full_name": "Donnie Yen"
+      },
+      {
+        "uuid": "3473c0e3-b984-4fc2-9d8f-ab504283e6ff",
+        "full_name": "Felicity Jones"
+      }
+    ],
+    "actors_names": [
+      "Diego Luna",
+      "Alan Tudyk",
+      "Donnie Yen",
+      "Felicity Jones"
+    ],
+    "writers": [
+      {
+        "uuid": "98e6ca6a-03cb-45e1-ad23-d77cb1f431c2",
+        "full_name": "John Knoll"
+      },
+      {
+        "uuid": "dde5bc24-3c1e-4e9d-b5cc-a152310b9d6c",
+        "full_name": "Tony Gilroy"
+      },
+      {
+        "uuid": "148e753d-bba8-4ab0-a738-0411abc825ec",
+        "full_name": "George Lucas"
+      },
+      {
+        "uuid": "444c9c52-b1b4-40bb-b0e2-ebabad41b2f4",
+        "full_name": "Chris Weitz"
+      },
+      {
+        "uuid": "056d671d-85a1-48fd-bcb9-a6c6a0132a48",
+        "full_name": "Gary Whitta"
+      }
+    ],
+    "writers_names": [
+      "Diego Luna",
+      "Alan Tudyk",
+      "Donnie Yen",
+      "Felicity Jones"
+    ],
+    "directors": [
+      {
+        "uuid": "e721e761-0e7b-4305-a43f-a5420094012f",
+        "full_name": "Gareth Edwards"
+      }
+    ],
+    "directors_names": [
+      "Gareth Edwards"
+    ],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "34bab0d7-53e3-4db5-a78d-37f4910f3178",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Star Trek",
+    "description": "On the day of James Kirk's birth, his father dies on his damaged starship in a last stand against a Romulan mining vessel looking for Ambassador Spock, who in this time, has grown on Vulcan disdained by his neighbors for his half-human heritage. 25 years later, James T. Kirk has grown into a young rebellious troublemaker. Challenged by Captain Christopher Pike to realize his potential in Starfleet, he comes to annoy academy instructors like Commander Spock. Suddenly, there is an emergency on Vulcan and the newly-commissioned USS Enterprise is crewed with promising cadets like Nyota Uhura, Hikaru Sulu, Pavel Chekov and even Kirk himself, thanks to Leonard McCoy's medical trickery. Together, this crew will have an adventure in the final frontier where the old legend is altered forever as a new version of the legend begins.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "61807c42-0f8f-417b-bb28-32e1fb7e370c",
+        "name": "Action"
+      },
+      {
+        "uuid": "8197e9ab-3869-4f18-b178-a1d297a4db8a",
+        "name": "Adventure"
+      },
+      {
+        "uuid": "8301bd05-5052-4ee3-9e53-b907b160c2d7",
+        "name": "Sci-Fi"
+      }
+    ],
+    "imdb_rating": 7.9,
+    "actors": [
+      {
+        "uuid": "09e4f60a-c631-4f15-adaa-236c953a451e",
+        "full_name": "Eric Bana"
+      },
+      {
+        "uuid": "33503caf-6be8-4bcb-8126-358156ebd4b7",
+        "full_name": "Zachary Quinto"
+      },
+      {
+        "uuid": "94d3d342-a514-42c4-a0d5-d26a81e928c6",
+        "full_name": "Chris Pine"
+      },
+      {
+        "uuid": "89591c47-95a8-409c-bf6d-b165fcbb561b",
+        "full_name": "Leonard Nimoy"
+      }
+    ],
+    "actors_names": [
+      "Eric Bana",
+      "Zachary Quinto",
+      "Chris Pine",
+      "Leonard Nimoy"
+    ],
+    "writers": [
+      {
+        "uuid": "2e9268c7-047b-47b1-be8d-f1cd1bc5b4b3",
+        "full_name": "Alex Kurtzman"
+      },
+      {
+        "uuid": "cf7f34b0-914d-42e4-8388-27188292cf88",
+        "full_name": "Roberto Orci"
+      },
+      {
+        "uuid": "54aba6d0-660d-40b5-b5ee-d127f80912c9",
+        "full_name": "Gene Roddenberry"
+      }
+    ],
+    "writers_names": [
+      "Eric Bana",
+      "Zachary Quinto",
+      "Chris Pine",
+      "Leonard Nimoy"
+    ],
+    "directors": [
+      {
+        "uuid": "7645df4d-5b35-4960-94dc-dad2be74b750",
+        "full_name": "J.J. Abrams"
+      }
+    ],
+    "directors_names": [
+      "J.J. Abrams"
+    ],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "3b135357-02a5-4cf1-9611-f362a1aebd28",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Star Trek: Discovery",
+    "description": "Ten years before Kirk, Spock, and the Enterprise, the USS Discovery discovers new worlds and lifeforms as one Starfleet officer learns to understand all things alien.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "61807c42-0f8f-417b-bb28-32e1fb7e370c",
+        "name": "Action"
+      },
+      {
+        "uuid": "8197e9ab-3869-4f18-b178-a1d297a4db8a",
+        "name": "Adventure"
+      },
+      {
+        "uuid": "8301bd05-5052-4ee3-9e53-b907b160c2d7",
+        "name": "Drama"
+      },
+      {
+        "uuid": "cafdae7a-9f64-443a-a8cf-ed070db9b0ce",
+        "name": "Sci-Fi"
+      }
+    ],
+    "imdb_rating": 7.3,
+    "actors": [
+      {
+        "uuid": "0dec4479-4b13-4ebf-93c3-46f3f997a036",
+        "full_name": "Anthony Rapp"
+      },
+      {
+        "uuid": "b042ff24-2a81-4a69-ac4d-ba9ce99b7582",
+        "full_name": "Doug Jones"
+      },
+      {
+        "uuid": "8e538be9-5001-48fe-8bf0-a640a294bf35",
+        "full_name": "Mary Wiseman"
+      },
+      {
+        "uuid": "b5b7789a-13cc-44a3-92f5-3e2214192d70",
+        "full_name": "Sonequa Martin-Green"
+      }
+    ],
+    "actors_names": [
+      "Anthony Rapp",
+      "Doug Jones",
+      "Mary Wiseman",
+      "Sonequa Martin-Green"
+    ],
+    "writers": [
+      {
+        "uuid": "e9be817c-31bd-4305-a048-301e793fc3b3",
+        "full_name": "Bryan Fuller"
+      },
+      {
+        "uuid": "2e9268c7-047b-47b1-be8d-f1cd1bc5b4b3",
+        "full_name": "Alex Kurtzman"
+      }
+    ],
+    "writers_names": [
+      "Anthony Rapp",
+      "Doug Jones",
+      "Mary Wiseman",
+      "Sonequa Martin-Green"
+    ],
+    "directors": [],
+    "directors_names": [],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "3f8acd11-d3cd-4ff0-8c8c-b38625976090",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Fist of the North Star",
+    "description": "In the year 199X, human civilization has been all but destroyed by a nuclear holocaust. In an age where the strong rule over the weak, the survivors of the fallout struggle over the remaining supply food and water left. Kenshiro, successor to an ancient, deadly martial art known as Hokuto Shinken (Fist of the North Star), wanders the wasteland with seven scars in the shape of the Big Dipper on his chest. This infamous style uses the body's hidden 708 pressure points to destroy opponents from within and allows practitioners to unleash 100% of their humanly strength. Accompanied by a young thief and an orphan girl, this messiah brings justice to this lawless world with the strongest fist in the world.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "05819c4e-8e59-400f-b999-f3c0bed78e97",
+        "name": "Action"
+      },
+      {
+        "uuid": "61807c42-0f8f-417b-bb28-32e1fb7e370c",
+        "name": "Adventure"
+      },
+      {
+        "uuid": "8197e9ab-3869-4f18-b178-a1d297a4db8a",
+        "name": "Animation"
+      },
+      {
+        "uuid": "8301bd05-5052-4ee3-9e53-b907b160c2d7",
+        "name": "Sci-Fi"
+      }
+    ],
+    "imdb_rating": 8.3,
+    "actors": [
+      {
+        "uuid": "36fd5b2e-9db6-42e9-aa6c-6708605759bb",
+        "full_name": "Teiy\u00fb Ichiry\u00fbsai"
+      },
+      {
+        "uuid": "dd038356-55ac-486d-ae5e-ac3b3ed0f185",
+        "full_name": "Tomiko Suzuki"
+      },
+      {
+        "uuid": "f86417b1-b64d-40fc-91de-f1d95b9552df",
+        "full_name": "Akira Kamiya"
+      },
+      {
+        "uuid": "eab2f368-d52f-4b02-a7f6-70892a37436f",
+        "full_name": "Shigeru Chiba"
+      }
+    ],
+    "actors_names": [
+      "Teiy\u00fb Ichiry\u00fbsai",
+      "Tomiko Suzuki",
+      "Akira Kamiya",
+      "Shigeru Chiba"
+    ],
+    "writers": [],
+    "writers_names": [
+      "Teiy\u00fb Ichiry\u00fbsai",
+      "Tomiko Suzuki",
+      "Akira Kamiya",
+      "Shigeru Chiba"
+    ],
+    "directors": [],
+    "directors_names": [],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "410a5d7d-15ae-4ba3-af66-e1c3247a2b10",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Star Wars: Battlefront II",
+    "description": "You play as a member of the Clone 501st Legion, the most elite clone trooper attack group, also known as Vader's Fist, and led by Anakin Skywalker/Darth Vader, over the course of the start, the middle, and the end of the Clone Wars, Operation Knightfall, and the key battles of the Galactic Civil War.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "61807c42-0f8f-417b-bb28-32e1fb7e370c",
+        "name": "Action"
+      },
+      {
+        "uuid": "8197e9ab-3869-4f18-b178-a1d297a4db8a",
+        "name": "Adventure"
+      },
+      {
+        "uuid": "8301bd05-5052-4ee3-9e53-b907b160c2d7",
+        "name": "Sci-Fi"
+      }
+    ],
+    "imdb_rating": 8.8,
+    "actors": [
+      {
+        "uuid": "1f6a8c4a-b04b-4b89-a802-67213419a8f3",
+        "full_name": "Christina Rumbley"
+      },
+      {
+        "uuid": "b4d5e67c-b5f0-43e4-a77c-e9316c027db1",
+        "full_name": "Bob Bergen"
+      },
+      {
+        "uuid": "8ea36422-b628-4033-9f02-fc80d85c6a1b",
+        "full_name": "Corey Burton"
+      },
+      {
+        "uuid": "17de9b66-f8c7-4939-b730-cc136769b8b5",
+        "full_name": "David Boat"
+      }
+    ],
+    "actors_names": [
+      "Christina Rumbley",
+      "Bob Bergen",
+      "Corey Burton",
+      "David Boat"
+    ],
+    "writers": [
+      {
+        "uuid": "6a0afd93-45af-4b45-9672-bedbafb393b1",
+        "full_name": "Matthew Keast"
+      }
+    ],
+    "writers_names": [
+      "Christina Rumbley",
+      "Bob Bergen",
+      "Corey Burton",
+      "David Boat"
+    ],
+    "directors": [
+      {
+        "uuid": "b43d43d5-6f44-4e87-93ac-e1cbcf4ccc36",
+        "full_name": "Eric 'Giz' Gewirtz"
+      }
+    ],
+    "directors_names": [
+      "Eric 'Giz' Gewirtz"
+    ],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "4478d887-e1c6-4322-b9c6-26c8b3c40fef",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Star Trek Beyond",
+    "description": "After stopping off at Starbase Yorktown, a remote outpost on the fringes of Federation space, the USS Enterprise, halfway into their five-year mission, is destroyed by an unstoppable wave of unknown aliens. With the crew stranded on an unknown planet and with no apparent means of rescue, they find themselves fighting against a ruthless enemy with a well-earned hatred of the Federation and everything it stands for. Only a rebellious alien warrior can help them reunite and leave the planet to stop this deadly menace from beginning a possible galactic war.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "61807c42-0f8f-417b-bb28-32e1fb7e370c",
+        "name": "Action"
+      },
+      {
+        "uuid": "7fd85018-827c-4758-acdf-936446a21d6f",
+        "name": "Adventure"
+      },
+      {
+        "uuid": "8197e9ab-3869-4f18-b178-a1d297a4db8a",
+        "name": "Sci-Fi"
+      },
+      {
+        "uuid": "8301bd05-5052-4ee3-9e53-b907b160c2d7",
+        "name": "Thriller"
+      }
+    ],
+    "imdb_rating": 7.1,
+    "actors": [
+      {
+        "uuid": "33503caf-6be8-4bcb-8126-358156ebd4b7",
+        "full_name": "Zachary Quinto"
+      },
+      {
+        "uuid": "94d3d342-a514-42c4-a0d5-d26a81e928c6",
+        "full_name": "Chris Pine"
+      },
+      {
+        "uuid": "93953929-246c-4707-9f5c-cb9da64ea173",
+        "full_name": "Karl Urban"
+      },
+      {
+        "uuid": "d215b5a5-7a89-4558-8135-4a076dffb51e",
+        "full_name": "Zoe Saldana"
+      }
+    ],
+    "actors_names": [
+      "Zachary Quinto",
+      "Chris Pine",
+      "Karl Urban",
+      "Zoe Saldana"
+    ],
+    "writers": [
+      {
+        "uuid": "004f2ddb-222e-4a7d-9830-613e061f3027",
+        "full_name": "Doug Jung"
+      },
+      {
+        "uuid": "15a241f3-8ab9-4a25-a519-b6de3d0677c6",
+        "full_name": "Simon Pegg"
+      },
+      {
+        "uuid": "54aba6d0-660d-40b5-b5ee-d127f80912c9",
+        "full_name": "Gene Roddenberry"
+      }
+    ],
+    "writers_names": [
+      "Zachary Quinto",
+      "Chris Pine",
+      "Karl Urban",
+      "Zoe Saldana"
+    ],
+    "directors": [
+      {
+        "uuid": "bcca482c-8615-4977-8da9-bc8c9520b63b",
+        "full_name": "Justin Lin"
+      }
+    ],
+    "directors_names": [
+      "Justin Lin"
+    ],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "447e469d-04a8-41a7-9b8e-7d543e74018f",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Robot Chicken: Star Wars III",
+    "description": "The Emmy Award-winning Robot Chicken returns with its third send-up of the Star Wars universe! In this all-new hour-long special, four very different characters -- Emperor Palpatine, Darth Vader, Boba Fett and Gary the Stormtrooper -- reveal untold stories that weave and interconnect throughout all six Star Wars films! Set phasers to \"fun\"! Oh wait, that's the wrong franchise.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "05819c4e-8e59-400f-b999-f3c0bed78e97",
+        "name": "Animation"
+      },
+      {
+        "uuid": "4d66f6f6-68b7-4a63-b15d-747f763e8f42",
+        "name": "Comedy"
+      },
+      {
+        "uuid": "8301bd05-5052-4ee3-9e53-b907b160c2d7",
+        "name": "Family"
+      },
+      {
+        "uuid": "933d0c17-2209-4b17-a3ec-a7d919768cc9",
+        "name": "Sci-Fi"
+      }
+    ],
+    "imdb_rating": 8.1,
+    "actors": [
+      {
+        "uuid": "b4d5e67c-b5f0-43e4-a77c-e9316c027db1",
+        "full_name": "Bob Bergen"
+      },
+      {
+        "uuid": "cca313f5-d1c7-4e40-a145-407f3a78100b",
+        "full_name": "Ahmed Best"
+      },
+      {
+        "uuid": "39668153-f3e3-4ea3-8794-97d5af87ad61",
+        "full_name": "Seth Green"
+      },
+      {
+        "uuid": "aba760cc-7aa9-40bf-a61e-f8e6846b66e4",
+        "full_name": "Abraham Benrubi"
+      }
+    ],
+    "actors_names": [
+      "Bob Bergen",
+      "Ahmed Best",
+      "Seth Green",
+      "Abraham Benrubi"
+    ],
+    "writers": [
+      {
+        "uuid": "88c47670-1e64-4be4-aad7-f029018ce13a",
+        "full_name": "Breckin Meyer"
+      },
+      {
+        "uuid": "45681da3-2da3-414b-9d78-6a4e0a3685b8",
+        "full_name": "Mike Fasolo"
+      },
+      {
+        "uuid": "3c45ee10-aafa-4c1c-91ba-a9701f2881f2",
+        "full_name": "Matthew Senreich"
+      },
+      {
+        "uuid": "a2e23372-b053-4e89-83d2-609ca12292b7",
+        "full_name": "Tom Root"
+      },
+      {
+        "uuid": "3d8cff0a-4028-410b-9c1c-88f2730fccc6",
+        "full_name": "Hugh Davidson"
+      },
+      {
+        "uuid": "ea2c06e5-c25c-419b-8339-d0bc9834a6ab",
+        "full_name": "Dan Milano"
+      },
+      {
+        "uuid": "9fd6ae27-760e-450d-ab7d-a7e7d4a38314",
+        "full_name": "Zeb Wells"
+      },
+      {
+        "uuid": "c251327c-ef10-4f48-a230-a623507c9d85",
+        "full_name": "Geoff Johns"
+      },
+      {
+        "uuid": "39668153-f3e3-4ea3-8794-97d5af87ad61",
+        "full_name": "Seth Green"
+      },
+      {
+        "uuid": "b9e19447-bc84-4c7a-9906-0cfcb42bc690",
+        "full_name": "Douglas Goldstein"
+      },
+      {
+        "uuid": "bba5f2ef-507e-4425-9a1b-87880b04b7d3",
+        "full_name": "Matthew Ireland Beans"
+      },
+      {
+        "uuid": "98f20c74-4e8c-4f85-b9ba-e68dd1ff2269",
+        "full_name": "Kevin Shinick"
+      },
+      {
+        "uuid": "e13d25ae-9c96-417e-8ce5-d46bf1ada48d",
+        "full_name": "Hugh Sterbakov"
+      }
+    ],
+    "writers_names": [
+      "Bob Bergen",
+      "Ahmed Best",
+      "Seth Green",
+      "Abraham Benrubi"
+    ],
+    "directors": [
+      {
+        "uuid": "491060be-2ae5-4c2c-b1f1-ae7333dfb48d",
+        "full_name": "Chris McKay"
+      }
+    ],
+    "directors_names": [
+      "Chris McKay"
+    ],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "449036bc-862f-47c7-8006-5eee6edc5930",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Lone Star State of Mind",
+    "description": "Earl is engaged to his step-sister Baby. Baby has entrusted him to take care of her misfit cousin Junior. Baby is also intent on leaving Texas for LA on Tuesday. When Junior and his recently released ex-con friend Tinker rob a pizza delivery boy and end up with $20,000 of drug money Earl is forced onto the scene, giving up his and Baby's LA money to save Juniors limbs.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "933d0c17-2209-4b17-a3ec-a7d919768cc9",
+        "name": "Comedy"
+      },
+      {
+        "uuid": "a5fe191f-48c5-47e8-8d96-a240649790ec",
+        "name": "Crime"
+      }
+    ],
+    "imdb_rating": 6.1,
+    "actors": [
+      {
+        "uuid": "3b9ec850-0a18-4d8e-86fa-f07dc9c6e3dd",
+        "full_name": "Joshua Jackson"
+      },
+      {
+        "uuid": "35ad0c42-59eb-4f7d-930d-b9d3ab758965",
+        "full_name": "Ryan Hurst"
+      },
+      {
+        "uuid": "5a86d068-ecff-456a-8be2-4e6ad8c026ed",
+        "full_name": "Matthew Davis"
+      },
+      {
+        "uuid": "4cab69dd-0ff1-4bd8-9713-f6bdec059b27",
+        "full_name": "Jaime King"
+      }
+    ],
+    "actors_names": [
+      "Joshua Jackson",
+      "Ryan Hurst",
+      "Matthew Davis",
+      "Jaime King"
+    ],
+    "writers": [
+      {
+        "uuid": "0ec592f5-3712-46be-bc4b-9c84450d4a3d",
+        "full_name": "Trevor Munson"
+      }
+    ],
+    "writers_names": [
+      "Joshua Jackson",
+      "Ryan Hurst",
+      "Matthew Davis",
+      "Jaime King"
+    ],
+    "directors": [
+      {
+        "uuid": "65a446be-8020-44a6-b73d-43b37adb7172",
+        "full_name": "David Semel"
+      }
+    ],
+    "directors_names": [
+      "David Semel"
+    ],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "486f0919-1d18-4067-95b4-deeb9dbb21d9",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Star-Crossed",
+    "description": "What starts out as a star crossed lovers story gradually changes focus to explore moral conflicts with integration and racism Both humans and aliens feel like they are the superior race so they fight each other to try to achieve the most power. The seven aliens and their families help each other out and take great risks to ensure their survival.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "32059e67-efeb-46b3-bf10-367d424a1ad7",
+        "name": "Drama"
+      },
+      {
+        "uuid": "8301bd05-5052-4ee3-9e53-b907b160c2d7",
+        "name": "Romance"
+      },
+      {
+        "uuid": "cafdae7a-9f64-443a-a8cf-ed070db9b0ce",
+        "name": "Sci-Fi"
+      }
+    ],
+    "imdb_rating": 7.3,
+    "actors": [
+      {
+        "uuid": "1041e948-dc5f-466d-a38b-2ce0cf399961",
+        "full_name": "Aimee Teegarden"
+      },
+      {
+        "uuid": "09af3296-6cd2-4044-b606-706b37b0bdb9",
+        "full_name": "Matt Lanter"
+      },
+      {
+        "uuid": "f0fe8d85-1e44-4612-875a-4e95242ec32b",
+        "full_name": "Greg Finley"
+      },
+      {
+        "uuid": "37c976f4-8a0e-4ab3-b4c3-e11aa6ddd2e4",
+        "full_name": "Grey Damon"
+      }
+    ],
+    "actors_names": [
+      "Aimee Teegarden",
+      "Matt Lanter",
+      "Greg Finley",
+      "Grey Damon"
+    ],
+    "writers": [
+      {
+        "uuid": "48e10cdc-b024-4aaf-9709-b9d79667e354",
+        "full_name": "Meredith Averill"
+      }
+    ],
+    "writers_names": [
+      "Aimee Teegarden",
+      "Matt Lanter",
+      "Greg Finley",
+      "Grey Damon"
+    ],
+    "directors": [],
+    "directors_names": [],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "4a1aeefe-139c-4a81-b7d1-91e5067bd386",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Lone Star",
+    "description": "John Sayles' murder-mystery explores interpersonal and interracial tensions in Rio County, Texas. Sam Deeds is the local sheriff who is called to investigate a 40-year-old skeleton found in the desert....As Sam delves deeper into the town's dark secrets, he begins to learn more about his father, the legendary former sheriff Buddy Deeds, who replaced the corrupt Charlie Wade. While Sam puzzles out the long-past events surrounding the mystery corpse, he also longs to rekindle a romance with his old high-school flame. Sayles' complex characters are brought together as the tightly woven plot finally draws to its dramatic close.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "ae28b347-2713-4247-b709-89af8c229560",
+        "name": "Drama"
+      },
+      {
+        "uuid": "cafdae7a-9f64-443a-a8cf-ed070db9b0ce",
+        "name": "Mystery"
+      }
+    ],
+    "imdb_rating": 7.4,
+    "actors": [
+      {
+        "uuid": "371b49d1-a466-4903-a34e-0473a59a4643",
+        "full_name": "Chris Cooper"
+      },
+      {
+        "uuid": "5764816e-a913-4eb1-ad3f-bc6964b2759a",
+        "full_name": "Stephen J. Lang"
+      },
+      {
+        "uuid": "bb08f0b8-6d53-4118-98f4-88973f57a7ab",
+        "full_name": "Stephen Mendillo"
+      },
+      {
+        "uuid": "4405ccab-9891-4ae8-987a-f6840beeb42e",
+        "full_name": "Elizabeth Pe\u00f1a"
+      }
+    ],
+    "actors_names": [
+      "Chris Cooper",
+      "Stephen J. Lang",
+      "Stephen Mendillo",
+      "Elizabeth Pe\u00f1a"
+    ],
+    "writers": [
+      {
+        "uuid": "451b2ed7-b88d-4730-8195-417c405d01c9",
+        "full_name": "John Sayles"
+      }
+    ],
+    "writers_names": [
+      "Chris Cooper",
+      "Stephen J. Lang",
+      "Stephen Mendillo",
+      "Elizabeth Pe\u00f1a"
+    ],
+    "directors": [
+      {
+        "uuid": "451b2ed7-b88d-4730-8195-417c405d01c9",
+        "full_name": "John Sayles"
+      }
+    ],
+    "directors_names": [
+      "John Sayles"
+    ],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "4fada141-fef1-4287-bc2b-4085373fbf5c",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Star Wars: The Force Unleashed",
+    "description": "Darth Vader's secret apprentice, codenamed Starkiller, is trained in the Dark Side to defeat the enemies of the Empire, but must find his own path when his master betrays him.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "61807c42-0f8f-417b-bb28-32e1fb7e370c",
+        "name": "Action"
+      },
+      {
+        "uuid": "8197e9ab-3869-4f18-b178-a1d297a4db8a",
+        "name": "Adventure"
+      },
+      {
+        "uuid": "cafdae7a-9f64-443a-a8cf-ed070db9b0ce",
+        "name": "Drama"
+      }
+    ],
+    "imdb_rating": 8.2,
+    "actors": [
+      {
+        "uuid": "ada69c2d-0f6a-4324-9b6d-0cd47616c434",
+        "full_name": "Nathalie Cox"
+      },
+      {
+        "uuid": "6e099a61-2244-4412-bddc-b4568c90c23d",
+        "full_name": "David W. Collins"
+      },
+      {
+        "uuid": "3c3c007e-afaa-4859-a2a4-0413320b6cdb",
+        "full_name": "Sam Witwer"
+      },
+      {
+        "uuid": "a2e826ff-4927-4c46-90e2-9ca7fae6f474",
+        "full_name": "Cully Fredricksen"
+      }
+    ],
+    "actors_names": [
+      "Nathalie Cox",
+      "David W. Collins",
+      "Sam Witwer",
+      "Cully Fredricksen"
+    ],
+    "writers": [
+      {
+        "uuid": "dbad9f92-2a89-4dc5-afd0-5b350a01302e",
+        "full_name": "Cameron Suey"
+      },
+      {
+        "uuid": "81f5e3bd-423e-454d-882a-5c3a1606abb5",
+        "full_name": "Shawn Pitman"
+      },
+      {
+        "uuid": "148e753d-bba8-4ab0-a738-0411abc825ec",
+        "full_name": "George Lucas"
+      },
+      {
+        "uuid": "eb09520c-6820-40da-8733-318faf21e7ac",
+        "full_name": "John Stafford"
+      },
+      {
+        "uuid": "bbc85d06-534f-4d8e-9c6a-08e61f80d9fb",
+        "full_name": "Haden Blackman"
+      }
+    ],
+    "writers_names": [
+      "Nathalie Cox",
+      "David W. Collins",
+      "Sam Witwer",
+      "Cully Fredricksen"
+    ],
+    "directors": [
+      {
+        "uuid": "dd9528bb-9adc-4c72-a3f8-1c5b8dd72718",
+        "full_name": "Darragh O'Farrell"
+      },
+      {
+        "uuid": "bbc85d06-534f-4d8e-9c6a-08e61f80d9fb",
+        "full_name": "Haden Blackman"
+      },
+      {
+        "uuid": "fe43ad12-22dd-41fc-b8dd-823af06ddbcf",
+        "full_name": "Martin Stoltz"
+      },
+      {
+        "uuid": "2fd63d67-f2c1-4ecc-9a5c-77eddfa139c7",
+        "full_name": "Steve Stamatiadis"
+      }
+    ],
+    "directors_names": [
+      "Darragh O'Farrell",
+      "Haden Blackman",
+      "Martin Stoltz",
+      "Steve Stamatiadis"
+    ],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "5215a2eb-d3d8-4602-beed-58193a08ce5c",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "My Love from Another Star",
+    "description": "Do Min-Joon, an alien that came to our planet 400 years ago, will be able to return to his planet in 3 months, but when he meets famous actress Chun Song-Yi, all the centuries he spent distancing himself from humans come to an end.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "32059e67-efeb-46b3-bf10-367d424a1ad7",
+        "name": "Comedy"
+      },
+      {
+        "uuid": "47392fcb-82e5-4ca3-b01f-aaa9cb96d2a2",
+        "name": "Drama"
+      },
+      {
+        "uuid": "8301bd05-5052-4ee3-9e53-b907b160c2d7",
+        "name": "Fantasy"
+      },
+      {
+        "uuid": "933d0c17-2209-4b17-a3ec-a7d919768cc9",
+        "name": "Romance"
+      },
+      {
+        "uuid": "cafdae7a-9f64-443a-a8cf-ed070db9b0ce",
+        "name": "Sci-Fi"
+      }
+    ],
+    "imdb_rating": 8.3,
+    "actors": [
+      {
+        "uuid": "91f409cd-32f7-4637-bba2-9ada97b06645",
+        "full_name": "Ji-Hyun Jun"
+      },
+      {
+        "uuid": "e2f3cebf-7f2b-4cff-8a93-6f9671cd17ca",
+        "full_name": "In-Na Yoo"
+      },
+      {
+        "uuid": "b6f620c3-bce7-4f4f-b12f-264b86173ef3",
+        "full_name": "Soo-hyun Kim"
+      },
+      {
+        "uuid": "2f76389d-739b-4964-846d-6ba7a8cd682b",
+        "full_name": "Hae-Jin Park"
+      }
+    ],
+    "actors_names": [
+      "Ji-Hyun Jun",
+      "In-Na Yoo",
+      "Soo-hyun Kim",
+      "Hae-Jin Park"
+    ],
+    "writers": [],
+    "writers_names": [
+      "Ji-Hyun Jun",
+      "In-Na Yoo",
+      "Soo-hyun Kim",
+      "Hae-Jin Park"
+    ],
+    "directors": [],
+    "directors_names": [],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "53d93c38-e3b8-4a96-aff4-88aec8f200bb",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Flaming Star",
+    "description": "West Texas in the years after the Civil War is an uneasy meeting ground of two cultures, one white. The other native American. Elvis portrays Pacer Burton. The son of a white rancher (John McIntire) and his beautiful Kiowa Indian wife (Dolores DelRio). When fighting breaks out between the settlers and natives, Pacer tries to act as a peace maker, but the \"flaming star of death\" pulls him irrevocably into the deadly violence.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "b9eafe57-0a91-4ecc-a03f-166c02bd9492",
+        "name": "Western"
+      }
+    ],
+    "imdb_rating": 6.5,
+    "actors": [
+      {
+        "uuid": "605c79a2-2261-4574-ba30-c7a02643b663",
+        "full_name": "Barbara Eden"
+      },
+      {
+        "uuid": "b5c8a800-c20f-42b8-9be5-e8436cd74c55",
+        "full_name": "Dolores del Rio"
+      },
+      {
+        "uuid": "bf6e3343-81fa-452e-bfaa-b187a28ed4f3",
+        "full_name": "Elvis Presley"
+      },
+      {
+        "uuid": "d3e827c4-3530-46e9-89e3-340f8154c628",
+        "full_name": "Steve Forrest"
+      }
+    ],
+    "actors_names": [
+      "Barbara Eden",
+      "Dolores del Rio",
+      "Elvis Presley",
+      "Steve Forrest"
+    ],
+    "writers": [
+      {
+        "uuid": "a10963b4-f803-4b75-b9c9-decc6a8aa094",
+        "full_name": "Nunnally Johnson"
+      },
+      {
+        "uuid": "77c01404-75f4-410c-938b-71edf5fbf211",
+        "full_name": "Clair Huffaker"
+      }
+    ],
+    "writers_names": [
+      "Barbara Eden",
+      "Dolores del Rio",
+      "Elvis Presley",
+      "Steve Forrest"
+    ],
+    "directors": [
+      {
+        "uuid": "166a50df-4575-4fa2-bec8-2d405d17befd",
+        "full_name": "Don Siegel"
+      }
+    ],
+    "directors_names": [
+      "Don Siegel"
+    ],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "59886a0f-11e7-4e37-b41d-0a2a59fd7293",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Third Star",
+    "description": "James and his three closest lifelong friends go on an ill-advised trip to the stunning coastal area of Barafundle Bay in West Wales. What follows is a touching and comical adventure dealing with friendship, heroism and love.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "cafdae7a-9f64-443a-a8cf-ed070db9b0ce",
+        "name": "Drama"
+      }
+    ],
+    "imdb_rating": 7.5,
+    "actors": [
+      {
+        "uuid": "ded2bed9-b7ae-4be1-bbcc-4b450a07fc21",
+        "full_name": "Adam Robertson"
+      },
+      {
+        "uuid": "db1fe85a-83e7-4286-b8ad-9e474b13c277",
+        "full_name": "JJ Feild"
+      },
+      {
+        "uuid": "ec5e5986-1b56-4f63-88d8-933a77b78d61",
+        "full_name": "Benedict Cumberbatch"
+      },
+      {
+        "uuid": "66fec273-ade2-4be5-a3c1-fcc8cc148e8e",
+        "full_name": "Tom Burke"
+      }
+    ],
+    "actors_names": [
+      "Adam Robertson",
+      "JJ Feild",
+      "Benedict Cumberbatch",
+      "Tom Burke"
+    ],
+    "writers": [
+      {
+        "uuid": "2a2330d7-f4f0-4991-9b1f-07e2706fe08a",
+        "full_name": "Vaughan Sivell"
+      }
+    ],
+    "writers_names": [
+      "Adam Robertson",
+      "JJ Feild",
+      "Benedict Cumberbatch",
+      "Tom Burke"
+    ],
+    "directors": [
+      {
+        "uuid": "489041f5-4d80-4367-b420-5f4c9a25efa4",
+        "full_name": "Hattie Dalton"
+      }
+    ],
+    "directors_names": [
+      "Hattie Dalton"
+    ],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "5a167f42-1d07-4703-acec-470d393dc55f",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "The Evening Star",
+    "description": "Continuing the story of Aurora Greenway in her latter years. After the death of her daughter, Aurora struggled to keep her family together, but has one grandson in jail, a rebellious granddaughter, and another grandson living just above the poverty line.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "32059e67-efeb-46b3-bf10-367d424a1ad7",
+        "name": "Comedy"
+      },
+      {
+        "uuid": "933d0c17-2209-4b17-a3ec-a7d919768cc9",
+        "name": "Drama"
+      },
+      {
+        "uuid": "cafdae7a-9f64-443a-a8cf-ed070db9b0ce",
+        "name": "Romance"
+      }
+    ],
+    "imdb_rating": 5.9,
+    "actors": [
+      {
+        "uuid": "84d6a1df-e388-4406-a255-3b233c9a69e9",
+        "full_name": "Shirley MacLaine"
+      },
+      {
+        "uuid": "0b6f9a37-6a23-4cb9-8c5e-bf6d0daf5485",
+        "full_name": "Miranda Richardson"
+      },
+      {
+        "uuid": "eb05e4ef-29d2-4c92-9832-47677d62cf80",
+        "full_name": "Juliette Lewis"
+      },
+      {
+        "uuid": "de24285d-8ac4-4581-b218-9d8123acacb1",
+        "full_name": "Bill Paxton"
+      }
+    ],
+    "actors_names": [
+      "Shirley MacLaine",
+      "Miranda Richardson",
+      "Juliette Lewis",
+      "Bill Paxton"
+    ],
+    "writers": [
+      {
+        "uuid": "777aa9bc-9f26-4721-a132-39d1f2ae0634",
+        "full_name": "Robert Harling"
+      },
+      {
+        "uuid": "edfd5ed4-1b24-48c3-a6a4-542ba7f1f7df",
+        "full_name": "Larry McMurtry"
+      }
+    ],
+    "writers_names": [
+      "Shirley MacLaine",
+      "Miranda Richardson",
+      "Juliette Lewis",
+      "Bill Paxton"
+    ],
+    "directors": [
+      {
+        "uuid": "777aa9bc-9f26-4721-a132-39d1f2ae0634",
+        "full_name": "Robert Harling"
+      }
+    ],
+    "directors_names": [
+      "Robert Harling"
+    ],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "5d3fc0f8-6eea-44f9-8c64-8b2be7597ff1",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Star Wars: Episode II - Attack of the Clones",
+    "description": "Ten years after the invasion of Naboo, the Galactic Republic is facing a Separatist movement and the former queen and now Senator Padm\u00e9 Amidala travels to Coruscant to vote on a project to create an army to help the Jedi to protect the Republic. Upon arrival, she escapes from an attempt to kill her, and Obi-Wan Kenobi and his Padawan Anakin Skywalker are assigned to protect her. They chase the shape-shifter Zam Wessell but she is killed by a poisoned dart before revealing who hired her. The Jedi Council assigns Obi-Wan Kenobi to discover who has tried to kill Amidala and Anakin to protect her in Naboo. Obi-Wan discovers that the dart is from the planet Kamino, and he heads to the remote planet. He finds an army of clones that has been under production for years for the Republic and that the bounty hunter Jango Fett was the matrix for the clones. Meanwhile Anakin and Amidala fall in love with each other, and he has nightmarish visions of his mother. They travel to his home planet, Tatooine, to see his mother, and he discovers that she has been abducted by Tusken Raiders. Anakin finds his mother dying, and he kills all the Tusken tribe, including the women and children. Obi-Wan follows Jango Fett to the planet Geonosis where he discovers who is behind the Separatist movement. He transmits his discoveries to Anakin since he cannot reach the Jedi Council. Who is the leader of the Separatist movement? Will Anakin receive Obi-Wan's message? And will the secret love between Anakin and Amidala succeed?",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "47392fcb-82e5-4ca3-b01f-aaa9cb96d2a2",
+        "name": "Action"
+      },
+      {
+        "uuid": "61807c42-0f8f-417b-bb28-32e1fb7e370c",
+        "name": "Adventure"
+      },
+      {
+        "uuid": "8197e9ab-3869-4f18-b178-a1d297a4db8a",
+        "name": "Fantasy"
+      },
+      {
+        "uuid": "8301bd05-5052-4ee3-9e53-b907b160c2d7",
+        "name": "Sci-Fi"
+      }
+    ],
+    "imdb_rating": 6.5,
+    "actors": [
+      {
+        "uuid": "e91668e9-06cd-4d27-b1d5-72beade22a32",
+        "full_name": "Natalie Portman"
+      },
+      {
+        "uuid": "3ad829ba-2d44-4ebb-85b7-7eb0e06fea47",
+        "full_name": "Christopher Lee"
+      },
+      {
+        "uuid": "ca1fe487-f71a-4251-b6c9-e992d5ce6c17",
+        "full_name": "Hayden Christensen"
+      },
+      {
+        "uuid": "2e7cb28f-9d05-4980-bc5f-c0a74a5d2ad5",
+        "full_name": "Ewan McGregor"
+      }
+    ],
+    "actors_names": [
+      "Natalie Portman",
+      "Christopher Lee",
+      "Hayden Christensen",
+      "Ewan McGregor"
+    ],
+    "writers": [
+      {
+        "uuid": "148e753d-bba8-4ab0-a738-0411abc825ec",
+        "full_name": "George Lucas"
+      },
+      {
+        "uuid": "6d326fb7-77dd-41a2-9f7e-d3a24cd5abf2",
+        "full_name": "Jonathan Hales"
+      }
+    ],
+    "writers_names": [
+      "Natalie Portman",
+      "Christopher Lee",
+      "Hayden Christensen",
+      "Ewan McGregor"
+    ],
+    "directors": [
+      {
+        "uuid": "148e753d-bba8-4ab0-a738-0411abc825ec",
+        "full_name": "George Lucas"
+      }
+    ],
+    "directors_names": [
+      "George Lucas"
+    ],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "5f67aeb2-f87c-4c39-ba2e-fba38fa21f3c",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Star Wars: Knights of the Old Republic II - The Sith Lords",
+    "description": "Five years after the defeat of Darth Malak, the Sith Lords have nearly destroyed the Jedi Order. An exiled Jedi has returned only to find the galaxy in shambles, and must decide whether to follow the path of the Dark Side and participate in the destruction of the Jedi Order or the Light Side and restore the Jedis to glory.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "47392fcb-82e5-4ca3-b01f-aaa9cb96d2a2",
+        "name": "Adventure"
+      },
+      {
+        "uuid": "61807c42-0f8f-417b-bb28-32e1fb7e370c",
+        "name": "Drama"
+      },
+      {
+        "uuid": "cafdae7a-9f64-443a-a8cf-ed070db9b0ce",
+        "name": "Fantasy"
+      }
+    ],
+    "imdb_rating": 8.9,
+    "actors": [
+      {
+        "uuid": "3e8b978e-2c67-42e8-aa5c-538c11ebfc2c",
+        "full_name": "Kelly Hu"
+      },
+      {
+        "uuid": "ae1028a5-18db-4dce-af96-dea8880c4d3c",
+        "full_name": "Roger Guenveur Smith"
+      },
+      {
+        "uuid": "7b6e215c-e657-4b1d-b09c-ee44c63d5820",
+        "full_name": "Sara Kestelman"
+      },
+      {
+        "uuid": "a87f2fe3-8c6f-404d-b8c0-67fa1232e85a",
+        "full_name": "Nicky Katt"
+      }
+    ],
+    "actors_names": [
+      "Kelly Hu",
+      "Roger Guenveur Smith",
+      "Sara Kestelman",
+      "Nicky Katt"
+    ],
+    "writers": [
+      {
+        "uuid": "f6b26818-3628-4ce0-85b7-e09dc7be69b3",
+        "full_name": "Chris Avellone"
+      },
+      {
+        "uuid": "0f7435e1-2f51-43b6-98e7-aaa5f814b4c6",
+        "full_name": "Ferret Baudoin"
+      }
+    ],
+    "writers_names": [
+      "Kelly Hu",
+      "Roger Guenveur Smith",
+      "Sara Kestelman",
+      "Nicky Katt"
+    ],
+    "directors": [],
+    "directors_names": [],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "60b33e65-1421-4bda-963f-02203b13d6d9",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Star Trek",
+    "description": "A massive alien spacecraft of enormous power destroys three powerful Klingon cruisers, entering Federation space. Admiral James T. Kirk is ordered to take command of the USS Enterprise for the first time since her historic five-year mission. The Epsilon IX space station alerts the Federation, but they are also destroyed by the alien spacecraft. The only starship in range is the Enterprise--after undergoing a major overhaul at Spacedock on Earth. Kirk rounds up the rest of his crew, and acquires some new members, and sets off to intercept the alien spacecraft. However, it has been there years since Kirk last commanded the Enterprise... is he up to the task of saving Earth?",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "61807c42-0f8f-417b-bb28-32e1fb7e370c",
+        "name": "Adventure"
+      },
+      {
+        "uuid": "8301bd05-5052-4ee3-9e53-b907b160c2d7",
+        "name": "Mystery"
+      },
+      {
+        "uuid": "ae28b347-2713-4247-b709-89af8c229560",
+        "name": "Sci-Fi"
+      }
+    ],
+    "imdb_rating": 6.4,
+    "actors": [
+      {
+        "uuid": "89591c47-95a8-409c-bf6d-b165fcbb561b",
+        "full_name": "Leonard Nimoy"
+      },
+      {
+        "uuid": "5428fa7b-7748-4ed3-a16b-4863f2d65503",
+        "full_name": "DeForest Kelley"
+      },
+      {
+        "uuid": "c5954003-e26c-4d8d-8bf3-45fd059bca32",
+        "full_name": "William Shatner"
+      },
+      {
+        "uuid": "8a15817e-7008-4eb9-9837-02cfdac8b6c4",
+        "full_name": "James Doohan"
+      }
+    ],
+    "actors_names": [
+      "Leonard Nimoy",
+      "DeForest Kelley",
+      "William Shatner",
+      "James Doohan"
+    ],
+    "writers": [
+      {
+        "uuid": "54aba6d0-660d-40b5-b5ee-d127f80912c9",
+        "full_name": "Gene Roddenberry"
+      },
+      {
+        "uuid": "a5fc1c0e-12ce-48de-8e78-51ef31521fa9",
+        "full_name": "Alan Dean Foster"
+      },
+      {
+        "uuid": "569b942d-c779-4ed9-bae7-18198c2176ab",
+        "full_name": "Harold Livingston"
+      }
+    ],
+    "writers_names": [
+      "Leonard Nimoy",
+      "DeForest Kelley",
+      "William Shatner",
+      "James Doohan"
+    ],
+    "directors": [
+      {
+        "uuid": "2336e5ac-aceb-4e64-b255-85e5a5742cc7",
+        "full_name": "Robert Wise"
+      }
+    ],
+    "directors_names": [
+      "Robert Wise"
+    ],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "61815719-a7d2-4b51-923a-98b057f155b3",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "The Last Movie Star",
+    "description": "An aging former movie star is forced to face the reality that his glory days are behind him. On its surface, the film is a tale about faded fame. At its core, it's a universal story about growing old.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "cafdae7a-9f64-443a-a8cf-ed070db9b0ce",
+        "name": "Drama"
+      }
+    ],
+    "imdb_rating": 6.9,
+    "actors": [
+      {
+        "uuid": "6095ea5c-6482-41c3-8677-39aa3bf59efb",
+        "full_name": "Macy Whitener"
+      },
+      {
+        "uuid": "f0d3925a-c0e7-4726-83d1-7fbcab5eab64",
+        "full_name": "Ariel Winter"
+      },
+      {
+        "uuid": "b59b8365-c4f5-4c3b-8227-3a9f76a2a68c",
+        "full_name": "Burt Reynolds"
+      },
+      {
+        "uuid": "f446b7c2-42fd-4bc5-b29b-2d1abcdcf832",
+        "full_name": "Chevy Chase"
+      }
+    ],
+    "actors_names": [
+      "Macy Whitener",
+      "Ariel Winter",
+      "Burt Reynolds",
+      "Chevy Chase"
+    ],
+    "writers": [
+      {
+        "uuid": "86a7854c-7f5c-43f3-bff3-f535d5b9fb20",
+        "full_name": "Adam Rifkin"
+      }
+    ],
+    "writers_names": [
+      "Macy Whitener",
+      "Ariel Winter",
+      "Burt Reynolds",
+      "Chevy Chase"
+    ],
+    "directors": [
+      {
+        "uuid": "86a7854c-7f5c-43f3-bff3-f535d5b9fb20",
+        "full_name": "Adam Rifkin"
+      }
+    ],
+    "directors_names": [
+      "Adam Rifkin"
+    ],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "62772f4e-9855-4ebf-b141-58acf1fc097f",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "The Star",
+    "description": "In Sony Pictures Animation's THE STAR, a small but brave donkey named Bo yearns for a life beyond his daily grind at the village mill. One day he finds the courage to break free, and finally goes on the adventure of his dreams. On his journey, he teams up with Ruth, a lovable sheep who has lost her flock and Dave, a dove with lofty aspirations. Along with three wisecracking camels and some eccentric stable animals, Bo and his new friends follow the Star and become accidental heroes in the greatest story ever told - the first Christmas.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "05819c4e-8e59-400f-b999-f3c0bed78e97",
+        "name": "Adventure"
+      },
+      {
+        "uuid": "47392fcb-82e5-4ca3-b01f-aaa9cb96d2a2",
+        "name": "Animation"
+      },
+      {
+        "uuid": "4d66f6f6-68b7-4a63-b15d-747f763e8f42",
+        "name": "Comedy"
+      },
+      {
+        "uuid": "61807c42-0f8f-417b-bb28-32e1fb7e370c",
+        "name": "Family"
+      },
+      {
+        "uuid": "933d0c17-2209-4b17-a3ec-a7d919768cc9",
+        "name": "Fantasy"
+      }
+    ],
+    "imdb_rating": 6.2,
+    "actors": [
+      {
+        "uuid": "9eceaa27-0f78-4702-b916-493d085236b2",
+        "full_name": "Steven Yeun"
+      },
+      {
+        "uuid": "61821c0d-a5bb-48a8-a68f-de09dd927658",
+        "full_name": "Aidy Bryant"
+      },
+      {
+        "uuid": "dc901eca-c9e0-47dc-b2cf-6d8fb3835de4",
+        "full_name": "Gina Rodriguez"
+      },
+      {
+        "uuid": "57618836-0f01-489b-99e3-d5f96dc515c4",
+        "full_name": "Keegan-Michael Key"
+      }
+    ],
+    "actors_names": [
+      "Steven Yeun",
+      "Aidy Bryant",
+      "Gina Rodriguez",
+      "Keegan-Michael Key"
+    ],
+    "writers": [
+      {
+        "uuid": "0f9af9b0-89be-4d71-b4a6-3d60c4b959bd",
+        "full_name": "Simon Moore"
+      },
+      {
+        "uuid": "d3bb285f-50c0-4a65-8f80-9d37e12be39d",
+        "full_name": "Carlos Kotkin"
+      }
+    ],
+    "writers_names": [
+      "Steven Yeun",
+      "Aidy Bryant",
+      "Gina Rodriguez",
+      "Keegan-Michael Key"
+    ],
+    "directors": [
+      {
+        "uuid": "3ceb3c6d-eec3-4906-83e8-e9454fafbe78",
+        "full_name": "Timothy Reckart"
+      }
+    ],
+    "directors_names": [
+      "Timothy Reckart"
+    ],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "649a437c-440f-40e6-bf32-2fdc519baa95",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "The Sun Is Also a Star",
+    "description": "A hopeless romantic ambivalent about his future in medical school falls for a hard-luck young woman who doesn't believe in love.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "03d48df8-9a64-4995-aab8-63869756381c",
+        "name": "Drama"
+      },
+      {
+        "uuid": "32059e67-efeb-46b3-bf10-367d424a1ad7",
+        "name": "Music"
+      },
+      {
+        "uuid": "cafdae7a-9f64-443a-a8cf-ed070db9b0ce",
+        "name": "Romance"
+      }
+    ],
+    "imdb_rating": 5.8,
+    "actors": [
+      {
+        "uuid": "a14ca0c6-e116-44fa-9458-56d120cf9d5b",
+        "full_name": "Charles Melton"
+      },
+      {
+        "uuid": "1f9e944f-d982-4b9c-979d-c49bd12cd3b4",
+        "full_name": "Yara Shahidi"
+      },
+      {
+        "uuid": "070a08e3-f207-4dea-90af-14d1fa60e70b",
+        "full_name": "Anais Lee"
+      },
+      {
+        "uuid": "d750da99-d533-4c17-a344-4bcb3a04163b",
+        "full_name": "John Leguizamo"
+      }
+    ],
+    "actors_names": [
+      "Charles Melton",
+      "Yara Shahidi",
+      "Anais Lee",
+      "John Leguizamo"
+    ],
+    "writers": [
+      {
+        "uuid": "e5010ccc-343c-4df5-8e7e-4e4bc872617b",
+        "full_name": "Tracy Oliver"
+      },
+      {
+        "uuid": "f89813c4-2dd7-4acd-8a46-f6f951d2ef65",
+        "full_name": "Nicola Yoon"
+      }
+    ],
+    "writers_names": [
+      "Charles Melton",
+      "Yara Shahidi",
+      "Anais Lee",
+      "John Leguizamo"
+    ],
+    "directors": [
+      {
+        "uuid": "5413f9fe-a0c5-4063-a799-b1f7f0a98c93",
+        "full_name": "Ry Russo-Young"
+      }
+    ],
+    "directors_names": [
+      "Ry Russo-Young"
+    ],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "665b6097-b876-4863-a0ad-bc821e311ad2",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Star Wars: Episode IX - The Rise of Skywalker",
+    "description": "The surviving members of the resistance face the First Order once again, and the legendary conflict between the Jedi and the Sith reaches its peak bringing the Skywalker saga to its end.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "47392fcb-82e5-4ca3-b01f-aaa9cb96d2a2",
+        "name": "Action"
+      },
+      {
+        "uuid": "61807c42-0f8f-417b-bb28-32e1fb7e370c",
+        "name": "Adventure"
+      },
+      {
+        "uuid": "8197e9ab-3869-4f18-b178-a1d297a4db8a",
+        "name": "Fantasy"
+      },
+      {
+        "uuid": "8301bd05-5052-4ee3-9e53-b907b160c2d7",
+        "name": "Sci-Fi"
+      }
+    ],
+    "imdb_rating": 6.7,
+    "actors": [
+      {
+        "uuid": "61fb7c17-7161-411b-af40-c5ae2f352822",
+        "full_name": "Carrie Fisher"
+      },
+      {
+        "uuid": "6c7dcdfb-31a9-40b0-aef9-b9556ce454f0",
+        "full_name": "Daisy Ridley"
+      },
+      {
+        "uuid": "f1fe34e8-b3b9-4186-983e-ee2e830e9fbd",
+        "full_name": "Adam Driver"
+      },
+      {
+        "uuid": "ba2fbd08-691e-47b2-b0de-dc34f8c718a9",
+        "full_name": "Mark Hamill"
+      }
+    ],
+    "actors_names": [
+      "Carrie Fisher",
+      "Daisy Ridley",
+      "Adam Driver",
+      "Mark Hamill"
+    ],
+    "writers": [
+      {
+        "uuid": "7645df4d-5b35-4960-94dc-dad2be74b750",
+        "full_name": "J.J. Abrams"
+      },
+      {
+        "uuid": "148e753d-bba8-4ab0-a738-0411abc825ec",
+        "full_name": "George Lucas"
+      },
+      {
+        "uuid": "767d6a17-6d52-4f38-9b2d-af7ad4f212df",
+        "full_name": "Chris Terrio"
+      },
+      {
+        "uuid": "2570638a-042d-456a-839e-bab71d455c67",
+        "full_name": "Colin Trevorrow"
+      },
+      {
+        "uuid": "3866c78b-f0d3-4ead-b351-cbc04d264684",
+        "full_name": "Derek Connolly"
+      }
+    ],
+    "writers_names": [
+      "Carrie Fisher",
+      "Daisy Ridley",
+      "Adam Driver",
+      "Mark Hamill"
+    ],
+    "directors": [
+      {
+        "uuid": "7645df4d-5b35-4960-94dc-dad2be74b750",
+        "full_name": "J.J. Abrams"
+      }
+    ],
+    "directors_names": [
+      "J.J. Abrams"
+    ],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "67bae25d-df14-4658-8ac4-554c75faeeb1",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Paper Mario: Sticker Star",
+    "description": "Mario returns to paper form and goes on yet another quest to save Princess Peach.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "61807c42-0f8f-417b-bb28-32e1fb7e370c",
+        "name": "Adventure"
+      }
+    ],
+    "imdb_rating": 6.7,
+    "actors": [
+      {
+        "uuid": "1b859ad6-c8cb-4ae7-9246-1cda0f0889f1",
+        "full_name": "Caety Sagoian"
+      },
+      {
+        "uuid": "fefde7fd-bdd2-4114-8670-c3c4acdb21a7",
+        "full_name": "Kazumi Totaka"
+      },
+      {
+        "uuid": "9343ba9c-5461-4780-aaa4-20a4b9466ec5",
+        "full_name": "Samantha Kelly"
+      },
+      {
+        "uuid": "cfb40412-0843-4e6b-932f-a42b4bd795d1",
+        "full_name": "Kenny James"
+      }
+    ],
+    "actors_names": [
+      "Caety Sagoian",
+      "Kazumi Totaka",
+      "Samantha Kelly",
+      "Kenny James"
+    ],
+    "writers": [
+      {
+        "uuid": "b672f039-0fcb-4f69-8a3b-b401a0f69fef",
+        "full_name": "Shigeru Miyamoto"
+      }
+    ],
+    "writers_names": [
+      "Caety Sagoian",
+      "Kazumi Totaka",
+      "Samantha Kelly",
+      "Kenny James"
+    ],
+    "directors": [
+      {
+        "uuid": "b672f039-0fcb-4f69-8a3b-b401a0f69fef",
+        "full_name": "Shigeru Miyamoto"
+      }
+    ],
+    "directors_names": [
+      "Shigeru Miyamoto"
+    ],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "67c99377-741c-43ec-a4bc-7ea6782ae2e3",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Star",
+    "description": "The Driver now carries an arrogant rock star who is visiting a major city (not Pittsburgh as earlier believed). Played by Madonna, this title character wants to get away from her bodyguards in the Driver's BMW. He soon gets tired of her and decides to have a bit of fun.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "1d88d1fd-01df-48e9-ae7b-34aadbdb506f",
+        "name": "Action"
+      },
+      {
+        "uuid": "8197e9ab-3869-4f18-b178-a1d297a4db8a",
+        "name": "Comedy"
+      },
+      {
+        "uuid": "933d0c17-2209-4b17-a3ec-a7d919768cc9",
+        "name": "Short"
+      }
+    ],
+    "imdb_rating": 7.7,
+    "actors": [
+      {
+        "uuid": "20519687-5eff-48d9-8ff0-322d87721a23",
+        "full_name": "Michael Beattie"
+      },
+      {
+        "uuid": "873942cb-ef7b-4d7b-9669-a646d5dfa2dd",
+        "full_name": "DTeflon"
+      },
+      {
+        "uuid": "88f3f3bc-1ad8-4cab-8370-8fcd619bd822",
+        "full_name": "Toru Tanaka Jr."
+      },
+      {
+        "uuid": "45684865-a2cf-49e6-b56e-7b29d65c57d7",
+        "full_name": "Clive Owen"
+      }
+    ],
+    "actors_names": [
+      "Michael Beattie",
+      "DTeflon",
+      "Toru Tanaka Jr.",
+      "Clive Owen"
+    ],
+    "writers": [
+      {
+        "uuid": "ca50491c-bf96-4d69-8495-7c1325f3ff94",
+        "full_name": "Joe Sweet"
+      },
+      {
+        "uuid": "57fdafd5-d951-4e29-9574-ce6dffb8799d",
+        "full_name": "Guy Ritchie"
+      }
+    ],
+    "writers_names": [
+      "Michael Beattie",
+      "DTeflon",
+      "Toru Tanaka Jr.",
+      "Clive Owen"
+    ],
+    "directors": [
+      {
+        "uuid": "57fdafd5-d951-4e29-9574-ce6dffb8799d",
+        "full_name": "Guy Ritchie"
+      }
+    ],
+    "directors_names": [
+      "Guy Ritchie"
+    ],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "7306e53b-a124-43f0-a738-57c03cab8d35",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Star Trek: Nemesis",
+    "description": "After a joyous wedding between William Riker and Deanna Troi, Captain Picard and the Enterprise crew stumble upon a mysterious signal which results in it being a prototype android who is the twin to Data. Then the Enterprise is invited to Romulus to negotiate peace with the Romulans by their new Praetor named Shinzon. However, Shinzon is revealed to be a clone of Picard who was raised on Remus, a slave planet to the Romulans. Later on, Picard discovers that this peace treaty was nothing more than a set-up due to the fact that Shinzon needs Picard in order to survive. But little do the Enterprise crew know that Shinzon also plans to do away with the Federation by unleashing a weapon that could destroy a whole planet.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "61807c42-0f8f-417b-bb28-32e1fb7e370c",
+        "name": "Action"
+      },
+      {
+        "uuid": "7fd85018-827c-4758-acdf-936446a21d6f",
+        "name": "Adventure"
+      },
+      {
+        "uuid": "8197e9ab-3869-4f18-b178-a1d297a4db8a",
+        "name": "Sci-Fi"
+      },
+      {
+        "uuid": "8301bd05-5052-4ee3-9e53-b907b160c2d7",
+        "name": "Thriller"
+      }
+    ],
+    "imdb_rating": 6.4,
+    "actors": [
+      {
+        "uuid": "2acf2ad8-a854-4078-a10d-495bcc90b057",
+        "full_name": "Jonathan Frakes"
+      },
+      {
+        "uuid": "c7545e8f-bfab-4251-bec3-ca830b1aab0b",
+        "full_name": "Patrick Stewart"
+      },
+      {
+        "uuid": "1da4b960-f42e-404e-a391-0aa9661460b3",
+        "full_name": "Brent Spiner"
+      },
+      {
+        "uuid": "e44db72b-acf0-4c88-9017-2cf2e0255588",
+        "full_name": "LeVar Burton"
+      }
+    ],
+    "actors_names": [
+      "Jonathan Frakes",
+      "Patrick Stewart",
+      "Brent Spiner",
+      "LeVar Burton"
+    ],
+    "writers": [
+      {
+        "uuid": "6958b676-6bba-4de3-889d-92ddc186d12b",
+        "full_name": "Rick Berman"
+      },
+      {
+        "uuid": "54aba6d0-660d-40b5-b5ee-d127f80912c9",
+        "full_name": "Gene Roddenberry"
+      },
+      {
+        "uuid": "1da4b960-f42e-404e-a391-0aa9661460b3",
+        "full_name": "Brent Spiner"
+      },
+      {
+        "uuid": "2e8c7f05-f177-43d0-8e1b-9f2cfc9bd9c9",
+        "full_name": "John Logan"
+      }
+    ],
+    "writers_names": [
+      "Jonathan Frakes",
+      "Patrick Stewart",
+      "Brent Spiner",
+      "LeVar Burton"
+    ],
+    "directors": [
+      {
+        "uuid": "a411c6b6-18aa-4a8f-ab4c-b9d38a924d49",
+        "full_name": "Stuart Baird"
+      }
+    ],
+    "directors_names": [
+      "Stuart Baird"
+    ],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "737d4524-f40f-435b-ad09-963d44994c66",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Star Trek II: The Wrath of Khan",
+    "description": "It is the 23rd century. Admiral James T. Kirk is an instructor at Starfleet Academy and feeling old; the prospect of attending his ship, the USS Enterprise--now a training ship--on a two-week cadet cruise does not make him feel any younger. But the training cruise becomes a deadly serious mission when his nemesis Khan Noonien Singh--infamous conqueror from late 20th century Earth--appears after years of exile. Khan later revealed that the planet Ceti Alpha VI exploded, and shifted the orbit of the fifth planet as a Mars-like haven. He begins capturing Project Genesis, a top secret device holding the power of creation itself, and schemes the utter destruction of Kirk.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "61807c42-0f8f-417b-bb28-32e1fb7e370c",
+        "name": "Action"
+      },
+      {
+        "uuid": "8197e9ab-3869-4f18-b178-a1d297a4db8a",
+        "name": "Adventure"
+      },
+      {
+        "uuid": "8301bd05-5052-4ee3-9e53-b907b160c2d7",
+        "name": "Sci-Fi"
+      }
+    ],
+    "imdb_rating": 7.7,
+    "actors": [
+      {
+        "uuid": "89591c47-95a8-409c-bf6d-b165fcbb561b",
+        "full_name": "Leonard Nimoy"
+      },
+      {
+        "uuid": "8a15817e-7008-4eb9-9837-02cfdac8b6c4",
+        "full_name": "James Doohan"
+      },
+      {
+        "uuid": "c5954003-e26c-4d8d-8bf3-45fd059bca32",
+        "full_name": "William Shatner"
+      },
+      {
+        "uuid": "5428fa7b-7748-4ed3-a16b-4863f2d65503",
+        "full_name": "DeForest Kelley"
+      }
+    ],
+    "actors_names": [
+      "Leonard Nimoy",
+      "James Doohan",
+      "William Shatner",
+      "DeForest Kelley"
+    ],
+    "writers": [
+      {
+        "uuid": "6236eb3b-f207-467e-afb3-b6e20c314424",
+        "full_name": "Jack B. Sowards"
+      },
+      {
+        "uuid": "54aba6d0-660d-40b5-b5ee-d127f80912c9",
+        "full_name": "Gene Roddenberry"
+      },
+      {
+        "uuid": "a78930f6-38e3-41da-b030-9491fc42a350",
+        "full_name": "Harve Bennett"
+      }
+    ],
+    "writers_names": [
+      "Leonard Nimoy",
+      "James Doohan",
+      "William Shatner",
+      "DeForest Kelley"
+    ],
+    "directors": [
+      {
+        "uuid": "9ecf2483-3690-4444-89c2-f686f6e17f76",
+        "full_name": "Nicholas Meyer"
+      }
+    ],
+    "directors_names": [
+      "Nicholas Meyer"
+    ],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "77e6472c-6e11-4552-b957-3b6b8ea25145",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Star Trek: Voyager",
+    "description": "The Federation starship USS Voyager, chasing a band of Maquis rebels, enters the dangerous space nebula known as the Badlands. Both ships are transported by a distant space probe to the Delta Quadrant, 75,000 light-years from Federation space. Voyager's crew and the Maquis form an uneasy truce to rescue crewmen of both ships, kidnapped by the probe's builder, the powerful, dying Caretaker. The Maquis ship is destroyed in a battle with the warlike Kazons. To prevent a Kazon aggression against a helpless world, Voyager destroys the space probe. Without the probe, it will take 75 years for Voyager to travel back to Federation space. With the differences between them rendered meaningless by time and distance, The Federation and Maquis crews unite aboard Voyager. Together, they embark on their new mission: to boldly go - home.",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "61807c42-0f8f-417b-bb28-32e1fb7e370c",
+        "name": "Action"
+      },
+      {
+        "uuid": "8197e9ab-3869-4f18-b178-a1d297a4db8a",
+        "name": "Adventure"
+      },
+      {
+        "uuid": "8301bd05-5052-4ee3-9e53-b907b160c2d7",
+        "name": "Sci-Fi"
+      }
+    ],
+    "imdb_rating": 7.8,
+    "actors": [
+      {
+        "uuid": "b33b471f-f52b-476f-9179-d866153af79e",
+        "full_name": "Kate Mulgrew"
+      },
+      {
+        "uuid": "703f77cf-46f8-4edb-8b60-4e051c472e2d",
+        "full_name": "Robert Beltran"
+      },
+      {
+        "uuid": "5f851797-c1e4-42c5-98ce-a821f1040f20",
+        "full_name": "Robert Duncan McNeill"
+      },
+      {
+        "uuid": "f3d2af23-e227-431c-816b-3861c9e14628",
+        "full_name": "Roxann Dawson"
+      }
+    ],
+    "actors_names": [
+      "Kate Mulgrew",
+      "Robert Beltran",
+      "Robert Duncan McNeill",
+      "Roxann Dawson"
+    ],
+    "writers": [
+      {
+        "uuid": "6958b676-6bba-4de3-889d-92ddc186d12b",
+        "full_name": "Rick Berman"
+      },
+      {
+        "uuid": "d063b285-98d6-4b72-b189-07745a407294",
+        "full_name": "Jeri Taylor"
+      },
+      {
+        "uuid": "b0b0b757-781b-4762-af13-20f9335d61fe",
+        "full_name": "Michael Piller"
+      }
+    ],
+    "writers_names": [
+      "Kate Mulgrew",
+      "Robert Beltran",
+      "Robert Duncan McNeill",
+      "Roxann Dawson"
+    ],
+    "directors": [],
+    "directors_names": [],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  },
+  {
+    "uuid": "79aa4924-c3f0-4110-9cd5-c8b3facfccef",
+    "@timestamp": "2021-03-08T16:12:28.005442+00:00",
+    "title": "Fist of the North Star",
+    "description": "After a nuclear holocaust tears the world apart, mankind is forced to the harshness of not only the oppression of others who are much more powerful, but the dead earth which seems to be getting worse with every passing moment. But a savior has risen from the ashes, a man who will defeat those who would torment the weak and make the world a livable place once more. A man named Kenshiro.....",
+    "type": "movie",
+    "genre": [
+      {
+        "uuid": "05819c4e-8e59-400f-b999-f3c0bed78e97",
+        "name": "Action"
+      },
+      {
+        "uuid": "47392fcb-82e5-4ca3-b01f-aaa9cb96d2a2",
+        "name": "Animation"
+      },
+      {
+        "uuid": "8197e9ab-3869-4f18-b178-a1d297a4db8a",
+        "name": "Drama"
+      },
+      {
+        "uuid": "cafdae7a-9f64-443a-a8cf-ed070db9b0ce",
+        "name": "Fantasy"
+      }
+    ],
+    "imdb_rating": 7.3,
+    "actors": [
+      {
+        "uuid": "7efd462e-8527-466b-8784-374ea545dc59",
+        "full_name": "Chikao Ohtsuka"
+      },
+      {
+        "uuid": "511632c9-e2ff-4670-ad53-4afb299203d4",
+        "full_name": "Kenji Utsumi"
+      },
+      {
+        "uuid": "c17ba799-8d77-4ba5-a6b0-52a38fb8edab",
+        "full_name": "Yuriko Yamamoto"
+      },
+      {
+        "uuid": "f86417b1-b64d-40fc-91de-f1d95b9552df",
+        "full_name": "Akira Kamiya"
+      }
+    ],
+    "actors_names": [
+      "Chikao Ohtsuka",
+      "Kenji Utsumi",
+      "Yuriko Yamamoto",
+      "Akira Kamiya"
+    ],
+    "writers": [
+      {
+        "uuid": "cd209285-6789-4e30-9787-d3a1056edecd",
+        "full_name": "Buronson"
+      },
+      {
+        "uuid": "03b4d6ce-6b2e-4842-8add-d559138e99fc",
+        "full_name": "Tetsuo Hara"
+      },
+      {
+        "uuid": "a670e732-1fec-4585-b253-7025b34101bd",
+        "full_name": "Susumu Takaku"
+      }
+    ],
+    "writers_names": [
+      "Chikao Ohtsuka",
+      "Kenji Utsumi",
+      "Yuriko Yamamoto",
+      "Akira Kamiya"
+    ],
+    "directors": [
+      {
+        "uuid": "3e0a21d4-967c-47b9-8267-4fa4dc70ae0d",
+        "full_name": "Toyoo Ashida"
+      }
+    ],
+    "directors_names": [
+      "Toyoo Ashida"
+    ],
+    "created": "2021-03-08T16:12:28.005440+00:00",
+    "modified": "2021-03-08T16:12:28.005442+00:00"
+  }
+]

@@ -1,0 +1,55 @@
+version: '3.2'
+
+services:
+  elasticsearch:
+    ports:
+      - "9200:9200"
+  redis:
+
+  fastapi:
+    build: ../../.
+    image: fastapi-image
+    environment:
+      - ELASTIC_HOST=elasticsearch
+      - ELASTIC_PORT=9200
+      - ELASTIC_USER=""
+      - ELASTIC_PASSWORD=""
+      - ELASTIC_INDEX=movies
+      - ELASTIC_INDEX_FILM=test_movies
+      - ELASTIC_INDEX_PERSON=test_persons
+      - ELASTIC_INDEX_GENRE=test_genres
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_PASSWORD
+      - ELASTIC_USE_SSL=false
+    ports:
+      - "8000:8000"
+    depends_on:
+      - elasticsearch
+      - redis
+
+  tests:
+    image: fastapi-image
+    volumes:
+    - ./asyncapi/tests/:/tests/
+    entrypoint: >
+      sh -c "pip install -r /tests/functional/requirements.txt
+      && python3 /tests/functional/utils/wait_for_es.py
+      && python3 /tests/functional/utils/wait_for_redis.py
+      && pytest /tests/functional/src"
+    depends_on:
+      - fastapi
+    environment:
+      - ELASTIC_HOST=elasticsearch
+      - ELASTIC_PORT=9200
+      - ELASTIC_USER=""
+      - ELASTIC_PASSWORD=""
+      - ELASTIC_INDEX=movies
+      - ELASTIC_INDEX_FILM=test_movies
+      - ELASTIC_INDEX_PERSON=test_persons
+      - ELASTIC_INDEX_GENRE=test_genres
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_PASSWORD
+      - SERVICE_URL=http://fastapi:8000/api/v1
+      - ELASTIC_USE_SSL=false
