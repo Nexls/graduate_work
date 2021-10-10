@@ -7,7 +7,7 @@ from utils.backoff import backoff
 from settings import DATABASE_URL
 
 sqlite3.register_adapter(uuid.UUID, lambda u: u.bytes_le)
-engine = create_engine(DATABASE_URL, convert_unicode=True)
+engine = create_engine(DATABASE_URL, convert_unicode=True, connect_args={'sslmode':'require'})
 db_session = scoped_session(sessionmaker(autocommit=False,
                                          autoflush=False,
                                          bind=engine))

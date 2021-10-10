@@ -9,6 +9,12 @@ authorizations = {
     }
 }
 
-api = Api(None, version='1.0', title='Auth API',
-          description='Auth API документация', doc='/apidocs/', default='Auth API',
-          authorizations=authorizations)
+api = Api(
+    None,
+    version='1.0',
+    title='Auth API',
+    description='Auth API документация',
+    doc='/api/docs/',
+    default='Auth API',
+    authorizations=authorizations
+)

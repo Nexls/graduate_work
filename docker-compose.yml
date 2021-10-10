@@ -39,7 +39,7 @@ services:
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=auth
+      - POSTGRES_DB=postgres
     ports:
       - "5432:5432"
 
@@ -51,14 +51,16 @@ services:
   authapi:
     build:
       context: auth/
+    env_file:
+      - .env
     environment:
-      - POSTGRES_HOST=postgres
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=auth
-      - POSTGRES_PORT=5432
-      - REDIS_HOST=redis
-      - REDIS_PORT=6379
+      - POSTGRES_HOST
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+      - POSTGRES_DB=${AUTH_DB}
+      - POSTGRES_PORT
+      - REDIS_HOST
+      - REDIS_PORT
       - REDIS_PASSWORD
     ports:
     - "5000:5000"
@@ -69,19 +71,21 @@ services:
   etl:
     build:
       context: postgres_to_es/
+    env_file:
+      - .env
     environment:
-      - POSTGRES_HOST #=postgres # здесь можно было взять переменные окружения с хоста,
-      - POSTGRES_DB #=movies # чтобы подключение было удобнее и безопаснее
-      - POSTGRES_USER #=postgres # но для показательного запуска оставил дефолтное подключение к db
-      - POSTGRES_PORT #=5432 # у меня свои настройки на Heroku
-      - POSTGRES_PASSWORD #=postgres
-      - ELASTIC_HOST #=elasticsearch
-      - ELASTIC_PORT #=9200
-      - ELASTIC_USER #не заполняется, так как у меня trial без пароля
+      - POSTGRES_HOST
+      - POSTGRES_DB=${ETL_DB}
+      - POSTGRES_USER
+      - POSTGRES_PORT
+      - POSTGRES_PASSWORD
+      - ELASTIC_HOST
+      - ELASTIC_PORT
+      - ELASTIC_USER
       - ELASTIC_PASSWORD
-      - ELASTIC_INDEX=movies
-      - REDIS_HOST=redis # поставил подключение к версии из compose.
-      - REDIS_PORT=6379 # но у меня личный на Heroku
+      - ELASTIC_INDEX
+      - REDIS_HOST
+      - REDIS_PORT
       - REDIS_PASSWORD
     depends_on:
       - elasticsearch
@@ -90,14 +94,16 @@ services:
   asyncapi:
     build:
       context: asyncapi/
+    env_file:
+      - .env
     environment:
-      - ELASTIC_HOST #=elasticsearch
-      - ELASTIC_PORT #=9200
-      - ELASTIC_USER #не заполняется, так как у меня trial без пароля
+      - ELASTIC_HOST
+      - ELASTIC_PORT
+      - ELASTIC_USER
       - ELASTIC_PASSWORD
-      - ELASTIC_INDEX=movies
-      - REDIS_HOST=redis # поставил подключение к версии из compose.
-      - REDIS_PORT=6379 # но у меня личный на Heroku
+      - ELASTIC_INDEX
+      - REDIS_HOST
+      - REDIS_PORT
       - REDIS_PASSWORD
       - JWT_KEY_URL="authapi:5000/public_key"
     ports:

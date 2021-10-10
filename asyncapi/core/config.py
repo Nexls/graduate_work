@@ -17,6 +17,7 @@ PROJECT_NAME = env('PROJECT_NAME', 'API для онлайн-кинотеатра
 # Настройки Redis
 REDIS_HOST = env('REDIS_HOST', '127.0.0.1')
 REDIS_PORT = env.int('REDIS_PORT', 6379)
+REDIS_PASS = env('REDIS_PASSWORD', '')
 REDIS_CACHE_EXPIRE_IN_SECONDS = 60 * 5  # 5 минут
 
 # Настройки Elasticsearch

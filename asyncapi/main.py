@@ -1,4 +1,5 @@
 import logging
+import ssl
 
 import aioredis
 import uvicorn as uvicorn
@@ -14,8 +15,8 @@ from security.security import init_jwt_public_key
 
 app = FastAPI(
     title=config.PROJECT_NAME,
-    docs_url='/api/openapi',
-    openapi_url='/api/openapi.json',
+    docs_url='/api/docs/',
+    openapi_url='/api/docs.json',
     default_response_class=ORJSONResponse,
     version='1.0.0',
 )
@@ -24,7 +25,16 @@ app = FastAPI(
 @app.on_event('startup')
 async def startup():
     await init_jwt_public_key()
-    storage.redis = await aioredis.create_redis_pool((config.REDIS_HOST, config.REDIS_PORT), minsize=10, maxsize=20)
+    ctx = ssl.create_default_context()
+    ctx.check_hostname = False
+    ctx.verify_mode = ssl.CERT_NONE
+    storage.redis = await aioredis.create_redis_pool(
+        (config.REDIS_HOST, config.REDIS_PORT),
+        password=config.REDIS_PASS,
+        minsize=10,
+        maxsize=20,
+        ssl=ctx,
+    )
     db_client.es = AsyncElasticsearch(
         hosts=[f'{config.ELASTIC_HOST}:{config.ELASTIC_PORT}'],
         http_auth=(config.ELASTIC_USER, config.ELASTIC_PASSWORD),

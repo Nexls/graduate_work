@@ -1,6 +1,7 @@
-from redis import Redis
 import abc
 from typing import Optional, Union, Awaitable, Iterable
+
+from redis import Redis
 from settings import REDIS_DB, REDIS_HOST, REDIS_PORT, REDIS_PASS
 
 
@@ -48,7 +49,13 @@ class RedisStorage(BaseStorage):
         self.redis_adapter.delete(key)
 
 
-jwt_storage = RedisStorage(redis_adapter=Redis(host=REDIS_HOST,
-                                               port=REDIS_PORT,
-                                               password=REDIS_PASS,
-                                               db=REDIS_DB))
+jwt_storage = RedisStorage(
+    redis_adapter=Redis(
+        host=REDIS_HOST,
+        port=REDIS_PORT,
+        password=REDIS_PASS,
+        db=REDIS_DB,
+        ssl=True,
+        ssl_cert_reqs=None
+    )
+)
