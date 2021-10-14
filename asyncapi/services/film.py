@@ -1,7 +1,6 @@
 from functools import lru_cache
 from typing import Optional, List, Tuple
 
-from elasticsearch import AsyncElasticsearch
 from fastapi import Depends, HTTPException
 from http import HTTPStatus
 
@@ -11,7 +10,7 @@ from models.film import Film
 from models.film_response import FilmResponse
 from models.enumerations import QueryType
 from services.query_constructor import QueryConstructor
-from core.config import REDIS_CACHE_EXPIRE_IN_SECONDS, ELASTIC_INDEX_FILM
+import settings
 
 
 class FilmService:
@@ -36,7 +35,7 @@ class FilmService:
 
         payload = query_constructor.get_payload()
 
-        results = await self.db_client.search(index=ELASTIC_INDEX_FILM, body=payload)
+        results = await self.db_client.search(index=settings.ELASTIC_INDEX_FILM, body=payload)
         return [Film(**doc) for doc in results]
 
     async def get_by_query(self, body: dict, query_type: QueryType) -> Optional[List[FilmResponse]]:
@@ -69,7 +68,7 @@ class FilmService:
     async def _get_film_from_db(self, film_id: str) -> Optional[Film]:
         # Если не найдено по id, то эластик кидает исключение. Оборачиваем в попытку и ругаемся правильно
         try:
-            doc = await self.db_client.get(ELASTIC_INDEX_FILM, film_id)
+            doc = await self.db_client.get(settings.ELASTIC_INDEX_FILM, film_id)
         except Exception:
             raise HTTPException(status_code=HTTPStatus.NOT_FOUND, detail='film not found')
         return Film(**doc)
@@ -90,7 +89,7 @@ class FilmService:
         # Выставляем время жизни кеша — 5 минут
         # https://redis.io/commands/set
         # pydantic позволяет сериализовать модель в json
-        await self.storage.set(str(film.uuid), film.json(), expire=REDIS_CACHE_EXPIRE_IN_SECONDS)
+        await self.storage.set(str(film.uuid), film.json(), expire=settings.REDIS_CACHE_EXPIRE_IN_SECONDS)
 
 
 @lru_cache()

@@ -11,7 +11,7 @@ from jwt import InvalidSignatureError, ExpiredSignatureError
 from pydantic import BaseModel
 from starlette import status
 
-from core.config import JWT_KEY_URL, JWT_PUBLIC_KEY
+from settings import JWT_KEY_URL, JWT_PUBLIC_KEY
 
 X_API_KEY = HTTPBearer(auto_error=False)
 

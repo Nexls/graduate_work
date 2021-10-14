@@ -1,22 +1,23 @@
 from http import HTTPStatus
+from typing import List
+
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import ORJSONResponse
-
+from models.film import Film
 from security.security import jwt_permissions_required
 from services.film import FilmService, get_film_service
-from models.film import Film
-from typing import List
 
 router = APIRouter()
 
 
 # Внедряем FilmService с помощью Depends(get_film_service)
-@router.get('/film/{film_id}/',
-            response_model=Film,
-            summary='Информация о фильме',
-            description='Детальная информация о фильме',
-            response_description='Название, рейтинг, описание фильма и список участников'
-            )
+@router.get(
+    '/film/{film_id}/',
+    response_model=Film,
+    summary='Информация о фильме',
+    description='Детальная информация о фильме',
+    response_description='Название, рейтинг, описание фильма и список участников'
+)
 async def film_details(film_id: str, film_service: FilmService = Depends(get_film_service)) -> ORJSONResponse:
     film, cached = await film_service.get_by_id(film_id)
     if not film:
@@ -28,12 +29,13 @@ async def film_details(film_id: str, film_service: FilmService = Depends(get_fil
     return ORJSONResponse(content=film.dict(), headers={'X-Cached': cached})
 
 
-@router.get('/security_films/',
-            response_model=List[Film],
-            summary='Иинформация о фильмах с доступами',
-            description='Детальная информация о фильмах с доступом',
-            response_description='Просмотреть список фильмов с различным доступом'
-            )
+@router.get(
+    '/security_films/',
+    response_model=List[Film],
+    summary='Иинформация о фильмах с доступами',
+    description='Детальная информация о фильмах с доступом',
+    response_description='Просмотреть список фильмов с различным доступом'
+)
 @jwt_permissions_required(response_model=List[Film])
 async def security_films():
     res = [

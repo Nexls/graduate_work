@@ -1,8 +1,6 @@
 from functools import lru_cache
 from typing import Optional, List, Tuple
 
-from aioredis import Redis
-from elasticsearch import AsyncElasticsearch
 from fastapi import Depends, HTTPException
 from http import HTTPStatus
 
@@ -13,7 +11,7 @@ from models.person import Person
 from models.person_response import PersonResponse
 from services.query_constructor import QueryConstructor
 from models.enumerations import QueryType
-from core.config import REDIS_CACHE_EXPIRE_IN_SECONDS, ELASTIC_INDEX_PERSON, ELASTIC_INDEX_FILM
+import settings
 
 
 class PersonService:
@@ -27,7 +25,7 @@ class PersonService:
         query_constructor = QueryConstructor(body).add_sort().add_limits().add_single_field_search('full_name')
         payload = query_constructor.get_payload()
 
-        results = await self.db_client.search(index=ELASTIC_INDEX_PERSON, body=payload)
+        results = await self.db_client.search(index=settings.ELASTIC_INDEX_PERSON, body=payload)
         return [Person(**doc) for doc in results]
 
     async def get_by_query(self, body: dict, query_type: QueryType) -> Optional[List[PersonResponse]]:
@@ -92,7 +90,7 @@ class PersonService:
     async def _get_from_elastic(self, id: str) -> Optional[Person]:
         # Если не найдено по id, то эластик кидает исключение. Оборачиваем в попытку и ругаемся правильно
         try:
-            doc = await self.db_client.get(ELASTIC_INDEX_PERSON, id)
+            doc = await self.db_client.get(settings.ELASTIC_INDEX_PERSON, id)
         except Exception:
             raise HTTPException(status_code=HTTPStatus.NOT_FOUND, detail='person not found')
         return Person(**doc)
@@ -110,7 +108,7 @@ class PersonService:
 
     async def _put_to_cache(self, item: PersonResponse):
 
-        await self.storage.set(str(item.uuid), item.json(), expire=REDIS_CACHE_EXPIRE_IN_SECONDS)
+        await self.storage.set(str(item.uuid), item.json(), expire=settings.REDIS_CACHE_EXPIRE_IN_SECONDS)
 
     async def get_films_by_person_id(self, id: str) -> Optional[List[FilmResponse]]:
         person, cached = await self.get_by_id(id)
@@ -121,8 +119,8 @@ class PersonService:
         try:
             docs = await self.db_client.mget(
                 body={'ids': person.film_ids},
-                index=ELASTIC_INDEX_FILM
-                )
+                index=settings.ELASTIC_INDEX_FILM
+            )
         except Exception:
             raise HTTPException(status_code=HTTPStatus.NOT_FOUND, detail='person not found')
 

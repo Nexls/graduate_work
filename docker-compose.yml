@@ -18,6 +18,8 @@ services:
       ES_JAVA_OPTS: "-Xmx256m -Xms256m"
       ELASTIC_PASSWORD: changeme
       discovery.type: single-node
+    ports:
+      - "9200:9200"
 
   kibana:
     build:

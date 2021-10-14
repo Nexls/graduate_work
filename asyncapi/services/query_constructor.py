@@ -34,19 +34,19 @@ class QueryConstructor():
     def add_limits(self) -> QueryConstructor:
         limit = LIMIT_PER_PAGE
 
-        if 'page[size]' in self.body:
+        if 'page_size' in self.body:
             try:
-                limit = int(self.body['page[size]'])
+                limit = int(self.body['page_size'])
                 if limit <= 0:
                     limit = LIMIT_PER_PAGE
             except Exception:
-                logging.error('Error converting "page[size]" to int')
+                logging.error('Error converting "page_size" to int')
         # limit всегда заполняем, хотя бы дефолтным значением, чтобы не запрашивать лишнего
         self._payload['size'] = limit
 
-        if 'page[number]' in self.body:
+        if 'page_number' in self.body:
             try:
-                page = int(self.body['page[number]'])
+                page = int(self.body['page_number'])
                 if page > 0:
                     self._payload['from'] = (page-1) * limit
             except Exception:

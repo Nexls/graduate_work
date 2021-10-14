@@ -1,17 +1,17 @@
 import pytest
-from ... import settings
+import settings
 
 
-@pytest.mark.asyncio
-async def test_film_list(make_get_request):
-    '''Тестирование получения списка фильмов'''
-
+async def test_film_list(
+    test_client
+):
+    """Тестирование получения списка фильмов"""
     # Выполнение запроса
-    response = await make_get_request('/film', {'page[size]': 2, 'page[number]': 2})
+    response = await test_client.get('/film', params={'page_size': 2, 'page_number': 2})
 
     # Проверка результата
-    assert response.status == 200
-    assert len(response.body) == 2
+    assert response.status_code == 200
+    assert len(response.json()) == 2
 
 
 @pytest.mark.asyncio
@@ -19,11 +19,14 @@ async def test_film_filter(make_get_request):
     '''Тестирование получения списка фильмов'''
 
     # Выполнение запроса
-    response = await make_get_request('/film',
-                                      {'page[size]': 50,
-                                       'page[number]': 1,
-                                       'filter[genre]': '47392fcb-82e5-4ca3-b01f-aaa9cb96d2a2'}
-                                      )
+    response = await make_get_request(
+        '/film',
+        {
+            'page[size]': 50,
+            'page[number]': 1,
+            'filter[genre]': '47392fcb-82e5-4ca3-b01f-aaa9cb96d2a2'
+        }
+    )
 
     # Проверка результата
     assert response.status == 200
@@ -35,11 +38,14 @@ async def test_film_sort(make_get_request):
     '''Тестирование получения списка фильмов'''
 
     # Выполнение запроса
-    response = await make_get_request('/film',
-                                      {'page[size]': 5,
-                                       'page[number]': 1,
-                                       'sort': '-imdb_rating'}
-                                      )
+    response = await make_get_request(
+        '/film',
+        {
+            'page[size]': 5,
+            'page[number]': 1,
+            'sort': '-imdb_rating'
+        }
+    )
 
     # Проверка результата
     assert response.status == 200

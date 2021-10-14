@@ -22,7 +22,7 @@ class RedisStorage(BaseStorage):
         self.redis_adapter = redis_adapter
 
     async def set(self, key: str, value: str, expire=None) -> None:
-        await self.redis_adapter.set(key, value, expire=expire)
+        await self.redis_adapter.set(key, value, ex=expire)
 
     async def get(self, key: str) -> str:
         raw_data = await self.redis_adapter.get(key)

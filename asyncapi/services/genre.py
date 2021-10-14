@@ -1,15 +1,13 @@
 from functools import lru_cache
 from typing import Optional, List, Tuple
 
-from aioredis import Redis
-from elasticsearch import AsyncElasticsearch
 from fastapi import Depends, HTTPException
 from http import HTTPStatus
 
 from db.db_client import get_elastic, BaseDatabaseClient
 from db.storage import get_redis, BaseStorage
 from models.genre import Genre
-from core.config import REDIS_CACHE_EXPIRE_IN_SECONDS, ELASTIC_INDEX_GENRE
+import settings
 
 
 class GenreService:
@@ -21,7 +19,7 @@ class GenreService:
         '''Возвращает список жанров из индекса, без ограничений, всё, что есть'''
 
         # если не задать size, то он по дефолту 10. Передаем максимум, чтобы вернул всё, что есть
-        results = await self.db_client.search(index=ELASTIC_INDEX_GENRE, size=10000)
+        results = await self.db_client.search(index=settings.ELASTIC_INDEX_GENRE, size=10000)
         return [Genre(**doc) for doc in results]
 
     async def get_by_id(self, id: str) -> Tuple[Optional[Genre], str]:
@@ -39,7 +37,7 @@ class GenreService:
 
     async def _get_from_db(self, id: str) -> Optional[Genre]:
         try:
-            doc = await self.db_client.get(ELASTIC_INDEX_GENRE, id)
+            doc = await self.db_client.get(settings.ELASTIC_INDEX_GENRE, id)
         except Exception:
             raise HTTPException(status_code=HTTPStatus.NOT_FOUND, detail='Genre not found')
         return Genre(**doc)
@@ -54,7 +52,7 @@ class GenreService:
 
     async def _put_to_cache(self, item: Genre):
 
-        await self.storage.set(str(item.uuid), item.json(), expire=REDIS_CACHE_EXPIRE_IN_SECONDS)
+        await self.storage.set(str(item.uuid), item.json(), expire=settings.REDIS_CACHE_EXPIRE_IN_SECONDS)
 
 
 @lru_cache()

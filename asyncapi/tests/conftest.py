@@ -4,9 +4,14 @@ import asyncio
 import json
 
 from dataclasses import dataclass
+
+from app import app
+from asgi_lifespan import LifespanManager
+from httpx import AsyncClient
 from multidict import CIMultiDictProxy
 from elasticsearch import AsyncElasticsearch, helpers
-from . import settings
+import settings
+from tests.functional.settings import BASE_DIR
 
 
 @dataclass
@@ -14,6 +19,13 @@ class HTTPResponse:
     body: dict
     headers: CIMultiDictProxy[str]
     status: int
+
+
+@pytest.fixture(scope="function", autouse=True)
+def patch_indexes(monkeypatch):
+    monkeypatch.setattr(settings, 'ELASTIC_INDEX_FILM', f'test_{settings.ELASTIC_INDEX_FILM}')
+    monkeypatch.setattr(settings, 'ELASTIC_INDEX_GENRE', f'test_{settings.ELASTIC_INDEX_GENRE}')
+    monkeypatch.setattr(settings, 'ELASTIC_INDEX_PERSON', f'test_{settings.ELASTIC_INDEX_PERSON}')
 
 
 @pytest.fixture(scope="session")
@@ -51,6 +63,13 @@ def make_get_request(session):
     return inner
 
 
+@pytest.fixture
+async def test_client() -> AsyncClient:
+    async with LifespanManager(app, startup_timeout=60, shutdown_timeout=60):
+        async with AsyncClient(app=app, base_url=settings.SERVICE_URL) as client:
+            yield client
+
+
 @pytest.fixture(scope="session")
 def load_data(es_client):
     async def inner(index_name: str, file_name: str) -> bool:
@@ -65,7 +84,7 @@ def load_data(es_client):
                     '_source': item,
                 }
 
-        with open(settings.BASE_DIR / 'testdata' / file_name, 'r') as f:
+        with open(BASE_DIR / 'testdata' / file_name, 'r') as f:
             data = json.load(f)
 
         # параметр refresh говорит, что надо сразу после загрузки сделать индексы доступными

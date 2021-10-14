@@ -1,7 +1,6 @@
 from elasticsearch import AsyncElasticsearch
 import abc
 from typing import Optional, Awaitable, Union, List
-from core.config import ELASTIC_INDEX_FILM
 
 es: Optional[AsyncElasticsearch] = None
 
