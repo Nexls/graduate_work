@@ -18,8 +18,8 @@ app = FastAPI(
 
 @app.on_event('startup')
 async def startup():
-    await init_jwt_public_key()
-    storage.redis = await aioredis.Redis(
+    app.state.jwt_public_key = await init_jwt_public_key()
+    storage.redis = aioredis.Redis(
         host=settings.REDIS_HOST,
         port=settings.REDIS_PORT,
         password=settings.REDIS_PASS if settings.REDIS_PASS else None,

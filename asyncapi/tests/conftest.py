@@ -1,4 +1,5 @@
 import aiohttp
+import aioredis
 import pytest
 import asyncio
 import json
@@ -99,10 +100,21 @@ def load_data(es_client):
 
 # перенес все загрузки в общий модуль, т.к. есть тест, который требует сразу 2 индекса.
 # и если удалять индексы после теста, то страдает другой тест, который индекс ещё использует
+@pytest.fixture(scope="session", autouse=True)
+async def storage_clear():
+    redis = aioredis.Redis(
+        host=settings.REDIS_HOST,
+        port=settings.REDIS_PORT,
+        password=settings.REDIS_PASS if settings.REDIS_PASS else None,
+        ssl=settings.REDIS_USE_SSL,
+        ssl_cert_reqs="none",
+    )
+    await redis.flushall(asynchronous=True)
+
 
 @pytest.fixture(scope="session", autouse=True)
 async def load_films(load_data, es_client):
-    '''Заполнение данных для теста'''
+    """Заполнение данных для теста"""
     rez = await load_data(settings.ELASTIC_INDEX_FILM, 'movies.json')
     yield rez
     await es_client.indices.delete(settings.ELASTIC_INDEX_FILM)
@@ -110,7 +122,7 @@ async def load_films(load_data, es_client):
 
 @pytest.fixture(scope="session", autouse=True)
 async def load_persons(load_data, es_client):
-    '''Заполнение данных для теста'''
+    """Заполнение данных для теста"""
     rez = await load_data(settings.ELASTIC_INDEX_PERSON, 'persons.json')
     yield rez
     await es_client.indices.delete(settings.ELASTIC_INDEX_PERSON)
@@ -118,7 +130,7 @@ async def load_persons(load_data, es_client):
 
 @pytest.fixture(scope="session", autouse=True)
 async def load_genres(load_data, es_client):
-    '''Заполнение данных для теста'''
+    """Заполнение данных для теста"""
     rez = await load_data(settings.ELASTIC_INDEX_GENRE, 'genres.json')
     yield rez
     await es_client.indices.delete(settings.ELASTIC_INDEX_GENRE)

@@ -9,23 +9,24 @@ from fastapi.params import Depends
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from jwt import InvalidSignatureError, ExpiredSignatureError
 from pydantic import BaseModel
-from starlette import status
-
 from settings import JWT_KEY_URL, JWT_PUBLIC_KEY
+from starlette import status
+from starlette.requests import Request
 
 X_API_KEY = HTTPBearer(auto_error=False)
 
 
-async def init_jwt_public_key():
-    global JWT_PUBLIC_KEY
-    if JWT_PUBLIC_KEY is None:
-        async with aiohttp.ClientSession() as session:
+async def init_jwt_public_key() -> str:
+    if JWT_PUBLIC_KEY is not None:
+        return JWT_PUBLIC_KEY
+    async with aiohttp.ClientSession() as session:
+        while True:
             try:
                 async with session.get(JWT_KEY_URL) as r:
                     json_body = await r.json()
-                    JWT_PUBLIC_KEY = json_body.get("public_key", "JWT_PUBLIC_KEY")
+                    return json_body.get("public_key")
             except:
-                JWT_PUBLIC_KEY = "JWT_PUBLIC_KEY"
+                ...
 
 
 class Permissions(Enum):
@@ -35,20 +36,22 @@ class Permissions(Enum):
     ADMIN = 3
 
 
-def _get_permissions(credentials: Optional[HTTPAuthorizationCredentials]):
-    global JWT_PUBLIC_KEY
-    permissions = None
+def _get_permissions(jwt_public_key: str, credentials: Optional[HTTPAuthorizationCredentials]) -> int:
     if credentials is None:
-        permissions = Permissions.OTHER.value  # Если токена нет, то права 0
+        return Permissions.OTHER.value  # Если токена нет, то права 0
     else:
         try:
-            payload = jwt.decode(jwt=credentials.credentials, key=JWT_PUBLIC_KEY,
-                                 algorithms=["RS256"])
-            permissions = payload.get("permissions", 0)
+            payload = jwt.decode(
+                jwt=credentials.credentials,
+                key=jwt_public_key,
+                algorithms=["RS256"]
+            )
+            return payload.get("permissions", 0)
         except (InvalidSignatureError, ExpiredSignatureError):
-            raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED,
-                                detail="Invalid API Key", )
-    return permissions
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Invalid API Key"
+            )
 
 
 def transform_obj_by_permissions(res, permissions):
@@ -64,9 +67,10 @@ def jwt_permissions_required(optional=False, response_model=None):
 
     def decorator(fn):
         async def wrapper(*args, credentials: HTTPAuthorizationCredentials = Depends(X_API_KEY), **kwargs):
+            request: Request = kwargs.get('request')
             res = await fn(*args, **kwargs)
             if optional is False:
-                permissions = _get_permissions(credentials)
+                permissions = _get_permissions(request.app.state.jwt_public_key, credentials)
                 if isinstance(response_model, BaseModel):
                     res = transform_obj_by_permissions(res, permissions)
                 elif issubclass(response_model.__origin__, list):

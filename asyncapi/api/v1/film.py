@@ -6,6 +6,7 @@ from fastapi.responses import ORJSONResponse
 from models.film import Film
 from security.security import jwt_permissions_required
 from services.film import FilmService, get_film_service
+from starlette.requests import Request
 
 router = APIRouter()
 
@@ -37,7 +38,7 @@ async def film_details(film_id: str, film_service: FilmService = Depends(get_fil
     response_description='Просмотреть список фильмов с различным доступом'
 )
 @jwt_permissions_required(response_model=List[Film])
-async def security_films():
+async def security_films(request: Request) -> List[Film]:
     res = [
         Film(**{
             "uuid": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
