@@ -7,7 +7,7 @@ es: Optional[AsyncElasticsearch] = None
 
 class BaseDatabaseClient(abc.ABC):
     @abc.abstractmethod
-    def get(self, search_path: str, id: str) -> Union[str, Awaitable]:
+    def get(self, search_path: str, id: str) -> Union[str, dict, Awaitable[dict]]:
         """Загрузить состояние локально из постоянного хранилища"""
         pass
 

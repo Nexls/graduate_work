@@ -5,13 +5,13 @@ import logging
 LIMIT_PER_PAGE = 50
 
 
-class QueryConstructor():
-    '''
+class QueryConstructor:
+    """
     Класс для парсинга параметров вручную, потому что наличие скобочек []
     в параметрах не дает воспользоваться штатным средством.
     Использовать класс надо методом цепочки вызовов:
     QueryConstructor(body).add_sort().add_limits().add_single_field_search('full_name')
-    '''
+    """
 
     def __init__(self, body: dict) -> None:
         self.body = body

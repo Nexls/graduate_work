@@ -16,7 +16,7 @@ class GenreService:
         self.db_client = db_client
 
     async def get_by_query(self, body: dict) -> Optional[List[Genre]]:
-        '''Возвращает список жанров из индекса, без ограничений, всё, что есть'''
+        """Возвращает список жанров из индекса, без ограничений, всё, что есть"""
 
         # если не задать size, то он по дефолту 10. Передаем максимум, чтобы вернул всё, что есть
         results = await self.db_client.search(index=settings.ELASTIC_INDEX_GENRE, size=10000)
@@ -24,10 +24,10 @@ class GenreService:
 
     async def get_by_id(self, id: str) -> Tuple[Optional[Genre], str]:
         genre = await self._get_from_cache(id)
-        cached = "1"
+        cached = '1'
         if not genre:
             genre = await self._get_from_db(id)
-            cached = "0"
+            cached = '0'
             if not genre:
                 return None, cached
 

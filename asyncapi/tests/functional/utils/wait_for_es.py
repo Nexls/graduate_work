@@ -1,8 +1,10 @@
-import os
 import logging
-from elasticsearch import Elasticsearch
-from dotenv import load_dotenv
+import os
 from time import sleep
+
+from dotenv import load_dotenv
+
+from elasticsearch import Elasticsearch
 
 logger = logging.getLogger(__name__)
 
@@ -29,7 +31,7 @@ class ElasticWaiter:
             sleep(1)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     # загружаем настройки из .env файла
     load_dotenv()
 

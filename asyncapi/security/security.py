@@ -24,7 +24,7 @@ async def init_jwt_public_key() -> str:
             try:
                 async with session.get(JWT_KEY_URL) as r:
                     json_body = await r.json()
-                    return json_body.get("public_key")
+                    return json_body.get('public_key')
             except:
                 ...
 
@@ -44,13 +44,13 @@ def _get_permissions(jwt_public_key: str, credentials: Optional[HTTPAuthorizatio
             payload = jwt.decode(
                 jwt=credentials.credentials,
                 key=jwt_public_key,
-                algorithms=["RS256"]
+                algorithms=['RS256']
             )
-            return payload.get("permissions", 0)
+            return payload.get('permissions', 0)
         except (InvalidSignatureError, ExpiredSignatureError):
             raise HTTPException(
                 status_code=status.HTTP_401_UNAUTHORIZED,
-                detail="Invalid API Key"
+                detail='Invalid API Key'
             )
 
 

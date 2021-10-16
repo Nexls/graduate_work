@@ -36,7 +36,7 @@ def backoff(start_sleep_time=0.1, factor=2, border_sleep_time=10):
                         logger.error(exc)
                         raise exc
                     logger.warning(f"Function '{func.__name__}' raised exception. "
-                                   f"Retrying in {t} seconds. Attempt {att_num}.")
+                                   f'Retrying in {t} seconds. Attempt {att_num}.')
                     time.sleep(att_num)
                     t = start_sleep_time * (factor ** att_num)
             return res

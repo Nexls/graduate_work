@@ -1,10 +1,10 @@
-import os
-import redis
 import logging
-from dotenv import load_dotenv
+import os
 from time import sleep
 
+import redis
 from backoff import backoff
+from dotenv import load_dotenv
 
 logger = logging.getLogger(__name__)
 
@@ -35,7 +35,7 @@ class RedisWaiter:
                 sleep(1)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     # загружаем настройки из .env файла
     load_dotenv()
 

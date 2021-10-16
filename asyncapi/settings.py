@@ -1,11 +1,8 @@
 import os
-from logging import config as logging_config
+
 from environs import Env
-
-from core.logger import LOGGING
-
 # Применяем настройки логирования
-logging_config.dictConfig(LOGGING)
+from pythonjsonlogger import jsonlogger
 
 # загружаем настройки из .env файла
 env = Env()
@@ -38,3 +35,32 @@ JWT_KEY_URL = env('JWT_KEY_URL', 'http://127.0.0.1:5000/public_key')
 JWT_PUBLIC_KEY = env('JWT_PUBLIC_KEY', 'test')
 
 SERVICE_URL = os.getenv('SERVICE_URL', 'http://127.0.0.1:8000/api/v1')
+
+DEBUG = bool(os.getenv('DEBUG', False))
+LOGGING_LEVEL = os.getenv('LOGGING_LEVEL', 'DEBUG')
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'json': {
+            '()': lambda: jsonlogger.JsonFormatter(
+                '%(asctime)s %(levelname)s %(name)s %(funcName)s %(message)s %(pathname)s %(lineno)s'),
+        },
+    },
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'json',
+            'level': LOGGING_LEVEL
+        },
+    },
+    'loggers': {
+        '': {
+            'handlers': ['debug_mode' if DEBUG else 'console'],
+            'level': 'DEBUG'
+        },
+        'aiohttp.access': {
+            'level': 'WARNING'
+        }
+    }
+}

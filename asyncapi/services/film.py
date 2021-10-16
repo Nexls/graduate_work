@@ -31,15 +31,15 @@ class FilmService:
                 'directors.full_name'
             ])
         if query_type == QueryType.FILTER:
-            query_constructor = query_constructor.add_filter('genre.uuid.keyword', 'filter[genre]')
+            query_constructor = query_constructor.add_filter('genre.name.keyword', 'filter_genre')
 
         payload = query_constructor.get_payload()
 
         results = await self.db_client.search(index=settings.ELASTIC_INDEX_FILM, body=payload)
         return [Film(**doc) for doc in results]
 
-    async def get_by_query(self, body: dict, query_type: QueryType) -> Optional[List[FilmResponse]]:
-        '''Получает список фильмов из эластика и преобразовывает в нужный формат ответа API'''
+    async def get_by_query(self, body: dict, query_type: QueryType) -> List[FilmResponse]:
+        """Получает список фильмов из эластика и преобразовывает в нужный формат ответа API"""
         film_list = await self._search_query_db(body, query_type)
         return [FilmResponse(
             uuid=film.uuid,
@@ -52,11 +52,11 @@ class FilmService:
     async def get_by_id(self, film_id: str) -> Tuple[Optional[Film], str]:
         # Пытаемся получить данные из кеша, потому что оно работает быстрее
         film = await self._film_from_cache(film_id)
-        cached = "1"
+        cached = '1'
         if not film:
             # Если фильма нет в кеше, то ищем его в Elasticsearch
             film = await self._get_film_from_db(film_id)
-            cached = "0"
+            cached = '0'
             if not film:
                 # Если он отсутствует в Elasticsearch, значит, фильма вообще нет в базе
                 return None, cached

@@ -6,7 +6,7 @@ from core.helpers import orjson_dumps
 
 
 class Genre(BaseModel):
-    '''Иинформация о жанре'''
+    """Иинформация о жанре"""
     uuid: uuid.UUID
     name: str
 

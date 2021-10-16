@@ -1,11 +1,17 @@
+import logging
+
 import aioredis
-from api.v1 import film, film_list, person_list, person, genre, genre_list
 import settings
+from api.v1 import film, film_list, genre, genre_list, person, person_list
 from db import db_client, storage
-from elasticsearch import AsyncElasticsearch
 from fastapi import FastAPI
 from fastapi.responses import ORJSONResponse
 from security.security import init_jwt_public_key
+
+from elasticsearch import AsyncElasticsearch
+
+logging.config.dictConfig(settings.LOGGING)
+logging.getLogger('elasticsearch').propagate = False
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
@@ -24,7 +30,7 @@ async def startup():
         port=settings.REDIS_PORT,
         password=settings.REDIS_PASS if settings.REDIS_PASS else None,
         ssl=settings.REDIS_USE_SSL,
-        ssl_cert_reqs="none",
+        ssl_cert_reqs='none',
     )
     db_client.es = AsyncElasticsearch(
         hosts=[f'{settings.ELASTIC_HOST}:{settings.ELASTIC_PORT}'],

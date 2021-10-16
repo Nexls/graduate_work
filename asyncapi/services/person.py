@@ -20,7 +20,7 @@ class PersonService:
         self.db_client = db_client
 
     async def _search_query_db(self, body: dict, query_type: QueryType) -> Optional[List[Person]]:
-        '''Возвращает список персон из индекса, с ограничениями и поиском, если задано в запросе'''
+        """Возвращает список персон из индекса, с ограничениями и поиском, если задано в запросе"""
 
         query_constructor = QueryConstructor(body).add_sort().add_limits().add_single_field_search('full_name')
         payload = query_constructor.get_payload()
@@ -29,7 +29,7 @@ class PersonService:
         return [Person(**doc) for doc in results]
 
     async def get_by_query(self, body: dict, query_type: QueryType) -> Optional[List[PersonResponse]]:
-        '''Получает список персон из эластика и преобразовывает в нужный формат ответа API'''
+        """Получает список персон из эластика и преобразовывает в нужный формат ответа API"""
 
         person_list = await self._search_query_db(body, query_type)
 
@@ -54,11 +54,11 @@ class PersonService:
     async def get_by_id(self, id: str) -> Tuple[Optional[PersonResponse], str]:
         # Пытаемся получить данные из кеша, потому что оно работает быстрее
         person_response = await self._get_from_cache(id)
-        cached = "1"
+        cached = '1'
         if not person_response:
             # Если персоны нет в кеше, то ищем его в Elasticsearch
             person = await self._get_from_elastic(id)
-            cached = "0"
+            cached = '0'
             if not person:
                 return None, cached
 

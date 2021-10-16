@@ -7,7 +7,7 @@ from core.helpers import orjson_dumps
 
 
 class FilmResponse(BaseModel):
-    '''Краткая информация о фильме'''
+    """Краткая информация о фильме"""
     uuid: uuid.UUID
     title: str
     imdb_rating: Optional[float]

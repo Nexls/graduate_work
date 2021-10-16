@@ -5,7 +5,7 @@ services:
     build:
       context: elasticsearch/
       args:
-        ELK_VERSION: 7.7.0
+        ELK_VERSION: 7.7.1
     volumes:
       - type: bind
         source: ./elasticsearch/config/elasticsearch.yml
@@ -16,7 +16,7 @@ services:
         target: /usr/share/elasticsearch/data
     environment:
       ES_JAVA_OPTS: "-Xmx256m -Xms256m"
-      ELASTIC_PASSWORD: changeme
+      ELASTIC_PASSWORD:
       discovery.type: single-node
     ports:
       - "9200:9200"
@@ -25,7 +25,7 @@ services:
     build:
       context: kibana/
       args:
-        ELK_VERSION: 7.7.0
+        ELK_VERSION: 7.7.1
     volumes:
       - type: bind
         source: ./kibana/config/kibana.yml
@@ -33,6 +33,20 @@ services:
         read_only: true
     ports:
       - "5601:5601"
+    environment:
+      ELASTIC_PASSWORD:
+    depends_on:
+      - elasticsearch
+
+  filebeat:
+    build:
+      context: filebeat/
+      args:
+        ELK_VERSION: 7.7.1
+    volumes:
+      - ./filebeat/config/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
+      - /var/lib/docker:/var/lib/docker:ro
+      - /var/run/docker.sock:/var/run/docker.sock
     depends_on:
       - elasticsearch
 

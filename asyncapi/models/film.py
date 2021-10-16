@@ -9,7 +9,7 @@ from core.helpers import orjson_dumps
 
 
 class FilmGenre(BaseModel):
-    '''Жанр'''
+    """Жанр"""
     uuid: uuid.UUID
     name: str
 
@@ -26,7 +26,7 @@ class FilmGenre(BaseModel):
 
 
 class FilmPerson(BaseModel):
-    '''Участник фильма'''
+    """Участник фильма"""
     uuid: uuid.UUID
     full_name: str
 

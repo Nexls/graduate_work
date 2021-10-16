@@ -1,8 +1,9 @@
 from typing import List
 
-from fastapi import APIRouter, Depends, Request
+from fastapi import APIRouter, Depends
 from models.enumerations import QueryType
 from models.film_response import FilmResponse
+from schemas.film_list import FilmFilterRequest, FilmSearchRequest
 from services.film import FilmService, get_film_service
 
 router = APIRouter()
@@ -17,11 +18,11 @@ router = APIRouter()
     response_description='Название и рейтинг фильма'
 )
 async def film_list_with_filter(
-    request: Request,
+    request: FilmFilterRequest = Depends(),
     film_list_service: FilmService = Depends(get_film_service)
 ) -> List[FilmResponse]:
     film_list = await film_list_service.get_by_query(
-        body=dict(request.query_params),
+        body=dict(request.dict(exclude_none=True)),
         query_type=QueryType.FILTER
     )
     if not film_list:
@@ -39,11 +40,11 @@ async def film_list_with_filter(
     response_description='Название и рейтинг фильма'
 )
 async def film_search(
-    request: Request,
+    request: FilmSearchRequest = Depends(),
     film_list_service: FilmService = Depends(get_film_service)
 ) -> List[FilmResponse]:
     film_list = await film_list_service.get_by_query(
-        body=dict(request.query_params),
+        body=dict(request.dict(exclude_none=True)),
         query_type=QueryType.SEARCH
     )
     if not film_list:

@@ -11,9 +11,12 @@ router = APIRouter()
     '/genre/',
     response_model=List[Genre],
     summary='Список жанров',
-    response_description='Ид и наименование жанра'
+    response_description='Id и наименование жанра'
 )
-async def genre_list(request: Request, genre_list_service: GenreService = Depends(get_genre_service)) -> List[Genre]:
+async def genre_list(
+    request: Request,
+    genre_list_service: GenreService = Depends(get_genre_service)
+) -> List[Genre]:
     item_list = await genre_list_service.get_by_query(
         body=dict(request.query_params)
     )

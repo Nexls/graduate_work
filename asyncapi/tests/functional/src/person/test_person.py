@@ -20,11 +20,11 @@ async def test_person_search(test_client):
     assert len(response.json()) == 1
 
     expected = {
-        "uuid": "13096714-19d3-4b07-adad-e14d2dd30657",
-        "full_name": "Nick Cornish",
-        "role": "actor",
-        "film_ids": [
-            "59844b89-64b1-45eb-b27a-940441c2fb7c"
+        'uuid': '13096714-19d3-4b07-adad-e14d2dd30657',
+        'full_name': 'Nick Cornish',
+        'role': 'actor',
+        'film_ids': [
+            '59844b89-64b1-45eb-b27a-940441c2fb7c'
         ]
     }
 
@@ -41,11 +41,11 @@ async def test_person_by_uuid(test_client):
     assert response.status_code == 200
 
     assert response.json() == {
-        "uuid": "04dc23a3-38c2-4135-8394-d731d6a9d655",
-        "full_name": "Richard Arnold",
-        "role": "actor",
-        "film_ids": [
-            "c62c41c9-3d2f-4e0a-947c-b898cf839f72"
+        'uuid': '04dc23a3-38c2-4135-8394-d731d6a9d655',
+        'full_name': 'Richard Arnold',
+        'role': 'actor',
+        'film_ids': [
+            'c62c41c9-3d2f-4e0a-947c-b898cf839f72'
         ]
     }
 
@@ -63,9 +63,9 @@ async def test_person_films(test_client):
     assert response.status_code == 200
 
     assert response.json() == [{
-        "uuid": "649a437c-440f-40e6-bf32-2fdc519baa95",
-        "title": "The Sun Is Also a Star",
-        "imdb_rating": 5.8
+        'uuid': '649a437c-440f-40e6-bf32-2fdc519baa95',
+        'title': 'The Sun Is Also a Star',
+        'imdb_rating': 5.8
     }]
 
 
@@ -89,9 +89,9 @@ async def test_cached(test_client):
 
     # Проверка результата
     assert first_response.status_code == 200
-    assert first_response.headers['x-cached'] == "0"
+    assert first_response.headers['x-cached'] == '0'
 
     second_response = await test_client.get('/person/1f3d25c0-c303-4f7e-944c-900957271ee6/', params={})
 
     assert second_response.status_code == 200
-    assert second_response.headers['x-cached'] == "1"
+    assert second_response.headers['x-cached'] == '1'

@@ -20,7 +20,7 @@ async def test_genge_by_uuid(test_client):
     # Проверка результата
     assert response.status_code == 200
 
-    assert response.json() == {"uuid": "933d0c17-2209-4b17-a3ec-a7d919768cc9", "name": "Comedy"}
+    assert response.json() == {'uuid': '933d0c17-2209-4b17-a3ec-a7d919768cc9', 'name': 'Comedy'}
 
 
 async def test_fake_uuid(test_client):
@@ -43,9 +43,9 @@ async def test_cached(test_client):
 
     # Проверка результата
     assert first_response.status_code == 200
-    assert first_response.headers['x-cached'] == "0"
+    assert first_response.headers['x-cached'] == '0'
 
     second_response = await test_client.get('/genre/72f42752-d389-4ef2-b62f-1f5e84abdfe0/', params={})
 
     assert second_response.status_code == 200
-    assert second_response.headers['x-cached'] == "1"
+    assert second_response.headers['x-cached'] == '1'
