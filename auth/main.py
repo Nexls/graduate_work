@@ -1,11 +1,12 @@
+import logging
+
 from flask_jwt_extended import JWTManager
 
 from api.routes import api
+from app import app
 from db.db import init_db, session
 from db.storage import jwt_storage
 from utils.utils import wait_redis
-from app import app
-import logging
 
 api.init_app(app)
 jwt = JWTManager(app)
@@ -36,4 +37,8 @@ if __name__ != '__main__':
     app.logger.setLevel(gunicorn_logger.level)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(
+        debug=True,
+        host='0.0.0.0',
+        port=8002,
+    )
