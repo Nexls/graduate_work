@@ -1,13 +1,15 @@
 from functools import lru_cache
+from http import HTTPStatus
 from typing import Optional, List, Tuple
 
-from fastapi import Depends, HTTPException
-from http import HTTPStatus
-
+import settings
+from core import context_logger
 from db.db_client import get_elastic, BaseDatabaseClient
 from db.storage import get_redis, BaseStorage
+from fastapi import Depends, HTTPException
 from models.genre import Genre
-import settings
+
+logger = context_logger.get(__name__)
 
 
 class GenreService:
@@ -57,7 +59,7 @@ class GenreService:
 
 @lru_cache()
 def get_genre_service(
-        storage: BaseStorage = Depends(get_redis),
-        db_client: BaseDatabaseClient = Depends(get_elastic),
+    storage: BaseStorage = Depends(get_redis),
+    db_client: BaseDatabaseClient = Depends(get_elastic),
 ) -> GenreService:
     return GenreService(storage, db_client)

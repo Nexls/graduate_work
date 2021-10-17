@@ -4,6 +4,7 @@ from typing import Optional
 
 import aiohttp
 import jwt
+from core import context_logger
 from fastapi import HTTPException
 from fastapi.params import Depends
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
@@ -12,6 +13,7 @@ from pydantic import BaseModel
 from settings import JWT_KEY_URL, JWT_PUBLIC_KEY
 from starlette import status
 from starlette.requests import Request
+logger = context_logger.get(__name__)
 
 X_API_KEY = HTTPBearer(auto_error=False)
 

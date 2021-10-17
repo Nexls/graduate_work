@@ -1,17 +1,19 @@
 from functools import lru_cache
+from http import HTTPStatus
 from typing import Optional, List, Tuple
 
-from fastapi import Depends, HTTPException
-from http import HTTPStatus
-
+import settings
+from core import context_logger
 from db.db_client import get_elastic, BaseDatabaseClient
 from db.storage import get_redis, BaseStorage
+from fastapi import Depends, HTTPException
+from models.enumerations import QueryType
 from models.film_response import FilmResponse
 from models.person import Person
 from models.person_response import PersonResponse
 from services.query_constructor import QueryConstructor
-from models.enumerations import QueryType
-import settings
+
+logger = context_logger.get(__name__)
 
 
 class PersonService:
@@ -129,7 +131,7 @@ class PersonService:
 
 @lru_cache()
 def get_person_service(
-        storage: BaseStorage = Depends(get_redis),
-        db_client: BaseDatabaseClient = Depends(get_elastic),
+    storage: BaseStorage = Depends(get_redis),
+    db_client: BaseDatabaseClient = Depends(get_elastic),
 ) -> PersonService:
     return PersonService(storage, db_client)

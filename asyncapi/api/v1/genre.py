@@ -1,9 +1,11 @@
 from http import HTTPStatus
 
+from core import context_logger
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import ORJSONResponse
 from models.genre import Genre
 from services.genre import GenreService, get_genre_service
+logger = context_logger.get(__name__)
 
 router = APIRouter()
 

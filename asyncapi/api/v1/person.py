@@ -1,11 +1,13 @@
 from http import HTTPStatus
 from typing import List
 
+from core import context_logger
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import ORJSONResponse
 from models.film_response import FilmResponse
 from models.person_response import PersonResponse
 from services.person import PersonService, get_person_service
+logger = context_logger.get(__name__)
 
 router = APIRouter()
 

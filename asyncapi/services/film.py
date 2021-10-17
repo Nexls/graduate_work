@@ -1,16 +1,20 @@
+import logging
 from functools import lru_cache
+from http import HTTPStatus
 from typing import Optional, List, Tuple
 
-from fastapi import Depends, HTTPException
-from http import HTTPStatus
-
+import settings
+from core import context_logger
 from db.db_client import get_elastic, BaseDatabaseClient
 from db.storage import get_redis, BaseStorage
+from fastapi import Depends, HTTPException
+from models.enumerations import QueryType
 from models.film import Film
 from models.film_response import FilmResponse
-from models.enumerations import QueryType
 from services.query_constructor import QueryConstructor
-import settings
+
+logger = context_logger.get(__name__)
+logging.getLogger('elasticsearch').propagate = False
 
 
 class FilmService:
@@ -51,13 +55,16 @@ class FilmService:
     # Объект опционален, так как фильм может отсутствовать в базе
     async def get_by_id(self, film_id: str) -> Tuple[Optional[Film], str]:
         # Пытаемся получить данные из кеша, потому что оно работает быстрее
+        logger.info(f'Try to find film {film_id = } in cache')
         film = await self._film_from_cache(film_id)
         cached = '1'
         if not film:
             # Если фильма нет в кеше, то ищем его в Elasticsearch
+            logger.info(f'Try to find film {film_id = } in es')
             film = await self._get_film_from_db(film_id)
             cached = '0'
             if not film:
+                logger.info(f'Film not found')
                 # Если он отсутствует в Elasticsearch, значит, фильма вообще нет в базе
                 return None, cached
             # Сохраняем фильм  в кеш

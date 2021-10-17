@@ -2,7 +2,10 @@ from aioredis import Redis
 import abc
 from typing import Optional, Union, Awaitable
 
+from core import context_logger
+
 redis: Optional[Redis] = None
+logger = context_logger.get(__name__)
 
 
 class BaseStorage(abc.ABC):

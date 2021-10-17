@@ -3,6 +3,7 @@ import logging
 import aioredis
 import settings
 from api.v1 import film, film_list, genre, genre_list, person, person_list
+from core import context_logger
 from db import db_client, storage
 from fastapi import FastAPI
 from fastapi.responses import ORJSONResponse
@@ -11,6 +12,7 @@ from security.security import init_jwt_public_key
 from elasticsearch import AsyncElasticsearch
 
 logging.config.dictConfig(settings.LOGGING)
+logger = context_logger.get(__name__)
 logging.getLogger('elasticsearch').propagate = False
 
 app = FastAPI(

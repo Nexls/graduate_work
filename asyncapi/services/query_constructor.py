@@ -1,8 +1,12 @@
 from __future__ import annotations
+
 import logging
 
+from core import context_logger
 
 LIMIT_PER_PAGE = 50
+
+logger = context_logger.get(__name__)
 
 
 class QueryConstructor:
@@ -48,7 +52,7 @@ class QueryConstructor:
             try:
                 page = int(self.body['page_number'])
                 if page > 0:
-                    self._payload['from'] = (page-1) * limit
+                    self._payload['from'] = (page - 1) * limit
             except Exception:
                 logging.error('Error converting "page[number]" to int')
 

@@ -1,6 +1,8 @@
 from http import HTTPStatus
 from typing import List
 
+from core import context_logger
+from core.logger_route import LoggerRoute
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import ORJSONResponse
 from models.film import Film
@@ -8,7 +10,9 @@ from security.security import jwt_permissions_required
 from services.film import FilmService, get_film_service
 from starlette.requests import Request
 
-router = APIRouter()
+logger = context_logger.get(__name__)
+
+router = APIRouter(route_class=LoggerRoute)
 
 
 # Внедряем FilmService с помощью Depends(get_film_service)

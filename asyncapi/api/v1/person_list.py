@@ -1,10 +1,13 @@
 from typing import List
 
-from fastapi import APIRouter, Depends, Request
+from core import context_logger
+from fastapi import APIRouter, Depends
 from models.enumerations import QueryType
 from models.person_response import PersonResponse
 from schemas.person_list import PersonSearchRequest
 from services.person import PersonService, get_person_service
+
+logger = context_logger.get(__name__)
 
 router = APIRouter()
 

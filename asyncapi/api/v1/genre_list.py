@@ -1,8 +1,10 @@
 from typing import List
 
+from core import context_logger
 from fastapi import APIRouter, Depends, Request
 from models.genre import Genre
 from services.genre import GenreService, get_genre_service
+logger = context_logger.get(__name__)
 
 router = APIRouter()
 

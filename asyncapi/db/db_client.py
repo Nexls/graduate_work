@@ -1,8 +1,13 @@
+import logging
+
+from core import context_logger
 from elasticsearch import AsyncElasticsearch
 import abc
 from typing import Optional, Awaitable, Union, List
 
 es: Optional[AsyncElasticsearch] = None
+logger = context_logger.get(__name__)
+logging.getLogger('elasticsearch').propagate = False
 
 
 class BaseDatabaseClient(abc.ABC):
