@@ -90,7 +90,7 @@ def create_partition(target, connection, **kw) -> None:
 class UserSignIn(Base):
     __tablename__ = 'users_sign_in'
     __table_args__ = (
-        PrimaryKeyConstraint("id", "user_device_type"),
+        PrimaryKeyConstraint('id', 'user_device_type'),
         {
             'postgresql_partition_by': 'LIST (user_device_type)',
             'listeners': [('after_create', create_partition)],

@@ -27,7 +27,7 @@ class Signup(Resource):
         data = api.payload
         user = User.query.filter(or_(User.login == data['login'], User.email == data['login'])).one_or_none()
         if user:
-            return "User exist", 401
+            return 'User exist', 401
         hass_pass = pbkdf2_sha256.hash(data['password'])
         user_db = User(login=data['login'], password=hass_pass, email=data.get('email', generate_random_email()))
         session.add(user_db)
@@ -56,7 +56,7 @@ class Signin(Resource):
         data = api.payload
         user = User.query.filter(or_(User.login == data['login'], User.email == data['login'])).one_or_none()
         if not user or not pbkdf2_sha256.verify(data['password'], user.password):
-            return "Wrong login or password", 401
+            return 'Wrong login or password', 401
         user_sing_in = UserSignIn(user_id=user.id, user_agent=request.user_agent.string,
                                   user_device_type=platform)
         session.add(user_sing_in)
@@ -65,7 +65,7 @@ class Signin(Resource):
         access_token = create_access_token(identity=user.login,
                                            additional_claims={'permissions': user_permissions.permissions.value})
         refresh_token = create_refresh_token(identity=user.login, additional_claims={'platform': platform})
-        jwt_storage.set(key=f"{user.login}_{platform}_refresh", value=refresh_token, expire=refresh_token_expires)
+        jwt_storage.set(key=f'{user.login}_{platform}_refresh', value=refresh_token, expire=refresh_token_expires)
         return {'access_token': access_token, 'refresh_token': refresh_token}
 
 
@@ -95,15 +95,15 @@ class SigninHistory(Resource):
         return json.dumps(history_list, cls=JsonExtendEncoder)
 
 
-@api.route("/protected", doc={'description': 'Метод для тестирования access токена'})
+@api.route('/protected', doc={'description': 'Метод для тестирования access токена'})
 class Protected(Resource):
     @api.doc(security='apikey')
     @jwt_required(locations=['headers'])
     def post(self):
-        return "You are authenticated!", 200
+        return 'You are authenticated!', 200
 
 
-@api.route("/refresh", doc={'description': 'Метод для обновления access и refresh токенов'})
+@api.route('/refresh', doc={'description': 'Метод для обновления access и refresh токенов'})
 class Refresh(Resource):
     @api.expect(get_parser('refresh'))
     @jwt_required(locations=['headers'], refresh=True)
@@ -119,7 +119,7 @@ class Refresh(Resource):
         return {'access_token': access_token, 'refresh_token': refresh_token}
 
 
-@api.route("/logout", doc={'description': 'Метод для разлогирования с текущего устройства'})
+@api.route('/logout', doc={'description': 'Метод для разлогирования с текущего устройства'})
 class Logout(Resource):
     @api.doc(security='apikey')
     @jwt_required(locations=['headers'])
@@ -132,7 +132,7 @@ class Logout(Resource):
         return response
 
 
-@api.route("/logout_all", doc={'description': 'Метод для разлогирования со всех устройств пользователя'})
+@api.route('/logout_all', doc={'description': 'Метод для разлогирования со всех устройств пользователя'})
 class LogoutAll(Resource):
     @api.doc(security='apikey')
     @jwt_required(locations=['headers'])
@@ -144,7 +144,7 @@ class LogoutAll(Resource):
         return response
 
 
-@api.route("/change_login", doc={'description': 'Метод для смены логина'})
+@api.route('/change_login', doc={'description': 'Метод для смены логина'})
 class ChangeInfo(Resource):
     @api.expect(change_login, validate=True)
     @api.doc(security='apikey')
@@ -153,19 +153,19 @@ class ChangeInfo(Resource):
         platform = get_platform_by_user_agent(web_list=WEB_list, mob_list=MOB_list, user_agent=request.user_agent)
         user_id = get_jwt()['sub']
         data = api.payload
-        session.query(User).filter(User.login == user_id).update({"login": data['new_login']})
+        session.query(User).filter(User.login == user_id).update({'login': data['new_login']})
         session.commit()
         delete_all_tokens_by_user_id(user_id, jwt_storage)
         user_permissions: Roles = Roles.query.join(User).filter(User.login == data['new_login']).first()
-        access_token = create_access_token(identity=data["new_login"],
+        access_token = create_access_token(identity=data['new_login'],
                                            additional_claims={'permissions': user_permissions.permissions.value})
-        refresh_token = create_refresh_token(identity=data["new_login"], additional_claims={'platform': platform})
+        refresh_token = create_refresh_token(identity=data['new_login'], additional_claims={'platform': platform})
         jwt_storage.set(key=f'{data["new_login"]}_{platform}_refresh', value=refresh_token,
                         expire=refresh_token_expires)
         return {'access_token': access_token, 'refresh_token': refresh_token}
 
 
-@api.route("/change_pass", doc={'description': 'Метод для смены пароля'})
+@api.route('/change_pass', doc={'description': 'Метод для смены пароля'})
 class ChangeInfo(Resource):
     @api.expect(change_pass, validate=True)
     @api.doc(security='apikey')
@@ -174,7 +174,7 @@ class ChangeInfo(Resource):
         platform = get_platform_by_user_agent(web_list=WEB_list, mob_list=MOB_list, user_agent=request.user_agent)
         user_id = get_jwt()['sub']
         data = api.payload
-        session.query(User).filter(User.login == user_id).update({"password": data['new_password']})
+        session.query(User).filter(User.login == user_id).update({'password': data['new_password']})
         session.commit()
         delete_all_tokens_by_user_id(user_id, jwt_storage)
         user_permissions: Roles = Roles.query.join(User).filter(User.login == user_id).first()

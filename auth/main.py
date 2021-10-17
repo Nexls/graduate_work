@@ -15,11 +15,11 @@ wait_redis(jwt_storage.redis_adapter)
 
 @jwt.token_in_blocklist_loader
 def check_if_token_is_revoked(jwt_header, jwt_payload):
-    user_id = jwt_payload["sub"]
-    token_type = jwt_payload["type"]
-    if token_type == "access":
+    user_id = jwt_payload['sub']
+    token_type = jwt_payload['type']
+    if token_type == 'access':
         return False
-    platform = jwt_payload["platform"]
+    platform = jwt_payload['platform']
     token_in_redis = jwt_storage.get(f'{user_id}_{platform}_refresh')
     return token_in_redis is None
 

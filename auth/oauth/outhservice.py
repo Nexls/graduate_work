@@ -16,15 +16,15 @@ from .provider import BaseProvider, VkProvider, FacebookProvider
 
 
 class OAuthService:
-    def __init__(self, session: Session, url_pattern: str = "http://localhost:5000/social_auth/"):
+    def __init__(self, session: Session, url_pattern: str = 'http://localhost:5000/social_auth/'):
         self.session = session
-        self.url_pattern = url_pattern.rstrip("/")
+        self.url_pattern = url_pattern.rstrip('/')
         self.providers: Dict[str, BaseProvider] = {}
 
     def add_providers(self, *args):
         for provider in args:
             if not isinstance(provider, BaseProvider):
-                raise ValueError(f"args {provider} must be instance of BaseProvider")
+                raise ValueError(f'args {provider} must be instance of BaseProvider')
             provider.update_url_pattern(self.url_pattern)
             self.providers[provider.name] = provider
 
@@ -52,7 +52,7 @@ class OAuthService:
             return render_template('login.html', account=user_db.email)
         if not social_account_db:
             # TODO: replace password to generate_random_password()
-            user_db = User(login=user_social.social_id, password=pbkdf2_sha256.hash("passpass"),
+            user_db = User(login=user_social.social_id, password=pbkdf2_sha256.hash('passpass'),
                            email=user_social.email)
             session.add(user_db)
             session.flush()
@@ -73,7 +73,7 @@ class OAuthService:
                                            additional_claims={'permissions': Permissions.USER.value})
         refresh_token = create_refresh_token(identity=user_db.login,
                                              additional_claims={'platform': platform})
-        jwt_storage.set(key=f"{user_db.login}_{platform}_refresh", value=refresh_token,
+        jwt_storage.set(key=f'{user_db.login}_{platform}_refresh', value=refresh_token,
                         expire=settings.refresh_token_expires)
         return {'access_token': access_token, 'refresh_token': refresh_token}
 
