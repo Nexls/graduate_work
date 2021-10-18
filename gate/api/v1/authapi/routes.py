@@ -23,8 +23,8 @@ router = APIRouter(route_class=LoggerRoute)
 async def sign_up(request: Request, user: User) -> ORJSONResponse:
     session: ClientSession = request.app.state.session
     async with session.post(
-        url=AUTH_API_URL + f'/signup',
-        data=user.dict(),
+        url=AUTH_API_URL + '/signup',
+        json=user.dict(),
         headers=request.headers
     ) as resp:
         return ORJSONResponse(content=await resp.json())

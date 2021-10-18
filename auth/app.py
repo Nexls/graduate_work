@@ -1,11 +1,15 @@
+import logging
+import sys
 from datetime import timedelta
+from logging import config
 
+import json_logging
+import settings
 from flask import Flask, render_template, request, redirect, url_for
 from flask_cors import CORS
-from requests import post
-
-import settings
 from oauth.outhservice import oauth_service
+from requests import post
+from utils import context_logger
 
 app = Flask(__name__)
 app.config['JWT_PRIVATE_KEY'] = settings.private_key
@@ -13,7 +17,15 @@ app.config['JWT_PUBLIC_KEY'] = settings.public_key
 app.config['JWT_ALGORITHM'] = 'RS256'
 app.config['JWT_ACCESS_TOKEN_EXPIRES'] = timedelta(seconds=settings.access_token_expires)
 app.config['JWT_REFRESH_TOKEN_EXPIRES'] = timedelta(seconds=settings.refresh_token_expires)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
+
+json_logging.ENABLE_JSON_LOGGING = True
+json_logging.init_flask(enable_json=True)
+
+logger = context_logger.get(__name__)
+config.dictConfig(settings.LOGGING)
+logger.logger.addHandler(logging.StreamHandler(sys.stdout))
+logging.getLogger('flask_cors').level = logging.DEBUG
 
 
 @app.route('/')

@@ -1,7 +1,15 @@
 import os
 
 from Cryptodome.PublicKey import RSA
+from pythonjsonlogger import jsonlogger
 
+from environs import Env
+
+# загружаем настройки из .env файла
+from pythonjsonlogger import jsonlogger
+
+env = Env()
+env.read_env()
 access_token_expires = os.environ.get('JWT_ACCESS_TOKEN_EXPIRES', 600)
 refresh_token_expires = os.environ.get('JWT_REFRESH_TOKEN_EXPIRES', 60 * 60 * 24 * 5)
 
@@ -35,3 +43,32 @@ FACEBOOK_CLIENT_SECRET = os.environ.get('FACEBOOK_CLIENT_SECRET', 'e88c8aa32ad15
 
 RECAPTCHA_SITE_KEY = '6Lcp3bQaAAAAAJGB-rKIjyrAl0jInGh44dyAz4mm'
 RECAPTCHA_SECRET_KEY = '6Lcp3bQaAAAAAPeBTPF3Ah6vKYVCE0zXSpfOSQ-7'
+
+DEBUG = bool(os.getenv('DEBUG', False))
+LOGGING_LEVEL = os.getenv('LOGGING_LEVEL', 'DEBUG')
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'json': {
+            '()': lambda: jsonlogger.JsonFormatter(
+                '%(asctime)s %(levelname)s %(name)s %(funcName)s %(message)s %(pathname)s %(lineno)s'),
+        },
+    },
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'json',
+            'level': LOGGING_LEVEL
+        },
+    },
+    'loggers': {
+        '': {
+            'handlers': ['debug_mode' if DEBUG else 'console'],
+            'level': 'DEBUG'
+        },
+        'aiohttp.access': {
+            'level': 'WARNING'
+        }
+    }
+}
