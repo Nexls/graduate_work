@@ -1,17 +1,18 @@
 import logging
 
-from flask_jwt_extended import JWTManager
-
 from api.routes import api
 from app import app
 from db.db import init_db, session
 from db.storage import jwt_storage
+from flask_jwt_extended import JWTManager
+from utils import context_logger
 from utils.utils import wait_redis
 
 api.init_app(app)
 jwt = JWTManager(app)
 init_db()
 wait_redis(jwt_storage.redis_adapter)
+logger = context_logger.get(__name__)
 
 
 @jwt.token_in_blocklist_loader

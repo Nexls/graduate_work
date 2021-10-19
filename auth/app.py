@@ -10,14 +10,16 @@ from flask_cors import CORS
 from oauth.outhservice import oauth_service
 from requests import post
 from utils import context_logger
+from utils.logger_middleware import LoggerMiddleware
 
 app = Flask(__name__)
+app.wsgi_app = LoggerMiddleware(app.wsgi_app)
 app.config['JWT_PRIVATE_KEY'] = settings.private_key
 app.config['JWT_PUBLIC_KEY'] = settings.public_key
 app.config['JWT_ALGORITHM'] = 'RS256'
 app.config['JWT_ACCESS_TOKEN_EXPIRES'] = timedelta(seconds=settings.access_token_expires)
 app.config['JWT_REFRESH_TOKEN_EXPIRES'] = timedelta(seconds=settings.refresh_token_expires)
-CORS(app, resources={r"/*": {"origins": "*"}})
+CORS(app)
 
 json_logging.ENABLE_JSON_LOGGING = True
 json_logging.init_flask(enable_json=True)
@@ -25,7 +27,6 @@ json_logging.init_flask(enable_json=True)
 logger = context_logger.get(__name__)
 config.dictConfig(settings.LOGGING)
 logger.logger.addHandler(logging.StreamHandler(sys.stdout))
-logging.getLogger('flask_cors').level = logging.DEBUG
 
 
 @app.route('/')

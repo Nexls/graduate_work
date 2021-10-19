@@ -25,7 +25,10 @@ async def sign_up(request: Request, user: User) -> ORJSONResponse:
     async with session.post(
         url=AUTH_API_URL + '/signup',
         json=user.dict(),
-        headers=request.headers
+        headers={
+            'X-REQUEST-ID': request.headers.get('x-request-id'),
+            'USER-AGENT': request.headers.get('user-agent'),
+        },
     ) as resp:
         return ORJSONResponse(content=await resp.json())
 
@@ -41,7 +44,10 @@ async def sign_in(request: Request, user: User) -> ORJSONResponse:
     async with session.post(
         url=AUTH_API_URL + f'/signin',
         data=user.dict(),
-        headers=request.headers
+        headers={
+            'X-REQUEST-ID': request.headers.get('x-request-id'),
+            'USER-AGENT': request.headers.get('user-agent'),
+        },
     ) as resp:
         return ORJSONResponse(content=await resp.json())
 
@@ -57,7 +63,10 @@ async def sign_in_history(request: Request) -> ORJSONResponse:
     async with session.get(
         url=AUTH_API_URL + f'/signin_history',
         params=request.query_params,
-        headers=request.headers
+        headers={
+            'X-REQUEST-ID': request.headers.get('x-request-id'),
+            'USER-AGENT': request.headers.get('user-agent'),
+        },
     ) as resp:
         return ORJSONResponse(content=await resp.json())
 
@@ -70,7 +79,10 @@ async def protected(request: Request, ) -> ORJSONResponse:
     session: ClientSession = request.app.state.session
     async with session.post(
         url=AUTH_API_URL + f'/protected',
-        headers=request.headers
+        headers={
+            'X-REQUEST-ID': request.headers.get('x-request-id'),
+            'USER-AGENT': request.headers.get('user-agent'),
+        },
     ) as resp:
         return ORJSONResponse(content=await resp.json())
 
@@ -83,7 +95,10 @@ async def refresh(request: Request) -> ORJSONResponse:
     session: ClientSession = request.app.state.session
     async with session.post(
         url=AUTH_API_URL + f'/refresh',
-        headers=request.headers
+        headers={
+            'X-REQUEST-ID': request.headers.get('x-request-id'),
+            'USER-AGENT': request.headers.get('user-agent'),
+        },
     ) as resp:
         return ORJSONResponse(content=await resp.json())
 
@@ -96,7 +111,10 @@ async def logout(request: Request) -> ORJSONResponse:
     session: ClientSession = request.app.state.session
     async with session.delete(
         url=AUTH_API_URL + f'/logout',
-        headers=request.headers
+        headers={
+            'X-REQUEST-ID': request.headers.get('x-request-id'),
+            'USER-AGENT': request.headers.get('user-agent'),
+        },
     ) as resp:
         return ORJSONResponse(content=await resp.json())
 
@@ -109,7 +127,10 @@ async def logout_all(request: Request) -> ORJSONResponse:
     session: ClientSession = request.app.state.session
     async with session.delete(
         url=AUTH_API_URL + f'/logout_all',
-        headers=request.headers
+        headers={
+            'X-REQUEST-ID': request.headers.get('x-request-id'),
+            'USER-AGENT': request.headers.get('user-agent'),
+        },
     ) as resp:
         return ORJSONResponse(content=await resp.json())
 
@@ -123,7 +144,10 @@ async def change_login(request: Request, new_data: ChangeLogin) -> ORJSONRespons
     async with session.post(
         url=AUTH_API_URL + f'/change_login',
         data=new_data.dict(),
-        headers=request.headers
+        headers={
+            'X-REQUEST-ID': request.headers.get('x-request-id'),
+            'USER-AGENT': request.headers.get('user-agent'),
+        },
     ) as resp:
         return ORJSONResponse(content=await resp.json())
 
@@ -137,7 +161,10 @@ async def change_pass(request: Request, new_data: ChangePassword) -> ORJSONRespo
     async with session.post(
         url=AUTH_API_URL + f'/change_pass',
         data=new_data.dict(),
-        headers=request.headers
+        headers={
+            'X-REQUEST-ID': request.headers.get('x-request-id'),
+            'USER-AGENT': request.headers.get('user-agent'),
+        },
     ) as resp:
         return ORJSONResponse(content=await resp.json())
 
@@ -150,6 +177,9 @@ async def public_key(request: Request) -> ORJSONResponse:
     session: ClientSession = request.app.state.session
     async with session.get(
         url=AUTH_API_URL + f'/public_key',
-        headers=request.headers
+        headers={
+            'X-REQUEST-ID': request.headers.get('x-request-id'),
+            'USER-AGENT': request.headers.get('user-agent'),
+        },
     ) as resp:
         return ORJSONResponse(content=await resp.json())

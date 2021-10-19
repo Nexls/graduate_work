@@ -2,7 +2,9 @@ import logging
 import time
 from functools import wraps
 
-logger = logging.getLogger(__name__)
+from utils import context_logger
+
+logger = context_logger.get(__name__)
 
 
 def backoff(start_sleep_time=0.5, factor=2, border_sleep_time=10):

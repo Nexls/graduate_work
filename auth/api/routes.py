@@ -1,20 +1,41 @@
 import json
+from functools import wraps
 
+from db.db import session
+from db.storage import jwt_storage
 from flask import jsonify, request
 from flask_jwt_extended import create_access_token, get_jwt_identity, jwt_required, \
     create_refresh_token, unset_jwt_cookies, get_jwt
 from flask_restplus import Resource, reqparse
-from passlib.hash import pbkdf2_sha256
-from sqlalchemy import or_
-
-from db.db import session
-from db.storage import jwt_storage
 from models.user import User, UserSignIn, Roles, Permissions
+from passlib.hash import pbkdf2_sha256
 from schemas import user, api, tokens, change_login, change_pass, user_sign_in
 from settings import WEB_list, MOB_list
 from settings import public_key, refresh_token_expires
+from sqlalchemy import or_
+from utils import context_logger
 from utils.utils import get_platform_by_user_agent, delete_all_tokens_by_user_id, JsonExtendEncoder, \
     generate_random_email
+
+logger = context_logger.get(__name__)
+
+
+def response_decorator():
+    def _response_decorator(f):
+        @wraps(f)
+        def __response_decorator(*args, **kwargs):
+            body = api.payload
+
+            request_context = context_logger.Context.get()
+            request_context['json_body'] = body
+            context_logger.Context.set(request_context)
+            logger.info(f'receive request for {f.__name__}')
+            result = f(*args, **kwargs)
+            return result
+
+        return __response_decorator
+
+    return _response_decorator
 
 
 @api.route('/signup', doc={'description': 'Метод для регистрации пользователя'})
@@ -22,7 +43,9 @@ class Signup(Resource):
     @api.expect(user, validate=True)
     @api.response(200, 'Success', tokens)
     @api.response(401, 'User exist')
+    @response_decorator()
     def post(self):
+        logger.info('Api SignUp')
         platform = get_platform_by_user_agent(web_list=WEB_list, mob_list=MOB_list, user_agent=request.user_agent)
         data = api.payload
         user = User.query.filter(or_(User.login == data['login'], User.email == data['login'])).one_or_none()
