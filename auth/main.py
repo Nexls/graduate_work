@@ -1,5 +1,8 @@
 import logging
+import sys
+from logging import config
 
+import settings
 from api.routes import api
 from app import app
 from db.db import init_db, session
@@ -13,6 +16,8 @@ jwt = JWTManager(app)
 init_db()
 wait_redis(jwt_storage.redis_adapter)
 logger = context_logger.get(__name__)
+config.dictConfig(settings.LOGGING)
+logger.logger.addHandler(logging.StreamHandler(sys.stdout))
 
 
 @jwt.token_in_blocklist_loader
@@ -33,7 +38,7 @@ def shutdown_session(exception=None):
 
 
 if __name__ != '__main__':
-    gunicorn_logger = logging.getLogger('gunicorn.error')
+    gunicorn_logger = logging.getLogger('gunicorn.access')
     app.logger.handlers = gunicorn_logger.handlers
     app.logger.setLevel(gunicorn_logger.level)
 

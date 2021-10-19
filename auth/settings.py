@@ -1,12 +1,11 @@
 import os
 
 from Cryptodome.PublicKey import RSA
-from pythonjsonlogger import jsonlogger
 
 from environs import Env
 
 # загружаем настройки из .env файла
-from pythonjsonlogger import jsonlogger
+from pythonjsonlogger.jsonlogger import JsonFormatter
 
 env = Env()
 env.read_env()
@@ -51,7 +50,7 @@ LOGGING = {
     'disable_existing_loggers': False,
     'formatters': {
         'json': {
-            '()': lambda: jsonlogger.JsonFormatter(
+            '()': lambda: JsonFormatter(
                 '%(asctime)s %(levelname)s %(name)s %(funcName)s %(message)s %(pathname)s %(lineno)s'),
         },
     },

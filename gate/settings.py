@@ -23,7 +23,7 @@ ASYNC_API_PORT = env('ASYNC_API_PORT', '8001')
 ASYNC_API_URL = f'http://{ASYNC_API_HOST}:{ASYNC_API_PORT}/api/v1'
 
 AUTH_API_HOST = env('AUTH_API_HOST', '0.0.0.0')
-AUTH_API_PORT = env('AUTH_API_HOST', '8002')
+AUTH_API_PORT = env('AUTH_API_PORT', '8002')
 AUTH_API_URL = f'http://{AUTH_API_HOST}:{AUTH_API_PORT}'
 
 LOG_FORMAT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'

@@ -12,6 +12,17 @@ processors:
 - add_docker_metadata:
     host: "unix:///var/run/docker.sock"
 
+- drop_event:
+    when:
+      not:
+        or:
+          - contains:
+              container.name: "asyncapi"
+          - contains:
+              container.name: "authapi"
+          - contains:
+              container.name: "gate"
+
 - decode_json_fields:
     fields: ["message"]
     target: "json"
@@ -20,7 +31,7 @@ processors:
 output.elasticsearch:
   hosts: ["elasticsearch:9200"]
   indices:
-    - index: "filebeat-%{[agent.version]}-%{+yyyy.MM}"
+    - index: "filebeat-apps-%{+yyyy.MM}"
 
 logging.json: true
 logging.metrics.enabled: false

@@ -16,21 +16,31 @@ from sqlalchemy import or_
 from utils import context_logger
 from utils.utils import get_platform_by_user_agent, delete_all_tokens_by_user_id, JsonExtendEncoder, \
     generate_random_email
+from werkzeug.exceptions import InternalServerError
 
 logger = context_logger.get(__name__)
 
 
 def response_decorator():
-    def _response_decorator(f):
-        @wraps(f)
+    def _response_decorator(func):
+        @wraps(func)
         def __response_decorator(*args, **kwargs):
-            body = api.payload
+            route_name = ''
+            if len(args):
+                route_name = getattr(getattr(args[0], '__class__', {}), '__name__', 'NoneName')
 
+            body = api.payload
             request_context = context_logger.Context.get()
             request_context['json_body'] = body
             context_logger.Context.set(request_context)
-            logger.info(f'receive request for {f.__name__}')
-            result = f(*args, **kwargs)
+            logger.info(f'receive request for {route_name} {func.__name__}')
+            try:
+                result = func(*args, **kwargs)
+            except BaseException:
+                logger.exception(f'Some error in  {route_name} {func.__name__}')
+                raise InternalServerError
+
+            logger.info(f'response {route_name} {func.__name__} with {result = }')
             return result
 
         return __response_decorator
@@ -45,7 +55,6 @@ class Signup(Resource):
     @api.response(401, 'User exist')
     @response_decorator()
     def post(self):
-        logger.info('Api SignUp')
         platform = get_platform_by_user_agent(web_list=WEB_list, mob_list=MOB_list, user_agent=request.user_agent)
         data = api.payload
         user = User.query.filter(or_(User.login == data['login'], User.email == data['login'])).one_or_none()

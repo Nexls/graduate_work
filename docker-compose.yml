@@ -64,26 +64,6 @@ services:
     ports:
       - "6379:6379"
 
-  authapi:
-    build:
-      context: auth/
-    env_file:
-      - .env
-    environment:
-      - POSTGRES_HOST
-      - POSTGRES_USER
-      - POSTGRES_PASSWORD
-      - POSTGRES_DB=${AUTH_DB}
-      - POSTGRES_PORT
-      - REDIS_HOST
-      - REDIS_PORT
-      - REDIS_PASSWORD
-    ports:
-    - "5000:5000"
-    depends_on:
-      - postgres
-      - redis
-
   etl:
     build:
       context: postgres_to_es/
@@ -103,9 +83,29 @@ services:
       - REDIS_HOST
       - REDIS_PORT
       - REDIS_PASSWORD
-    depends_on:
-      - elasticsearch
-      - redis
+#    depends_on:
+#      - elasticsearch
+#      - redis
+
+  authapi:
+    build:
+      context: auth/
+    env_file:
+      - .env
+    environment:
+      - POSTGRES_HOST
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+      - POSTGRES_DB=${AUTH_DB}
+      - POSTGRES_PORT
+      - REDIS_HOST
+      - REDIS_PORT
+      - REDIS_PASSWORD
+    ports:
+      - "8002:8002"
+  #    depends_on:
+  #      - postgres
+  #      - redis
 
   asyncapi:
     build:
@@ -121,13 +121,32 @@ services:
       - REDIS_HOST
       - REDIS_PORT
       - REDIS_PASSWORD
-      - JWT_KEY_URL="authapi:5000/public_key"
+      - JWT_KEY_URL="authapi:8002/public_key"
+      - JWT_PUBLIC_KEY
     ports:
-    - "8000:8000"
+    - "8001:8001"
     depends_on:
-      - elasticsearch
-      - redis
+#      - elasticsearch
+#      - redis
       - authapi
+
+  gate:
+    build:
+      context: gate/
+    env_file:
+      - .env
+    environment:
+      - JWT_KEY_URL="authapi:8002/public_key"
+      - JWT_PUBLIC_KEY
+      - ASYNC_API_HOST=asyncapi
+      - ASYNC_API_PORT=8001
+      - AUTH_API_HOST=authapi
+      - AUTH_API_PORT=8002
+    ports:
+      - "8000:8000"
+    depends_on:
+      - authapi
+      - asyncapi
 
 volumes:
   elasticsearch:
