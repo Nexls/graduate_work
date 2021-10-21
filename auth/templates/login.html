@@ -1,0 +1,103 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.css"
+          integrity="sha512-sopmFEmRVsWt542K+yzH3FQ1KJfdosOJG+bGLs9ZJT07b/3gUxRA9ICuJg2JtoZ9WeknAUuwJ0ggnmrV1YL6kQ=="
+          crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link href="https://lipis.github.io/bootstrap-social/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="https://lipis.github.io/bootstrap-social/bootstrap-social.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+          href="{{ url_for('static', filename='login.css') }}?{{ range(1, 400) | random }}?{{ range(1, 400) | random }}">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card card-signin my-5">
+                <div class="card-body">
+                    <h5 class="card-title text-center">
+                        {% if account is not none %}
+                        Find account with email
+                        {% else %}
+                        Sign In
+                        {% endif %}
+                    </h5>
+                    <form class="form-signin" id="formElem" method="post" onsubmit="this.preventDefault();">
+                        <div class="form-label-group">
+                            <input type="email" id="inputEmail" name="email" class="form-control"
+                                   placeholder="Email address" required autofocus
+                                   {% if account is not none %}
+                                   value={{ account }}
+                                   readonly
+                                   {% else %}
+                                   value="example@ex.com"
+                                   {% endif %}
+                            >
+                            <label for="inputEmail">Email address</label>
+                        </div>
+
+                        <div class="form-label-group">
+                            <input type="password" id="inputPassword" name="password" value="passpass"
+                                   class="form-control" placeholder="Password" required>
+                            <label for="inputPassword">Password</label>
+                        </div>
+                        <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" name="action"
+                                onclick='f1(this)' value="signin">Sign in
+                        </button>
+                        {% if account is none %}
+                        <div class="g-recaptcha" id='recaptcha' name="recaptcha"
+                             data-sitekey="{{ client_secret }}"></div>
+                        <button class="btn btn-lg btn-success btn-block text-uppercase" type="submit" name="action"
+                                onclick='f1(this)' value="signup">Sign up
+                        </button>
+                        {% endif %}
+                        <hr class="my-4">
+                        {% if account is none %}
+                        {% for item in oauth_urls %}
+                        <a class="btn btn-lg btn-{{ item['name'] }} btn-block text-uppercase" type="button" href={{
+                           item['url'] }}><i class="fa fa-{{ item['name'] }}"></i> Sign
+                        in with {{ item['name'] }}</a>
+                        {% endfor %}
+                        {% endif %}
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    async function f1(objButton) {
+        var form = new FormData(document.forms.formElem)
+        data = {
+            login: form.get("email"),
+            password: form.get("password"),
+            url: objButton.value,
+            g_recaptcha: form.get("g-recaptcha-response"),
+        }
+        let response = await fetch(`http://127.0.0.1:5000/login`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+        let text = await response.json()
+        if (response.status !== 200) {
+            alert(text)
+        } else {
+            prompt("Copy to clipboard: Ctrl+C, Enter", text.access_token)
+        }
+
+    }
+
+    formElem.onsubmit = async (e) => {
+        e.preventDefault();
+    };
+</script>
+</html>

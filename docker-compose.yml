@@ -1,0 +1,139 @@
+version: '3.2'
+
+services:
+  elasticsearch:
+    build:
+      context: elasticsearch/
+      args:
+        ELK_VERSION: 7.7.1
+    volumes:
+      - type: bind
+        source: ./elasticsearch/config/elasticsearch.yml
+        target: /usr/share/elasticsearch/config/elasticsearch.yml
+        read_only: true
+      - type: volume
+        source: elasticsearch
+        target: /usr/share/elasticsearch/data
+    environment:
+      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+      ELASTIC_PASSWORD:
+      discovery.type: single-node
+    ports:
+      - "9200:9200"
+
+  kibana:
+    build:
+      context: kibana/
+      args:
+        ELK_VERSION: 7.7.1
+    volumes:
+      - type: bind
+        source: ./kibana/config/kibana.yml
+        target: /usr/share/kibana/config/kibana.yml
+        read_only: true
+    ports:
+      - "5601:5601"
+    environment:
+      ELASTIC_PASSWORD:
+    depends_on:
+      - elasticsearch
+
+  filebeat:
+    build:
+      context: filebeat/
+      args:
+        ELK_VERSION: 7.7.1
+    volumes:
+      - ./filebeat/config/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
+      - /var/lib/docker:/var/lib/docker:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+    depends_on:
+      - elasticsearch
+
+  postgres:
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:6.2.0-alpine
+    ports:
+      - "6379:6379"
+
+  authapi:
+    build:
+      context: auth/
+    env_file:
+      - .env
+    environment:
+      - POSTGRES_HOST
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+      - POSTGRES_DB=${AUTH_DB}
+      - POSTGRES_PORT
+      - REDIS_HOST
+      - REDIS_PORT
+      - REDIS_PASSWORD
+    ports:
+      - "8002:8002"
+  #    depends_on:
+  #      - postgres
+  #      - redis
+
+  asyncapi:
+    build:
+      context: asyncapi/
+    env_file:
+      - .env
+    environment:
+      - ELASTIC_HOST
+      - ELASTIC_PORT
+      - ELASTIC_USER
+      - ELASTIC_PASSWORD
+      - ELASTIC_INDEX
+      - REDIS_HOST
+      - REDIS_PORT
+      - REDIS_PASSWORD
+      - JWT_KEY_URL="authapi:8002/public_key"
+      - JWT_PUBLIC_KEY
+    ports:
+    - "8001:8001"
+    depends_on:
+#      - elasticsearch
+#      - redis
+      - authapi
+
+  voice_assistant:
+    build:
+      context: voice_assistant/
+    env_file:
+      - .env
+    ports:
+      - "8003:8003"
+    depends_on:
+      - asyncapi
+
+  gate:
+    build:
+      context: gate/
+    env_file:
+      - .env
+    environment:
+      - JWT_KEY_URL="authapi:8002/public_key"
+      - JWT_PUBLIC_KEY
+      - ASYNC_API_HOST=asyncapi
+      - ASYNC_API_PORT=8001
+      - AUTH_API_HOST=authapi
+      - AUTH_API_PORT=8002
+    ports:
+      - "8000:8000"
+    depends_on:
+      - authapi
+      - asyncapi
+
+volumes:
+  elasticsearch:
