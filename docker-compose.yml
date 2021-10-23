@@ -43,6 +43,7 @@ services:
       context: filebeat/
       args:
         ELK_VERSION: 7.7.1
+    user: root
     volumes:
       - ./filebeat/config/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
       - /var/lib/docker:/var/lib/docker:ro
@@ -98,7 +99,7 @@ services:
       - REDIS_HOST
       - REDIS_PORT
       - REDIS_PASSWORD
-      - JWT_KEY_URL="authapi:8002/public_key"
+      - JWT_KEY_URL=http://authapi:8002/public_key
       - JWT_PUBLIC_KEY
     ports:
     - "8001:8001"
@@ -123,7 +124,7 @@ services:
     env_file:
       - .env
     environment:
-      - JWT_KEY_URL="authapi:8002/public_key"
+      - JWT_KEY_URL=http://authapi:8002/public_key
       - JWT_PUBLIC_KEY
       - ASYNC_API_HOST=asyncapi
       - ASYNC_API_PORT=8001

@@ -1,0 +1,34 @@
+slots:
+    type:
+        source: $Type
+        type: MediaType
+    film_name:
+        source: $FilmName
+
+root:
+    ($Show)? $Who $Played в ($Type)? $FilmName ($Please)?
+$Show:
+    %lemma
+    скажи
+    покажи
+    продемонстрируй
+    какие
+    назови
+$Who:
+    %lemma
+    кто
+    какие актеры
+$Played:
+    %lemma
+    снялся
+    играл
+    выступал
+    участвовал
+$Type:
+    $MediaType
+$FilmName:
+    .+
+$Please:
+    %lemma
+    плиз
+    пожалуйста

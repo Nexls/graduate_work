@@ -90,36 +90,8 @@ waitForElasticsearch() {
   exit 1
 }
 
-# Wait for kibana to start
-waitForKibana() {
-    echo -n "===> Waiting for kibana (${KIBANA_HOST:-kibana:5601}) to start..."
-    i=1
-    while [ $i -le 20 ]; do
-
-        status=$(curl --silent -XGET "http://${KIBANA_HOST:-kibana:5601}/api/status" | jq -r '.status.overall.state')
-
-        if [[ "$status" = "green" ]] ; then
-            echo "kibana is ready!"
-            return 0
-        fi
-
-        echo -n '.'
-        sleep 1
-        i=$((i+1))
-    done
-
-    echo
-    echo >&2 "${2} is not available"
-    echo >&2 "Address: ${1}"
-}
-
 if [[ -z $1 ]] || [[ ${1:0:1} == '-' ]] ; then
   waitForElasticsearch
-  # geoipInfo
-  waitForKibana "${KIBANA_HOST:-kibana:5601}"
-  echo "===> Setting up filebeat..."
-#  filebeat setup --modules zeek -e -E 'setup.dashboards.enabled=true'
-  echo "===> Starting filebeat..."
 fi
 
 filebeat -e

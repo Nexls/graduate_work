@@ -1,0 +1,28 @@
+slots:
+    person_name:
+        source: $PersonName
+
+root:
+    ($Show)? $What ($Biography)? (у)? $PersonName ($Please)?
+$Show:
+    %lemma
+    скажи
+    покажи
+    продемонстрируй
+    назови
+$What:
+    %lemma
+    какая
+    расскажи (о|про)?
+$Biography:
+    %lemma
+    биография
+    судьба
+    история
+    карьера
+$PersonName:
+    .+
+$Please:
+    %lemma
+    плиз
+    пожалуйста

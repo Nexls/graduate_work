@@ -1,0 +1,35 @@
+slots:
+    type:
+        source: $Type
+        type: MediaType
+    film_name:
+        source: $FilmName
+
+root:
+    ($Show)? $When $Released (у|в)? ($Type)? $FilmName ($Please)?
+$Show:
+    %lemma
+    скажи
+    покажи
+    продемонстрируй
+    назови
+$When:
+    %lemma
+    когда
+    как давно
+    в каком году
+$Released:
+    %lemma
+    выпустили
+    вышел
+    вышел в прокат
+    появился на экранах
+    сняли
+$Type:
+    $MediaType
+$FilmName:
+    .+
+$Please:
+    %lemma
+    плиз
+    пожалуйста

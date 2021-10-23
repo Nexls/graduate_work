@@ -1,0 +1,26 @@
+slots:
+    type:
+        source: $Type
+        type: MediaType
+    period:
+        source: $Period
+        type: YANDEX.DATETIME
+        
+root:
+    ($Show)? (самые)? $Top ($Type)? (за)? $Period (пожалуйста)?
+$Show:
+    %lemma
+    скажи
+    покажи
+    продемонстрируй
+    какие
+    назови
+$Top:
+    %lemma
+    топ
+    лучшие
+    крутые
+$Type:
+    $MediaType
+$Period:
+    .+

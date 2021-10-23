@@ -1,0 +1,50 @@
+entity MediaType:
+    values:
+        movie:
+            %lemma
+            фильм
+            кино
+        tv_show:
+            %lemma
+            сериал
+            шоу
+
+entity GenreType:
+    values:
+        comedy:
+            %lemma
+            комедия
+        drama:
+            %lemma
+            драма
+        fantasy:
+            %lemma
+            фэнтези
+        short:
+            %lemma
+            короткометражки
+            короткий метр
+            короткометражное (кино)?
+        documentary:
+            %lemma
+            документальное (кино)?
+            документалка
+        talk_show:
+            %lemma
+            ток шоу
+        musical:
+            %lemma
+            мьюзикл
+        news:
+            %lemma
+            новости
+        family:
+            %lemma
+            семейное (кино)?
+        reality_tv:
+            %lemma
+            реалити шоу
+        war:
+            %lemma
+            военное (кино)?
+            о войне

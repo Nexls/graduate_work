@@ -1,0 +1,33 @@
+slots:
+    type:
+        source: $Type
+        type: MediaType
+    person_name:
+        source: $PersonName
+
+root:
+    ($Show)? $Where ($Type)? $Played $PersonName ($Please)?
+$Show:
+    %lemma
+    скажи
+    покажи
+    продемонстрируй
+    назови
+$Where:
+    %lemma
+    в каких
+    где
+$Type:
+    $MediaType
+$Played:
+    %lemma
+    снялся
+    играл
+    выступал
+    участвовал
+$PersonName:
+    .+
+$Please:
+    %lemma
+    плиз
+    пожалуйста

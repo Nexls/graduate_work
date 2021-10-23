@@ -1,0 +1,30 @@
+slots:
+    person_name:
+        source: $PersonName
+
+root:
+    ($Show)? $When $Born (у)? $PersonName ($Please)?
+$Show:
+    %lemma
+    скажи
+    покажи
+    продемонстрируй
+    назови
+$When:
+    %lemma
+    когда
+    как давно
+    в каком году
+    сколько
+    какой
+$Born:
+    %lemma
+    родился
+    лет
+    возраст
+$PersonName:
+    .+
+$Please:
+    %lemma
+    плиз
+    пожалуйста

@@ -1,0 +1,22 @@
+slots:
+    type:
+        source: $Type
+        type: MediaType
+        
+root:
+    ($Show)? (самые)? $Top $Type (пожалуйста)?
+$Show:
+    %lemma
+    скажи
+    покажи
+    продемонстрируй
+    какие
+    назови
+$Top:
+    %lemma
+    топ
+    лучшие
+    крутые
+$Type:
+    $MediaType
+
