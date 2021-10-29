@@ -6,14 +6,16 @@ slots:
         source: $FilmName
 
 root:
-    ($Show)? $Description (у|в)? ($Type)? $FilmName ($Please)?
+    ($Show)? ($What)? $Description (у|в)? ($Type)? $FilmName ($Please)?
 $Show:
     %lemma
     скажи
     покажи
     продемонстрируй
     какие
-    назови
+$What:
+    %lemma
+    какое
 $Description:
     %lemma
     описание
