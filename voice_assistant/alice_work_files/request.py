@@ -18,7 +18,8 @@ class AliceRequest:
         slots = {}
         request_intents = self.request_body['request']['nlu']['intents']
 
-        # ебучие костыли из-за формата запроса яндекса (и моего аутизма)
+        # слоты в интентах могут записываться по-разному
+        # сделаем либо обработку поумнее, либо другую логику доставания слотов из запроса
         for intent in request_intents:
             try:
                 slot_type = self.request_body['request']['nlu']['intents'][intent]['slots']['type']['type']

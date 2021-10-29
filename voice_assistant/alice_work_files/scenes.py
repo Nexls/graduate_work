@@ -40,8 +40,9 @@ class Scene(ABC):
         raise NotImplementedError()
 
     async def fallback(self, request: AliceRequest):
-        text = 'Спроси нормально.'
+        text = 'Не понимаю. Попробуй сформулировать иначе'
 
+        # пока складываем нераспознанные выражения в обычный txt файл
         with open('/home/nexls/Documents/Cinema/alice_cinema_search/fallbacks.txt',
                   'a', encoding='utf-8') as file:
             file.write(request.original_utterance + '\n')
@@ -52,7 +53,7 @@ class Scene(ABC):
 
     async def make_response(self, text, tts=None, card=None, state=None, buttons=None, directives=None):
         if tts is None:
-            tts = text.replace('\n', '')
+            tts = text.replace('\n', ' ')
 
         response = {
             'text': text,
@@ -189,14 +190,14 @@ class FilmInfo(SearchScene):
         if intents.FILM_DESCRIPTION in request.intents:
             return await self.film_description(request)
 
-    # эта функция должна заменить половину быдлокода в отдельных функциях
+    # эта функция должна сократить код отдельных функций в 2 раза
     async def get_film_id(self, request: AliceRequest):
-        # надо переводить с русского на латиницу чтобы можно было искать по названию
+        # переводим с русского на латиницу чтобы можно было вставлять в запрос
 
         # film_name_rus = request.slots.get('YANDEX.STRING', '')
         # film_name_eng = transliterate(film_name_rus)
 
-        # пока так будет
+        # для теста
         film_name_eng = 'dune'
 
         async with ClientSession() as session:
@@ -211,12 +212,12 @@ class FilmInfo(SearchScene):
         return await film_id
 
     async def film_author(self, request: AliceRequest):
-        # надо переводить с русского на латиницу чтобы можно было искать по названию
+        # переводим с русского на латиницу чтобы можно было вставлять в запрос
 
         # film_name_rus = request.slots.get('YANDEX.STRING', '')
         # film_name_eng = transliterate(film_name_rus)
 
-        # пока так будет
+        # для теста
         film_name_eng = 'dune'
 
         async with ClientSession() as session:
@@ -241,12 +242,12 @@ class FilmInfo(SearchScene):
         return await self.make_response(text)
 
     async def film_actors(self, request: AliceRequest):
-        # надо переводить с русского на латиницу чтобы можно было искать по названию
+        # переводим с русского на латиницу чтобы можно было вставлять в запрос
 
         # film_name_rus = request.slots.get('YANDEX.STRING', '')
         # film_name_eng = transliterate(film_name_rus)
 
-        # пока так будет
+        # для теста
         film_name_eng = 'dune'
 
         async with ClientSession() as session:
@@ -271,12 +272,12 @@ class FilmInfo(SearchScene):
         return await self.make_response(text)
 
     async def film_description(self, request: AliceRequest):
-        # надо переводить с русского на латиницу чтобы можно было искать по названию
+        # переводим с русского на латиницу чтобы можно было вставлять в запрос
 
         # film_name_rus = request.slots.get('YANDEX.STRING', '')
         # film_name_eng = transliterate(film_name_rus)
 
-        # пока так будет
+        # для теста
         film_name_eng = 'dune'
 
         async with ClientSession() as session:
@@ -297,12 +298,12 @@ class FilmInfo(SearchScene):
         return await self.make_response(film_description)
 
     async def film_duration(self, request: AliceRequest):
-        # надо переводить с русского на латиницу чтобы можно было искать по названию
+        # переводим с русского на латиницу чтобы можно было вставлять в запрос
 
         # film_name_rus = request.slots.get('YANDEX.STRING', '')
         # film_name_eng = transliterate(film_name_rus)
 
-        # пока так будет
+        # для теста
         film_name_rus = 'дюна'
         film_name_eng = 'dune'
 
@@ -324,12 +325,12 @@ class FilmInfo(SearchScene):
         return await self.make_response(f'Пока нет информации о длительности фильма {film_name_rus}')
 
     async def film_genre(self, request: AliceRequest):
-        # надо переводить с русского на латиницу чтобы можно было искать по названию
+        # переводим с русского на латиницу чтобы можно было вставлять в запрос
 
         # film_name_rus = request.slots.get('YANDEX.STRING', '')
         # film_name_eng = transliterate(film_name_rus)
 
-        # пока так будет
+        # для теста
         film_name_eng = 'dune'
 
         async with ClientSession() as session:
@@ -352,12 +353,12 @@ class FilmInfo(SearchScene):
         return await self.make_response(text)
 
     async def film_rating(self, request: AliceRequest):
-        # надо переводить с русского на латиницу чтобы можно было искать по названию
+        # переводим с русского на латиницу чтобы можно было вставлять в запрос
 
         # film_name_rus = request.slots.get('YANDEX.STRING', '')
         # film_name_eng = transliterate(film_name_rus)
 
-        # пока так будет
+        # для теста
         film_name_rus = 'дюна'
         film_name_eng = 'dune'
 
@@ -379,12 +380,12 @@ class FilmInfo(SearchScene):
         return await self.make_response(f'Рейтинг фильма {film_name_rus} - {film_rating}')
 
     async def film_release_date(self, request: AliceRequest):
-        # надо переводить с русского на латиницу чтобы можно было искать по названию
+        # переводим с русского на латиницу чтобы можно было вставлять в запрос
 
         # film_name_rus = request.slots.get('YANDEX.STRING', '')
         # film_name_eng = transliterate(film_name_rus)
 
-        # пока так будет
+        # для теста
         film_name_rus = 'дюна'
         film_name_eng = 'dune'
 
@@ -420,12 +421,12 @@ class PersonInfo(SearchScene):
             return await self.person_biography(request)
 
     async def person_age(self, request: AliceRequest):
-        # надо переводить с русского на латиницу чтобы можно было искать по названию
+        # переводим с русского на латиницу чтобы можно было вставлять в запрос
 
-        # film_name_rus = request.slots.get('YANDEX.STRING', '')
-        # film_name_eng = transliterate(film_name_rus)
+        # person_name_rus = request.slots.get('YANDEX.STRING', '')
+        # person_name_eng = transliterate(film_name_rus)
 
-        # пока так будет
+        # для теста
         person_name_rus = 'алиса'
         person_name_eng = 'alice'
 
@@ -447,12 +448,12 @@ class PersonInfo(SearchScene):
         return await self.make_response(person_birth_date)
 
     async def person_films(self, request: AliceRequest):
-        # надо переводить с русского на латиницу чтобы можно было искать по названию
+        # переводим с русского на латиницу чтобы можно было вставлять в запрос
 
-        # film_name_rus = request.slots.get('YANDEX.STRING', '')
-        # film_name_eng = transliterate(film_name_rus)
+        # person_name_rus = request.slots.get('YANDEX.STRING', '')
+        # person_name_eng = transliterate(film_name_rus)
 
-        # пока так будет
+        # для теста
         person_name_rus = 'алиса'
         person_name_eng = 'alice'
 
@@ -478,12 +479,12 @@ class PersonInfo(SearchScene):
         return await self.make_response(text)
 
     async def person_biography(self, request: AliceRequest):
-        # надо переводить с русского на латиницу чтобы можно было искать по названию
+        # переводим с русского на латиницу чтобы можно было вставлять в запрос
 
-        # film_name_rus = request.slots.get('YANDEX.STRING', '')
-        # film_name_eng = transliterate(film_name_rus)
+        # person_name_rus = request.slots.get('YANDEX.STRING', '')
+        # person_name_eng = transliterate(film_name_rus)
 
-        # пока так будет
+        # для теста
         person_name_rus = 'алиса'
         person_name_eng = 'alice'
 
@@ -524,16 +525,9 @@ SCENES = {
 DEFAULT_SCENE = Welcome
 
 
-# тип перевод в латиницу (кажется не работает нихуя)
+# первая попавшаяся функция транслитерации
 def transliterate(name):
-    """
-    Автор: LarsKort
-    Дата: 16/07/2011; 1:05 GMT-4;
-    Не претендую на "хорошесть" словарика. В моем случае и такой пойдет,
-    вы всегда сможете добавить свои символы и даже слова. Только
-    это нужно делать в обоих списках, иначе будет ошибка.
-    """
-    # Слоаврь с заменами
+    # Словарь с заменами
     slovar = {'а': 'a', 'б': 'b', 'в': 'v', 'г': 'g', 'д': 'd', 'е': 'e', 'ё': 'yo',
               'ж': 'zh', 'з': 'z', 'и': 'i', 'й': 'i', 'к': 'k', 'л': 'l', 'м': 'm', 'н': 'n',
               'о': 'o', 'п': 'p', 'р': 'r', 'с': 's', 'т': 't', 'у': 'u', 'ф': 'f', 'х': 'h',
