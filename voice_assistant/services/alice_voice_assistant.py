@@ -14,15 +14,14 @@ logger = context_logger.get(__name__)
 logging.getLogger('elasticsearch').propagate = False
 
 
-class AliceVoiceAssistantService():
-    def __init__(self, *args, **kwargs) -> None:
-        super().__init__()
+class AliceVoiceAssistantService:
+    def __init__(self, session: ClientSession) -> None:
+        self.session = session
 
     async def parse_alice_request_and_routing(self, request: Request) -> dict[str, Any]:
         """
         Entry-point for Serverless Function.
-        :param event: request payload.
-        :param context: information about current execution context.
+        :param request: HTTP-Request instance
         :return: response to be serialized as JSON.
         """
         event = await request.json()

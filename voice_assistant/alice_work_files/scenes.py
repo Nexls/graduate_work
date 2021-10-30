@@ -22,7 +22,7 @@ class Scene(ABC):
     # генерация ответа сцены
     @abstractmethod
     async def reply(self, request):
-        raise NotImplementedError()
+        ...
 
     # проверка перехода к новой сцене
     def move(self, request: AliceRequest):
@@ -33,11 +33,11 @@ class Scene(ABC):
 
     @abstractmethod
     async def handle_global_intents(self, request: AliceRequest):
-        raise NotImplementedError()
+        ...
 
     @abstractmethod
     async def handle_local_intents(self, request: AliceRequest) -> Optional[str]:
-        raise NotImplementedError()
+        ...
 
     async def fallback(self, request: AliceRequest):
         text = 'Не понимаю. Попробуй сформулировать иначе'
