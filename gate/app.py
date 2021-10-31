@@ -1,15 +1,14 @@
 import logging
 
 import aioredis
-
+import api.v1 as api
 import settings
 from aiohttp import ClientSession
 from core import context_logger
 from fastapi import FastAPI
 from fastapi.responses import ORJSONResponse
-from security.security import init_jwt_public_key
-import api.v1 as api
 from security.limiter import FastAPILimiter
+from security.security import init_jwt_public_key
 
 logging.config.dictConfig(settings.LOGGING)
 logger = context_logger.get(__name__)

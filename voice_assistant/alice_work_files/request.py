@@ -1,6 +1,16 @@
+from typing import Any
+
+from aiohttp import ClientSession
+
+
 class AliceRequest:
-    def __init__(self, request_body):
+    def __init__(
+        self,
+        request_body: dict[str, Any],
+        session: ClientSession
+    ) -> None:
         self.request_body = request_body
+        self.session = session
 
     def __getitem__(self, key):
         return self.request_body[key]

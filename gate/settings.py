@@ -2,7 +2,6 @@ import os
 from logging import config as logging_config
 
 from environs import Env
-
 # загружаем настройки из .env файла
 from pythonjsonlogger import jsonlogger
 

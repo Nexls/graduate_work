@@ -4,13 +4,16 @@ from abc import ABC, abstractmethod
 from typing import Optional
 
 import ujson
-from aiohttp import ClientSession
 
 from alice_work_files import intents
 from alice_work_files.intents import FILM_INFO_INTENTS, PERSON_INFO_INTENTS, TOP_FILM_INTENTS
 from alice_work_files.request import AliceRequest
 from alice_work_files.response_helpers import button
 from alice_work_files.state import STATE_RESPONSE_KEY
+from core import context_logger
+from settings import ASYNC_API_URL
+
+logger = context_logger.get(__name__)
 
 
 class Scene(ABC):
@@ -42,10 +45,7 @@ class Scene(ABC):
     async def fallback(self, request: AliceRequest):
         text = 'Не понимаю. Попробуй сформулировать иначе'
 
-        # пока складываем нераспознанные выражения в обычный txt файл
-        with open('/home/nexls/Documents/Cinema/alice_cinema_search/fallbacks.txt',
-                  'a', encoding='utf-8') as file:
-            file.write(request.original_utterance + '\n')
+        logger.error(f'incomprehensible intense: {request.original_utterance}')
 
         return await self.make_response(text, buttons=[
             button('Что ты умеешь?', hide=True)
@@ -122,10 +122,11 @@ class TopFilms(SearchScene):
     async def top_by_type(self, request: AliceRequest):
         filter_type = request.slots.get('MediaType', '')
 
-        async with ClientSession() as session:
+        async with request.session as session:
             async with session.get(
-                    url=('http://localhost:8001/api/v1/film?'
-                         f'sort=-imdb_rating&page_size=3&filter_type={filter_type}')) as resp:
+                    url=(f'{ASYNC_API_URL}/film?'
+                         f'sort=-imdb_rating&page_size=3&filter_type={filter_type}')
+            ) as resp:
                 resp_json = await resp.json()
 
         film_list = [film['title'] for film in resp_json]
@@ -136,10 +137,11 @@ class TopFilms(SearchScene):
     async def top_by_genre(self, request: AliceRequest):
         filter_genre = request.slots.get('GenreType', '')
 
-        async with ClientSession() as session:
+        async with request.session as session:
             async with session.get(
-                    url=('http://localhost:8001/api/v1/film?'
-                         f'sort=-imdb_rating&page_size=3&filter_genre={filter_genre}')) as resp:
+                    url=(f'{ASYNC_API_URL}/film?'
+                         f'sort=-imdb_rating&page_size=3&filter_genre={filter_genre}')
+            ) as resp:
                 resp_json = await resp.json()
 
         film_list = [film['title'] for film in resp_json]
@@ -200,9 +202,9 @@ class FilmInfo(SearchScene):
         # для теста
         film_name_eng = 'dune'
 
-        async with ClientSession() as session:
+        async with request.session as session:
             async with session.get(
-                    url=('http://localhost:8001/api/v1/film/search?'
+                    url=(f'{ASYNC_API_URL}/film/search?'
                          f'sort=-imdb_rating&page_size=1&query={film_name_eng}')) as resp:
                 resp_json = await resp.json()
 
@@ -220,10 +222,11 @@ class FilmInfo(SearchScene):
         # для теста
         film_name_eng = 'dune'
 
-        async with ClientSession() as session:
+        async with request.session as session:
             async with session.get(
-                    url=('http://localhost:8001/api/v1/film/search?'
-                         f'sort=-imdb_rating&page_size=1&query={film_name_eng}')) as resp:
+                    url=(f'{ASYNC_API_URL}/film/search?'
+                         f'sort=-imdb_rating&page_size=1&query={film_name_eng}')
+            ) as resp:
                 resp_json = await resp.json()
 
         # по-хорошему сохранить как переменную класса, чтобы потом использовать в локальных интентах
@@ -231,9 +234,10 @@ class FilmInfo(SearchScene):
 
         film_id = resp_json[0]['uuid']
 
-        async with ClientSession() as session:
+        async with request.session as session:
             async with session.get(
-                    url=(f'http://localhost:8001/api/v1/film/{film_id}')) as resp:
+                    url=f'{ASYNC_API_URL}/film/{film_id}'
+            ) as resp:
                 resp_json = await resp.json()
 
         film_writers = [writer['full_name'] for writer in resp_json['writers']]
@@ -250,10 +254,11 @@ class FilmInfo(SearchScene):
         # для теста
         film_name_eng = 'dune'
 
-        async with ClientSession() as session:
+        async with request.session as session:
             async with session.get(
-                    url=('http://localhost:8001/api/v1/film/search?'
-                         f'sort=-imdb_rating&page_size=1&query={film_name_eng}')) as resp:
+                    url=(f'{ASYNC_API_URL}/film/search?'
+                         f'sort=-imdb_rating&page_size=1&query={film_name_eng}')
+            ) as resp:
                 resp_json = await resp.json()
 
         # по-хорошему сохранить как переменную класса, чтобы потом использовать в локальных интентах
@@ -261,9 +266,10 @@ class FilmInfo(SearchScene):
 
         film_id = resp_json[0]['uuid']
 
-        async with ClientSession() as session:
+        async with request.session as session:
             async with session.get(
-                    url=(f'http://localhost:8001/api/v1/film/{film_id}')) as resp:
+                    url=f'{ASYNC_API_URL}/film/{film_id}'
+            ) as resp:
                 resp_json = await resp.json()
 
         film_actors = [actor['full_name'] for actor in resp_json['actors']]
@@ -280,18 +286,19 @@ class FilmInfo(SearchScene):
         # для теста
         film_name_eng = 'dune'
 
-        async with ClientSession() as session:
+        async with request.session as session:
             async with session.get(
-                    url=('http://localhost:8001/api/v1/film/search?'
-                         f'sort=-imdb_rating&page_size=1&query={film_name_eng}')) as resp:
+                    url=(f'{ASYNC_API_URL}/film/search?'
+                         f'sort=-imdb_rating&page_size=1&query={film_name_eng}')
+            ) as resp:
                 resp_json = await resp.json()
 
         # по-хорошему сохранить как переменную класса, чтобы потом использовать в локальных интентах
         film_id = resp_json[0]['uuid']
 
-        async with ClientSession() as session:
+        async with request.session as session:
             async with session.get(
-                    url=(f'http://localhost:8001/api/v1/film/{film_id}')) as resp:
+                    url=f'{ASYNC_API_URL}/film/{film_id}') as resp:
                 resp_json = await resp.json()
 
         film_description = resp_json[0]['description']
@@ -307,18 +314,20 @@ class FilmInfo(SearchScene):
         film_name_rus = 'дюна'
         film_name_eng = 'dune'
 
-        async with ClientSession() as session:
+        async with request.session as session:
             async with session.get(
-                    url=('http://localhost:8001/api/v1/film/search?'
-                         f'sort=-imdb_rating&page_size=1&query={film_name_eng}')) as resp:
+                    url=(f'{ASYNC_API_URL}/film/search?'
+                         f'sort=-imdb_rating&page_size=1&query={film_name_eng}')
+            ) as resp:
                 resp_json = await resp.json()
 
         # по-хорошему сохранить как переменную класса, чтобы потом использовать в локальных интентах
         film_id = resp_json[0]['uuid']
 
-        async with ClientSession() as session:
+        async with request.session as session:
             async with session.get(
-                    url=(f'http://localhost:8001/api/v1/film/{film_id}')) as resp:
+                    url=f'{ASYNC_API_URL}/film/{film_id}'
+            ) as resp:
                 resp_json = await resp.json()
 
         # film_duration = resp_json[0]['duration']
@@ -333,18 +342,20 @@ class FilmInfo(SearchScene):
         # для теста
         film_name_eng = 'dune'
 
-        async with ClientSession() as session:
+        async with request.session as session:
             async with session.get(
-                    url=('http://localhost:8001/api/v1/film/search?'
-                         f'sort=-imdb_rating&page_size=1&query={film_name_eng}')) as resp:
+                    url=(f'{ASYNC_API_URL}/film/search?'
+                         f'sort=-imdb_rating&page_size=1&query={film_name_eng}')
+            ) as resp:
                 resp_json = await resp.json()
 
         # по-хорошему сохранить как переменную класса, чтобы потом использовать в локальных интентах
         film_id = resp_json[0]['uuid']
 
-        async with ClientSession() as session:
+        async with request.session as session:
             async with session.get(
-                    url=(f'http://localhost:8001/api/v1/film/{film_id}')) as resp:
+                    url=f'{ASYNC_API_URL}/film/{film_id}'
+            ) as resp:
                 resp_json = await resp.json()
 
         film_genres = [genre['name'] for genre in resp_json['genre']]
@@ -362,18 +373,20 @@ class FilmInfo(SearchScene):
         film_name_rus = 'дюна'
         film_name_eng = 'dune'
 
-        async with ClientSession() as session:
+        async with request.session as session:
             async with session.get(
-                    url=('http://localhost:8001/api/v1/film/search?'
-                         f'sort=-imdb_rating&page_size=1&query={film_name_eng}')) as resp:
+                    url=(f'{ASYNC_API_URL}/film/search?'
+                         f'sort=-imdb_rating&page_size=1&query={film_name_eng}')
+            ) as resp:
                 resp_json = await resp.json()
 
         # по-хорошему сохранить как переменную класса, чтобы потом использовать в локальных интентах
         film_id = resp_json[0]['uuid']
 
-        async with ClientSession() as session:
+        async with request.session as session:
             async with session.get(
-                    url=(f'http://localhost:8001/api/v1/film/{film_id}')) as resp:
+                    url=f'{ASYNC_API_URL}/film/{film_id}'
+            ) as resp:
                 resp_json = await resp.json()
 
         film_rating = resp_json[0]['imdb_rating']
@@ -389,18 +402,18 @@ class FilmInfo(SearchScene):
         film_name_rus = 'дюна'
         film_name_eng = 'dune'
 
-        async with ClientSession() as session:
+        async with request.session as session:
             async with session.get(
-                    url=('http://localhost:8001/api/v1/film/search?'
+                    url=(f'{ASYNC_API_URL}/film/search?'
                          f'sort=-imdb_rating&page_size=1&query={film_name_eng}')) as resp:
                 resp_json = await resp.json()
 
         # по-хорошему сохранить как переменную класса, чтобы потом использовать в локальных интентах
         film_id = resp_json[0]['uuid']
 
-        async with ClientSession() as session:
+        async with request.session as session:
             async with session.get(
-                    url=(f'http://localhost:8001/api/v1/film/{film_id}')) as resp:
+                    url=f'{ASYNC_API_URL}/film/{film_id}') as resp:
                 resp_json = await resp.json()
 
         # film_release_date = resp_json[0]['release_date']
@@ -430,18 +443,18 @@ class PersonInfo(SearchScene):
         person_name_rus = 'алиса'
         person_name_eng = 'alice'
 
-        async with ClientSession() as session:
+        async with request.session as session:
             async with session.get(
-                    url=('http://localhost:8001/api/v1/person/search?'
+                    url=(f'{ASYNC_API_URL}/person/search?'
                          f'page_size=1&query={person_name_eng}')) as resp:
                 resp_json = await resp.json()
 
         # по-хорошему сохранить как переменную класса, чтобы потом использовать в локальных интентах
         person_id = resp_json[0]['uuid']
 
-        async with ClientSession() as session:
+        async with request.session as session:
             async with session.get(
-                    url=(f'http://localhost:8001/api/v1/person/{person_id}')) as resp:
+                    url=f'{ASYNC_API_URL}/person/{person_id}') as resp:
                 resp_json = await resp.json()
 
         person_birth_date = resp_json[0]['birth_date']
@@ -457,18 +470,18 @@ class PersonInfo(SearchScene):
         person_name_rus = 'алиса'
         person_name_eng = 'alice'
 
-        async with ClientSession() as session:
+        async with request.session as session:
             async with session.get(
-                    url=('http://localhost:8001/api/v1/person/search?'
+                    url=(f'{ASYNC_API_URL}/person/search?'
                          f'page_size=1&query={person_name_eng}')) as resp:
                 resp_json = await resp.json()
 
         # по-хорошему сохранить как переменную класса, чтобы потом использовать в локальных интентах
         person_id = resp_json[0]['uuid']
 
-        async with ClientSession() as session:
+        async with request.session as session:
             async with session.get(
-                    url=(f'http://localhost:8001/api/v1/person/{person_id}')) as resp:
+                    url=f'{ASYNC_API_URL}/person/{person_id}') as resp:
                 resp_json = await resp.json()
 
         # тут либо возвращать из es сразу названия фильмов
@@ -488,18 +501,19 @@ class PersonInfo(SearchScene):
         person_name_rus = 'алиса'
         person_name_eng = 'alice'
 
-        async with ClientSession() as session:
+        async with request.session as session:
             async with session.get(
-                    url=('http://localhost:8001/api/v1/person/search?'
-                         f'page_size=1&query={person_name_eng}')) as resp:
+                    url=(f'{ASYNC_API_URL}/person/search?'
+                         f'page_size=1&query={person_name_eng}')
+            ) as resp:
                 resp_json = await resp.json()
 
         # по-хорошему сохранить как переменную класса, чтобы потом использовать в локальных интентах
         person_id = resp_json[0]['uuid']
 
-        async with ClientSession() as session:
+        async with request.session as session:
             async with session.get(
-                    url=(f'http://localhost:8001/api/v1/person/{person_id}')) as resp:
+                    url=f'{ASYNC_API_URL}/person/{person_id}') as resp:
                 resp_json = await resp.json()
 
         # person_biography = resp_json[0]['biography']

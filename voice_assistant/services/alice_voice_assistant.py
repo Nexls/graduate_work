@@ -3,12 +3,14 @@ from functools import lru_cache
 from typing import Any
 
 from aiohttp import ClientSession
+from fastapi import Depends
 from starlette.requests import Request
 
 from alice_work_files.request import AliceRequest
 from alice_work_files.scenes import DEFAULT_SCENE, SCENES
 from alice_work_files.state import STATE_REQUEST_KEY
 from core import context_logger
+from core.session import get_session
 
 logger = context_logger.get(__name__)
 logging.getLogger('elasticsearch').propagate = False
@@ -26,7 +28,7 @@ class AliceVoiceAssistantService:
         """
         event = await request.json()
 
-        request = AliceRequest(event)
+        request = AliceRequest(request_body=event, session=self.session)
         current_scene_id = event.get('state', {}).get(STATE_REQUEST_KEY, {}).get('scene')
 
         if current_scene_id is None:
@@ -43,5 +45,6 @@ class AliceVoiceAssistantService:
 
 @lru_cache()
 def get_alice_voice_assistant_service(
+    session: ClientSession = Depends(get_session)
 ) -> AliceVoiceAssistantService:
-    return AliceVoiceAssistantService()
+    return AliceVoiceAssistantService(session=session)
