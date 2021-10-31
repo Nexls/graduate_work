@@ -1,4 +1,4 @@
-from typing import Any
+from typing import Any, Optional
 
 from aiohttp import ClientSession
 
@@ -28,8 +28,7 @@ class AliceRequest:
         slots = {}
         request_intents = self.request_body['request']['nlu']['intents']
 
-        # слоты в интентах могут записываться по-разному
-        # сделаем либо обработку поумнее, либо другую логику доставания слотов из запроса
+        # TODO: refactor slots formation
         for intent in request_intents:
             try:
                 slot_type = self.request_body['request']['nlu']['intents'][intent]['slots']['type']['type']

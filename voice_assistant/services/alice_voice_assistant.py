@@ -1,26 +1,28 @@
+import collections
 import logging
 from functools import lru_cache
-from typing import Any
+from typing import Any, Awaitable
 
 from aiohttp import ClientSession
+from core.session import get_session
 from fastapi import Depends
+from services.voice_assistant_base import VoiceAssistantServiceBase
 from starlette.requests import Request
 
 from alice_work_files.request import AliceRequest
 from alice_work_files.scenes import DEFAULT_SCENE, SCENES
 from alice_work_files.state import STATE_REQUEST_KEY
 from core import context_logger
-from core.session import get_session
 
 logger = context_logger.get(__name__)
 logging.getLogger('elasticsearch').propagate = False
 
 
-class AliceVoiceAssistantService:
+class AliceVoiceAssistantService(VoiceAssistantServiceBase):
     def __init__(self, session: ClientSession) -> None:
         self.session = session
 
-    async def parse_alice_request_and_routing(self, request: Request) -> dict[str, Any]:
+    async def parse_request_and_routing(self, request: Request) -> dict[str, Any]:
         """
         Entry-point for Serverless Function.
         :param request: HTTP-Request instance
@@ -44,7 +46,9 @@ class AliceVoiceAssistantService:
 
 
 @lru_cache()
-def get_alice_voice_assistant_service(
-    session: ClientSession = Depends(get_session)
+async def get_alice_voice_assistant_service(
+    session: Awaitable[ClientSession] = Depends(get_session)
 ) -> AliceVoiceAssistantService:
+    if isinstance(session, collections.abc.Awaitable):
+        session = await session
     return AliceVoiceAssistantService(session=session)
