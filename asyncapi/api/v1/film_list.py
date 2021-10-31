@@ -1,12 +1,14 @@
 from typing import List
 
+from fastapi import APIRouter, Depends
+
 from core import context_logger
 from core.logger_route import LoggerRoute
-from fastapi import APIRouter, Depends
 from models.enumerations import QueryType
 from models.film_response import FilmResponse
 from schemas.film_list import FilmFilterRequest, FilmSearchRequest
 from services.film import FilmService, get_film_service
+
 logger = context_logger.get(__name__)
 
 router = APIRouter(route_class=LoggerRoute)
