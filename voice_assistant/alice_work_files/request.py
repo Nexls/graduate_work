@@ -17,6 +17,7 @@ class AliceRequest:
 
     @property
     def intents(self):
+        # TODO: return the most relevant intent
         return self.request_body['request'].get('nlu', {}).get('intents', {})
 
     @property
@@ -27,18 +28,18 @@ class AliceRequest:
     def slots(self):
         slots = {}
         request_intents = self.request_body['request']['nlu']['intents']
+        intent = list(request_intents.keys())[0]
 
-        # TODO: refactor slots formation
-        for intent in request_intents:
-            try:
-                slot_type = self.request_body['request']['nlu']['intents'][intent]['slots']['type']['type']
-                slot_value = self.request_body['request']['nlu']['intents'][intent]['slots']['type']['value']
-            except KeyError:
-                slot_type = self.request_body['request']['nlu']['intents'][intent]['slots']['period']['type']
-                slot_value = self.request_body['request']['nlu']['intents'][intent]['slots']['period']['value']
-            finally:
-                slots = {slot_type:slot_value}
-        return slots
+        slots = self.request_body['request']['nlu']['intents'][intent]['slots']
+
+        try:
+            slot_type = slots['type']['type']
+            slot_value = slots['type']['value']
+        except KeyError:
+            slot_type = slots['period']['type']
+            slot_value = slots['period']['value']
+
+        return {slot_type: slot_value}
 
     @property
     def original_utterance(self):
