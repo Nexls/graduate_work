@@ -18,6 +18,7 @@ REDIS_PASS = env('REDIS_PASSWORD', '')
 REDIS_USE_SSL = env.bool('REDIS_USE_SSL', False)
 REDIS_CACHE_EXPIRE_IN_SECONDS = 60 * 5  # 5 минут
 
+
 # Настройки Elasticsearch
 ELASTIC_HOST = env('ELASTIC_HOST', '127.0.0.1')
 ELASTIC_PORT = env.int('ELASTIC_PORT', 9200)

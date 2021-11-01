@@ -1,10 +1,12 @@
+import json
 from collections import Callable
 
-from core import context_logger
 from fastapi.responses import ORJSONResponse
 from fastapi.routing import APIRoute
 from starlette.requests import Request
-from starlette.responses import Response, ujson
+from starlette.responses import Response
+
+from core import context_logger
 
 logger = context_logger.get(__name__)
 
@@ -17,7 +19,7 @@ class LoggerRoute(APIRoute):
         async def custom_route_handler(request: Request) -> Response:
             request_text = await request.body()
             try:
-                json_body = ujson.loads(request_text)
+                json_body = json.loads(request_text)
             except (ValueError, AttributeError):
                 json_body = {}
 
