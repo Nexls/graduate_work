@@ -26,20 +26,15 @@ class AliceRequest:
 
     @property
     def slots(self):
-        slots = {}
         request_intents = self.request_body['request']['nlu']['intents']
         intent = list(request_intents.keys())[0]
 
+        result = {}
         slots = self.request_body['request']['nlu']['intents'][intent]['slots']
+        for slot in slots:
+            result[slot] = slots[slot]['value']
 
-        try:
-            slot_type = slots['type']['type']
-            slot_value = slots['type']['value']
-        except KeyError:
-            slot_type = slots['period']['type']
-            slot_value = slots['period']['value']
-
-        return {slot_type: slot_value}
+        return result
 
     @property
     def original_utterance(self):

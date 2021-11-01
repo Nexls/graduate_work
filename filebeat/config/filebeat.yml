@@ -22,6 +22,8 @@ processors:
               container.name: "authapi"
           - contains:
               container.name: "gate"
+          - contains:
+              container.name: "voice_assistant"
 
 - decode_json_fields:
     fields: ["message"]

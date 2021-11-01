@@ -58,7 +58,7 @@ class TopFilms(GlobalScene):
         return await handler(request)
 
     async def top_by_type(self, request: AliceRequest):
-        filter_type = request.slots.get('MediaType', '')
+        filter_type = request.slots.get('type', '')
 
         resp_json = await self.get_request(
             request,
@@ -69,11 +69,11 @@ class TopFilms(GlobalScene):
 
         film_list = (film['title'] for film in resp_json)
 
-        text = json.dumps('\n'.join(film_list))
+        text = '\n'.join(film_list)
         return await self.make_response(text)
 
     async def top_by_genre(self, request: AliceRequest):
-        filter_type = request.slots.get('GenreType', '')
+        filter_type = request.slots.get('type', '')
 
         resp_json = await self.get_request(
             request,
@@ -84,12 +84,12 @@ class TopFilms(GlobalScene):
 
         film_list = (film['title'] for film in resp_json)
 
-        text = json.dumps('\n'.join(film_list))
+        text = '\n'.join(film_list)
         return await self.make_response(text)
 
     async def top_by_release_date(self, request: AliceRequest):
-        filter_type = request.slots.get('DateType', '')
-        filter_type = 'movies'
+        filter_type = request.slots.get('period', '')
+
         resp_json = await self.get_request(
             request,
             path='film',
@@ -99,7 +99,7 @@ class TopFilms(GlobalScene):
 
         film_list = (film['title'] for film in resp_json)
 
-        text = json.dumps('\n'.join(film_list))
+        text = '\n'.join(film_list)
         return await self.make_response(text)
 
     def handle_local_intents(self, request: AliceRequest):
@@ -146,7 +146,7 @@ class FilmInfo(GlobalScene):
         return await handler(request)
 
     async def _get_film_id(self, request: AliceRequest):
-        film_name = request.slots.get('YANDEX.STRING', '')
+        film_name = request.slots.get('film_name', '')
 
         resp_json = await self.get_request(request, path='film/search', query=film_name)
 
@@ -159,7 +159,7 @@ class FilmInfo(GlobalScene):
 
         film_writers = (writer['full_name'] for writer in resp_json['writers'])
 
-        text = json.dumps('\n'.join(film_writers))
+        text = '\n'.join(film_writers)
         return await self.make_response(text)
 
     async def film_actors(self, request: AliceRequest):
@@ -169,7 +169,7 @@ class FilmInfo(GlobalScene):
 
         film_actors = (actor['full_name'] for actor in resp_json['actors'])
 
-        text = json.dumps('\n'.join(film_actors))
+        text = '\n'.join(film_actors)
         return await self.make_response(text)
 
     async def film_description(self, request: AliceRequest):
@@ -195,7 +195,7 @@ class FilmInfo(GlobalScene):
 
         film_genres = (genre['name'] for genre in resp_json['genre'])
 
-        text = json.dumps('\n'.join(film_genres))
+        text = '\n'.join(film_genres)
         return await self.make_response(text)
 
     async def film_rating(self, request: AliceRequest):
@@ -237,7 +237,7 @@ class PersonInfo(GlobalScene):
         return await handler(request)
 
     async def _get_person_id(self, request: AliceRequest):
-        person_name = request.slots.get('YANDEX.STRING', '')
+        person_name = request.slots.get('film_name', '')
 
         resp_json = await self.get_request(request, path='person/search', query=person_name)
 
@@ -258,7 +258,7 @@ class PersonInfo(GlobalScene):
 
         person_film_ids = (film['uuid'] for film in resp_json['filmworks'])
 
-        text = json.dumps('\n'.join(person_film_ids))
+        text = '\n'.join(person_film_ids)
         return await self.make_response(text)
 
     async def person_biography(self, request: AliceRequest):

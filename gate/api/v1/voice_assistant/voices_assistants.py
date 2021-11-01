@@ -23,8 +23,11 @@ async def alice(request: Request) -> ORJSONResponse:
     session: ClientSession = request.app.state.session
     async with session.post(
         url=VOICE_ASSISTANT_URL + '/alice',
+        json=await request.json(),
         params=request.query_params,
-        headers=request.headers
+        headers={
+            'X-REQUEST-ID': request.headers.get('x-request-id'),
+        },
     ) as resp:
 
         return ORJSONResponse(content=await resp.json())

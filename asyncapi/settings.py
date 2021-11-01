@@ -32,7 +32,7 @@ ELASTIC_INDEX_GENRE = env('ELASTIC_INDEX_GENRE', 'genres')
 # Корень проекта
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-JWT_KEY_URL = env('JWT_KEY_URL', 'http://127.0.0.1:5000/public_key')
+JWT_KEY_URL = env('JWT_KEY_URL', 'http://localhost:8002/public_key')
 JWT_PUBLIC_KEY = env('JWT_PUBLIC_KEY', 'test')
 
 SERVICE_URL = os.getenv('SERVICE_URL', 'http://127.0.0.1:8000/api/v1')

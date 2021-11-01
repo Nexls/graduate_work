@@ -130,6 +130,8 @@ services:
       - ASYNC_API_PORT=8001
       - AUTH_API_HOST=authapi
       - AUTH_API_PORT=8002
+      - VOICE_ASSISTANT_HOST=voice_assistant
+      - VOICE_ASSISTANT_PORT=8003
     ports:
       - "8000:8000"
     depends_on:

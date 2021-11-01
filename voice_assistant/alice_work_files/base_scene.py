@@ -45,7 +45,7 @@ class Scene(ABC):
 
     async def make_response(self, text, tts=None, card=None, state=None, buttons=None, directives=None):
         if tts is None:
-            tts = text.replace('\n', ' ')
+            tts = text.replace('\n', ', ')
 
         response = {
             'text': text,
