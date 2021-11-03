@@ -14,7 +14,7 @@ PROJECT_NAME = env('PROJECT_NAME', 'Голосовые помощники')
 # Корень проекта
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-ASYNC_API_HOST = env('ASYNC_API_HOST', 'localhost')
+ASYNC_API_HOST = env('ASYNC_API_HOST', '0.0.0.0')
 ASYNC_API_PORT = env('ASYNC_API_PORT', '8001')
 ASYNC_API_URL = f'http://{ASYNC_API_HOST}:{ASYNC_API_PORT}/api/v1'
 

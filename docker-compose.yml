@@ -113,6 +113,9 @@ services:
       context: voice_assistant/
     env_file:
       - .env
+    environment:
+      - ASYNC_API_HOST=asyncapi
+      - ASYNC_API_PORT=8001
     ports:
       - "8003:8003"
     depends_on:
