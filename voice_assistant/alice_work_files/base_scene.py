@@ -44,6 +44,11 @@ class Scene(ABC):
         ])
 
     async def make_response(self, text, tts=None, card=None, state=None, buttons=None, directives=None):
+        if not text:
+            text = ('К сожалению, по твоему запросу ничего не нашлось. '
+                    'Попробуй спросить что-нибудь еще!')
+        elif len(text) > 1024:
+            text = text[:1024]
         if tts is None:
             tts = text.replace('\n', ', ')
 
@@ -75,6 +80,7 @@ class Scene(ABC):
             request: AliceRequest,
             path: str,
             filter_type: str = None,
+            filter_genre: str = None,
             query: str = None,
             sort: str = None,
             page_size: int = 3
@@ -84,6 +90,8 @@ class Scene(ABC):
 
         if filter_type:
             url += f'?filter_type={filter_type}&page_size={page_size}'
+        if filter_genre:
+            url += f'?filter_genre={filter_genre}&page_size={page_size}'
         if query:
             url += f'?query={query}&page_size={page_size}'
         if sort:

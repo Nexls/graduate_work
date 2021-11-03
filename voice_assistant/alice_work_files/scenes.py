@@ -2,7 +2,7 @@ import inspect
 import sys
 from typing import Any, Awaitable, Callable
 
-import json
+from datetime import date
 
 from alice_work_files import intents
 from alice_work_files.base_scene import Scene
@@ -40,6 +40,23 @@ class Welcome(GlobalScene):
         return self.handle_global_intents(request)
 
 
+class Helper(GlobalScene):
+    async def reply(self, request):
+        text = ('Я могу посоветовать лучшие фильмы по жанрам.\n'
+                'Или, например, сказать когда вышел фильм, и кто его снял.\n'
+                'А еще могу подсказать фильмы с твоим любимым актером.')
+        return await self.make_response(text, buttons=[
+            button('Покажи топ фильмов', hide=True),
+            button('Подскажи лучшие комедии', hide=True),
+            button('Кто автор фильма The Star Chamber?', hide=True),
+            button('В каких фильмах снимался Nick Cornish?', hide=True),
+            button('Какой сюжет у фильма A star for two?', hide=True),
+        ])
+
+    def handle_local_intents(self, request: AliceRequest):
+        pass
+
+
 class TopFilms(GlobalScene):
     def __init__(self):
         self.intents_dict = {
@@ -73,12 +90,12 @@ class TopFilms(GlobalScene):
         return await self.make_response(text)
 
     async def top_by_genre(self, request: AliceRequest):
-        filter_type = request.slots.get('type', '')
+        filter_genre = request.slots.get('type', '')
 
         resp_json = await self.get_request(
             request,
             path='film',
-            filter_type=filter_type,
+            filter_genre=filter_genre,
             sort='-imdb_rating'
         )
 
@@ -88,12 +105,12 @@ class TopFilms(GlobalScene):
         return await self.make_response(text)
 
     async def top_by_release_date(self, request: AliceRequest):
-        filter_type = request.slots.get('period', '')
+        filter_genre = request.slots.get('type', '')
 
         resp_json = await self.get_request(
             request,
             path='film',
-            filter_type=filter_type,
+            filter_genre=filter_genre,
             sort='-imdb_rating'
         )
 
@@ -107,23 +124,6 @@ class TopFilms(GlobalScene):
             return self
 
 
-class Helper(GlobalScene):
-    async def reply(self, request):
-        text = ('Я могу показать лучшие фильмы этой недели.\n'
-                'Или, например, сказать кто снял фильм.\n'
-                'А еще могу посоветовать фильмы с твоим любимым актером.')
-        return await self.make_response(text, buttons=[
-            button('Покажи топ фильмов', hide=True),
-            button('Покажи лучшие комедии', hide=True),
-            button('Кто автор фильма Дюна?', hide=True),
-            button('В каких фильмах снимался Джейсон Стэтхем?', hide=True),
-            button('Что ты умеешь?', hide=True)
-        ])
-
-    def handle_local_intents(self, request: AliceRequest):
-        pass
-
-
 class FilmInfo(GlobalScene):
     def __init__(self):
         self.intents_dict = {
@@ -134,7 +134,9 @@ class FilmInfo(GlobalScene):
             intents.FILM_DURATION: self.film_duration,
             intents.FILM_RELEASE_DATE: self.film_release_date,
             intents.FILM_DESCRIPTION: self.film_description,
+            intents.DETAILS: self.film_description,
         }
+        self.film_id = None
 
     @property
     def intents_handler(self) -> dict[str, Callable[[AliceRequest], Awaitable]]:
@@ -173,11 +175,12 @@ class FilmInfo(GlobalScene):
         return await self.make_response(text)
 
     async def film_description(self, request: AliceRequest):
-        film_id = await self._get_film_id(request)
+        if not self.film_id:
+            self.film_id = await self._get_film_id(request)
 
-        resp_json = await self.get_request(request, path=f'film/{film_id}')
+        resp_json = await self.get_request(request, path=f'film/{self.film_id}')
 
-        film_description = resp_json[0]['description']
+        film_description = resp_json['description']
         return await self.make_response(film_description)
 
     async def film_duration(self, request: AliceRequest):
@@ -185,7 +188,7 @@ class FilmInfo(GlobalScene):
 
         resp_json = await self.get_request(request, path=f'film/{film_id}')
 
-        # film_duration = resp_json[0]['duration']
+        # film_duration = resp_json['duration']
         return await self.make_response(f'Пока нет информации о длительности фильма')
 
     async def film_genre(self, request: AliceRequest):
@@ -203,15 +206,16 @@ class FilmInfo(GlobalScene):
 
         resp_json = await self.get_request(request, path=f'film/{film_id}')
 
-        film_rating = resp_json[0]['imdb_rating']
-        return await self.make_response(f'Рейтинг фильма - {film_rating}')
+        film_rating = resp_json['imdb_rating']
+        return await self.make_response(f'IMDB рейтинг фильма - {film_rating}')
 
     async def film_release_date(self, request: AliceRequest):
         film_id = await self._get_film_id(request)
 
-        resp_json = await self.get_request(request, path=f'film/{film_id}')
-
-        film_release_date = resp_json[0]['release_date']
+        # resp_json = await self.get_request(request, path=f'film/{film_id}')
+        # film_release_date = resp_json['release_date']
+        today = date.today()
+        film_release_date = today.strftime("%d.%m.%Y")
         return await self.make_response(f'Дата выхода фильма - {film_release_date}')
 
     def handle_local_intents(self, request: AliceRequest):
@@ -225,7 +229,9 @@ class PersonInfo(GlobalScene):
             intents.PERSON_AGE: self.person_age,
             intents.PERSON_FILMS: self.person_films,
             intents.PERSON_BIOGRAPHY: self.person_biography,
+            intents.DETAILS: self.person_biography,
         }
+        self.person_id = None
 
     @property
     def intents_handler(self) -> dict[str, Callable[[AliceRequest], Awaitable]]:
@@ -237,37 +243,46 @@ class PersonInfo(GlobalScene):
         return await handler(request)
 
     async def _get_person_id(self, request: AliceRequest):
-        person_name = request.slots.get('film_name', '')
+        person_name = request.slots.get('person_name', '')
 
         resp_json = await self.get_request(request, path='person/search', query=person_name)
-
-        return resp_json[0]['uuid']
+        if resp_json:
+            return resp_json[0]['uuid']
+        else:
+            return ''
 
     async def person_age(self, request: AliceRequest):
-        person_id = self._get_person_id(request)
+        person_id = await self._get_person_id(request)
 
         resp_json = await self.get_request(request, path=f'person/{person_id}')
-
-        person_birth_date = resp_json[0]['birth_date']
-        return await self.make_response(person_birth_date)
+        today = date.today()
+        person_birth_date = today.strftime("%d.%m.%Y")
+        person_full_name = resp_json['full_name']
+        return await self.make_response(f'{person_full_name} родился {person_birth_date}')
 
     async def person_films(self, request: AliceRequest):
-        person_id = self._get_person_id(request)
+        person_id = await self._get_person_id(request)
 
         resp_json = await self.get_request(request, path=f'person/{person_id}')
 
-        person_film_ids = (film['uuid'] for film in resp_json['filmworks'])
+        person_film_ids = (film_id for film_id in resp_json['film_ids'])
 
-        text = '\n'.join(person_film_ids)
+        person_films = []
+        for film_id in person_film_ids:
+            resp_json = await self.get_request(request, path=f'film/{film_id}')
+            person_films.append(resp_json['title'])
+
+        text = '\n'.join(person_films)
         return await self.make_response(text)
 
     async def person_biography(self, request: AliceRequest):
-        person_id = self._get_person_id(request)
+        if not self.person_id:
+            self.person_id = await self._get_person_id(request)
 
-        resp_json = await self.get_request(request, path=f'person/{person_id}')
+        resp_json = await self.get_request(request, path=f'person/{self.person_id}')
 
-        person_biography = resp_json[0]['biography']
-        return await self.make_response(f'Вот что я нашла - {person_biography}')
+        person_biography = resp_json['full_name']
+        return await self.make_response(f'Биография {person_biography} - *биография*')
 
     def handle_local_intents(self, request: AliceRequest):
         if set(request.intents) & set(PERSON_INFO_INTENTS):

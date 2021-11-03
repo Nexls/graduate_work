@@ -1,4 +1,5 @@
 HELP = 'help'
+DETAILS = 'details'
 
 TOP_BY_TYPE = 'top_by_type'
 TOP_BY_GENRE = 'top_by_genre'
@@ -30,9 +31,11 @@ FILM_INFO_INTENTS = [
     FILM_DURATION,
     FILM_RELEASE_DATE,
     FILM_DESCRIPTION,
+    DETAILS,
 ]
 PERSON_INFO_INTENTS = [
     PERSON_AGE,
     PERSON_FILMS,
     PERSON_BIOGRAPHY,
+    DETAILS,
 ]
